@@ -28,7 +28,7 @@ final class MypageViewController: UIViewController {
                                            listInfo(title: "관심 직종", subDetail: "UI/UX/GUI디자인 외 3개"),
                                            listInfo(title: "관심 산업군", subDetail: "IT/웹/통신"),
                                            listInfo(title: "gray"),
-                                           listInfo(title: "내강좌"),
+                                           listInfo(title: "내 강좌"),
                                            listInfo(title: "gray")]
     
     override func viewWillAppear(_ animated: Bool) {
