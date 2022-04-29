@@ -8,7 +8,6 @@
 import UIKit
 
 class ReceivedOfferTableViewCell: UITableViewCell {
-    
     @IBOutlet weak var companyIcon: UIImageView!
     @IBOutlet weak var companyName: UILabel!
     @IBOutlet weak var offeredDate: UILabel!

@@ -7,29 +7,29 @@
 
 import UIKit
 
-struct listInfo {
-    var title: String
-    var subDetail: String?
-}
-
 final class MypageViewController: UIViewController {
+    // 해당 클래스에서만 사용될 거 같으면 아래 처럼 구속시키는 것이 좋아요.
+    struct ListInfo {
+        var title: String
+        var subDetail: String?
+    }
 
-    @IBOutlet weak private var mypageTableView: UITableView!
+    @IBOutlet private weak var mypageTableView: UITableView!
     @IBOutlet private weak var navigationView: UIView!
     
-    private var myPageTableList: [listInfo] = [listInfo(title: "gray"),
-                                           listInfo(title: "계정"),
-                                           listInfo(title: "활동내역"),
-                                           listInfo(title: "제휴대학교 정보"),
-                                           listInfo(title: "gray"),
-                                           listInfo(title: "받은 제안", subDetail: "구글코리아 외 4개"),
-                                           listInfo(title: "gray"),
-                                           listInfo(title: "팔로잉 기업", subDetail: "잡플래닛 외 1개"),
-                                           listInfo(title: "관심 직종", subDetail: "UI/UX/GUI디자인 외 3개"),
-                                           listInfo(title: "관심 산업군", subDetail: "IT/웹/통신"),
-                                           listInfo(title: "gray"),
-                                           listInfo(title: "내 강좌"),
-                                           listInfo(title: "gray")]
+    private var myPageTableList: [ListInfo] = [ListInfo(title: "gray"),
+                                           ListInfo(title: "계정"),
+                                           ListInfo(title: "활동내역"),
+                                           ListInfo(title: "제휴대학교 정보"),
+                                           ListInfo(title: "gray"),
+                                           ListInfo(title: "받은 제안", subDetail: "구글코리아 외 4개"),
+                                           ListInfo(title: "gray"),
+                                           ListInfo(title: "팔로잉 기업", subDetail: "잡플래닛 외 1개"),
+                                           ListInfo(title: "관심 직종", subDetail: "UI/UX/GUI디자인 외 3개"),
+                                           ListInfo(title: "관심 산업군", subDetail: "IT/웹/통신"),
+                                           ListInfo(title: "gray"),
+                                           ListInfo(title: "내 강좌"),
+                                           ListInfo(title: "gray")]
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -50,13 +50,12 @@ extension MypageViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0{
+        if indexPath.row == 0 {
             let profileCell = tableView.dequeueReusableCell(withIdentifier: "MyProfileTableViewCell", for: indexPath) as! ProfileFirstTableViewCell
             profileCell.myProfileImageView.image = UIImage(named: "me")
             profileCell.myProfileJobInfo.text = "7년차 - 사진/포토그래퍼/카메라기자"
             return profileCell
-        }
-        else {
+        } else {
             let title = myPageTableList[(indexPath.row)-1].title
             let subDetail = myPageTableList[(indexPath.row)-1].subDetail
             if title == "gray" {
@@ -98,27 +97,5 @@ extension MypageViewController: UITableViewDelegate{
             offerVC.modalPresentationStyle = .fullScreen
             self.present(offerVC, animated: true, completion: nil)
         }
-    }
-}
-
-extension UIView{
-    @IBInspectable var borderRadius: CGFloat {
-        get {
-            return layer.cornerRadius
-        }
-        set {
-            layer.cornerRadius = newValue
-            layer.masksToBounds = true
-        }
-    }
-}
-
-extension UIViewController{
-    func navigationUnderLine(sendView: UIView) {
-        let border = CALayer()
-        border.frame = CGRect(x: 0, y: sendView.frame.size.height-1, width: sendView.frame.width, height: 0.3)
-        border.borderWidth = 0.3
-        border.borderColor = UIColor.systemGray4.cgColor
-        sendView.layer.addSublayer(border)
     }
 }

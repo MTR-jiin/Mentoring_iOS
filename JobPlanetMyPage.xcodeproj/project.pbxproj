@@ -18,6 +18,8 @@
 		6CD86570281B7471000C8195 /* GrayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD8656F281B7471000C8195 /* GrayTableViewCell.swift */; };
 		6CD86572281B79E1000C8195 /* ReceivedOfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD86571281B79E1000C8195 /* ReceivedOfferViewController.swift */; };
 		6CD86574281B9AC6000C8195 /* ReceivedOfferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD86573281B9AC6000C8195 /* ReceivedOfferTableViewCell.swift */; };
+		FC6B973D281C47C300B3C40F /* Ex+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6B973C281C47C300B3C40F /* Ex+UIView.swift */; };
+		FC6B973F281C47DB00B3C40F /* Ex+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6B973E281C47DB00B3C40F /* Ex+UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		6CD8656F281B7471000C8195 /* GrayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayTableViewCell.swift; sourceTree = "<group>"; };
 		6CD86571281B79E1000C8195 /* ReceivedOfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedOfferViewController.swift; sourceTree = "<group>"; };
 		6CD86573281B9AC6000C8195 /* ReceivedOfferTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedOfferTableViewCell.swift; sourceTree = "<group>"; };
+		FC6B973C281C47C300B3C40F /* Ex+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UIView.swift"; sourceTree = "<group>"; };
+		FC6B973E281C47DB00B3C40F /* Ex+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UIViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 		6C847821281A112000954861 /* JobPlanetMyPage */ = {
 			isa = PBXGroup;
 			children = (
+				FC6B973A281C47B600B3C40F /* Helper */,
 				6CD86576281B9AD5000C8195 /* ReceivedOffer */,
 				6CD86575281B9AD0000C8195 /* MyPage */,
 				6C847822281A112000954861 /* AppDelegate.swift */,
@@ -104,6 +109,23 @@
 				6CD8656F281B7471000C8195 /* GrayTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		FC6B973A281C47B600B3C40F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FC6B973B281C47BB00B3C40F /* Ex */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		FC6B973B281C47BB00B3C40F /* Ex */ = {
+			isa = PBXGroup;
+			children = (
+				FC6B973C281C47C300B3C40F /* Ex+UIView.swift */,
+				FC6B973E281C47DB00B3C40F /* Ex+UIViewController.swift */,
+			);
+			path = Ex;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,10 +203,12 @@
 				6CD86572281B79E1000C8195 /* ReceivedOfferViewController.swift in Sources */,
 				6CD8656C281B69EE000C8195 /* ProfileFirstTableViewCell.swift in Sources */,
 				6CD8656E281B6A8C000C8195 /* MyPageListTableViewCell.swift in Sources */,
+				FC6B973D281C47C300B3C40F /* Ex+UIView.swift in Sources */,
 				6C847823281A112000954861 /* AppDelegate.swift in Sources */,
 				6CD86570281B7471000C8195 /* GrayTableViewCell.swift in Sources */,
 				6CD86574281B9AC6000C8195 /* ReceivedOfferTableViewCell.swift in Sources */,
 				6C847825281A112000954861 /* SceneDelegate.swift in Sources */,
+				FC6B973F281C47DB00B3C40F /* Ex+UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
