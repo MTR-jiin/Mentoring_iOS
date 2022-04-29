@@ -21,7 +21,7 @@ class MypageViewController: UIViewController {
                                            listInfo(title: "활동내역"),
                                            listInfo(title: "제휴대학교 정보"),
                                            listInfo(title: "gray"),
-                                           listInfo(title: "받은제안", subDetail: "구글코리아 외 4개"),
+                                           listInfo(title: "받은 제안", subDetail: "구글코리아 외 4개"),
                                            listInfo(title: "gray"),
                                            listInfo(title: "팔로잉 기업", subDetail: "잡플래닛 외 1개"),
                                            listInfo(title: "관심 직종", subDetail: "UI/UX/GUI디자인 외 3개"),
@@ -36,7 +36,6 @@ class MypageViewController: UIViewController {
         mypageTableView.delegate = self
         
     }
-
 
 }
 
@@ -69,9 +68,6 @@ extension MypageViewController: UITableViewDataSource{
                 return listCell
             }
         }
-        
-        
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -85,12 +81,19 @@ extension MypageViewController: UITableViewDataSource{
         }
     }
     
-    
 }
 
 
 extension MypageViewController: UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let title = myPageTableList[(indexPath.row)-1].title
+        print(title)
+        if title == "받은 제안" {
+            guard let offerVC = self.storyboard?.instantiateViewController(withIdentifier: "ReceivedOfferViewController") as? ReceivedOfferViewController else { return }
+            offerVC.navigationTitle = title
+            self.navigationController?.pushViewController(offerVC, animated: true)
+        }
+    }
 }
 
 extension UIView{
