@@ -20,7 +20,11 @@ struct companyData {
 
 class ReceivedOfferViewController: UIViewController {
     
-    var navigationTitle: String = ""
+    @IBOutlet private weak var navigationTitle: UILabel!
+    @IBOutlet private weak var offerListTableView: UITableView!
+    @IBOutlet weak var navigationView: UIView!
+    
+    var sentNavigationTItle: String = ""
     var offerCompanyList: [companyData] = [
         companyData(companyName: "구글 코리아", offerDate: "2019. 08. 30", offerState: .none),
         companyData(companyIcon: UIImage(systemName: "house"), companyName: "드라마앤 컴패니", offerDate: "2019. 08. 30", offerState: .permit),
@@ -28,19 +32,21 @@ class ReceivedOfferViewController: UIViewController {
         companyData(companyIcon: UIImage(systemName: "house"), companyName: "페이스북 코리아", offerDate: "2019. 08. 30", offerState: .deny)
     ]
     
-    @IBOutlet weak var offerListTableView: UITableView!
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationItem.title = navigationTitle
-        self.navigationController?.navigationBar.topItem?.title = ""
-        self.navigationController?.navigationBar.tintColor = .darkGray
+        navigationTitle.text = sentNavigationTItle
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.offerListTableView.dataSource = self
+        navigationUnderLine(sendView: navigationView)
     }
+    
+    @IBAction func backNaviBtn(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 
 }
 

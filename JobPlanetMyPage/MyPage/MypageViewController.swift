@@ -14,7 +14,8 @@ struct listInfo {
 
 class MypageViewController: UIViewController {
 
-    @IBOutlet weak var mypageTableView: UITableView!
+    @IBOutlet weak private var mypageTableView: UITableView!
+    @IBOutlet weak var navigationView: UIView!
     
     private var myPageTableList: [listInfo] = [listInfo(title: "gray"),
                                            listInfo(title: "계정"),
@@ -30,18 +31,22 @@ class MypageViewController: UIViewController {
                                            listInfo(title: "내강좌"),
                                            listInfo(title: "gray")]
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mypageTableView.dataSource = self
         mypageTableView.delegate = self
-        
+        navigationUnderLine(sendView: navigationView)
     }
 
 }
 
 extension MypageViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 14
+        return myPageTableList.count+1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -87,11 +92,12 @@ extension MypageViewController: UITableViewDataSource{
 extension MypageViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let title = myPageTableList[(indexPath.row)-1].title
-        print(title)
         if title == "받은 제안" {
             guard let offerVC = self.storyboard?.instantiateViewController(withIdentifier: "ReceivedOfferViewController") as? ReceivedOfferViewController else { return }
-            offerVC.navigationTitle = title
-            self.navigationController?.pushViewController(offerVC, animated: true)
+            offerVC.sentNavigationTItle = title
+            offerVC.modalTransitionStyle = .crossDissolve
+            offerVC.modalPresentationStyle = .fullScreen
+            self.present(offerVC, animated: true, completion: nil)
         }
     }
 }
@@ -105,5 +111,15 @@ extension UIView{
                 layer.cornerRadius = newValue
                 layer.masksToBounds = true
             }
-        }
+    }
+}
+
+extension UIViewController{
+    func navigationUnderLine(sendView: UIView) {
+        let border = CALayer()
+        border.frame = CGRect(x: 0, y: sendView.frame.size.height-1, width: sendView.frame.width, height: 0.3)
+        border.borderWidth = 0.3
+        border.borderColor = UIColor.systemGray4.cgColor
+        sendView.layer.addSublayer(border)
+    }
 }

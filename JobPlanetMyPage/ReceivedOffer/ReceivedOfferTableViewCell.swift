@@ -10,10 +10,6 @@ import UIKit
 class ReceivedOfferTableViewCell: UITableViewCell {
     
     @IBOutlet weak var companyIcon: UIImageView!
-//        didSet{
-//            companyIcon.image = offerCompanyList[IndexPath.]
-//        }
-    
     @IBOutlet weak var companyName: UILabel!
     @IBOutlet weak var offeredDate: UILabel!
     //제안 상태
@@ -22,13 +18,11 @@ class ReceivedOfferTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }
