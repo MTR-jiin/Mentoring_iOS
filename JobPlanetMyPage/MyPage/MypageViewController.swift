@@ -12,10 +12,10 @@ struct listInfo {
     var subDetail: String?
 }
 
-class MypageViewController: UIViewController {
+final class MypageViewController: UIViewController {
 
     @IBOutlet weak private var mypageTableView: UITableView!
-    @IBOutlet weak var navigationView: UIView!
+    @IBOutlet private weak var navigationView: UIView!
     
     private var myPageTableList: [listInfo] = [listInfo(title: "gray"),
                                            listInfo(title: "계정"),
@@ -88,7 +88,6 @@ extension MypageViewController: UITableViewDataSource{
     
 }
 
-
 extension MypageViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let title = myPageTableList[(indexPath.row)-1].title
@@ -104,13 +103,13 @@ extension MypageViewController: UITableViewDelegate{
 
 extension UIView{
     @IBInspectable var borderRadius: CGFloat {
-            get {
-                return layer.cornerRadius
-            }
-            set {
-                layer.cornerRadius = newValue
-                layer.masksToBounds = true
-            }
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+            layer.masksToBounds = true
+        }
     }
 }
 
