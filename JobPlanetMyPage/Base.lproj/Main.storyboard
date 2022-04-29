@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KAV-GF-uHf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--마이페이지-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MypageViewController" customModule="JobPlanetMyPage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1HG-QV-p4v">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyProfileTableViewCell" id="wqa-Ov-QU2" customClass="ProfileFirstTableViewCell" customModule="JobPlanetMyPage" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="173.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wqa-Ov-QU2" id="YHt-g1-fol">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="173.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="l4u-d3-1Ad">
+                                                    <rect key="frame" x="20" y="23.5" width="60" height="55.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="V6P-Rj-iU0"/>
+                                                        <constraint firstAttribute="height" constant="60" id="ee9-59-HBp"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N년차 - 프로그래머" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUA-Qn-wwJ">
+                                                    <rect key="frame" x="20" y="101" width="154" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Gt-hl-Sh0">
+                                                    <rect key="frame" x="20" y="130" width="81" height="29.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="tintColor" systemColor="systemGreenColor"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="내 프로필 보기"/>
+                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6z-Dp-s4c">
+                                                    <rect key="frame" x="319.5" y="11" width="74.5" height="27"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="임시저장 중" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Px-eF-I0z">
+                                                            <rect key="frame" x="5" y="5" width="64.5" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="0Px-eF-I0z" secondAttribute="trailing" constant="5" id="BDl-4y-ubG"/>
+                                                        <constraint firstItem="0Px-eF-I0z" firstAttribute="top" secondItem="B6z-Dp-s4c" secondAttribute="top" constant="5" id="LiY-gu-qR1"/>
+                                                        <constraint firstItem="0Px-eF-I0z" firstAttribute="leading" secondItem="B6z-Dp-s4c" secondAttribute="leading" constant="5" id="hqZ-mT-3By"/>
+                                                        <constraint firstAttribute="bottom" secondItem="0Px-eF-I0z" secondAttribute="bottom" constant="5" id="waq-lW-Ufc"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7Gt-hl-Sh0" firstAttribute="top" secondItem="vUA-Qn-wwJ" secondAttribute="bottom" constant="5" id="DdS-ea-8lL"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vUA-Qn-wwJ" secondAttribute="trailing" constant="20" symbolic="YES" id="FWq-3F-jha"/>
+                                                <constraint firstItem="vUA-Qn-wwJ" firstAttribute="top" secondItem="l4u-d3-1Ad" secondAttribute="bottom" constant="20" id="HBG-jY-lyr"/>
+                                                <constraint firstItem="l4u-d3-1Ad" firstAttribute="leading" secondItem="YHt-g1-fol" secondAttribute="leadingMargin" id="Imi-y3-fsq"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7Gt-hl-Sh0" secondAttribute="trailing" constant="20" symbolic="YES" id="N6J-9n-VFd"/>
+                                                <constraint firstItem="B6z-Dp-s4c" firstAttribute="trailing" secondItem="YHt-g1-fol" secondAttribute="trailingMargin" id="QHL-PL-Lfp"/>
+                                                <constraint firstItem="vUA-Qn-wwJ" firstAttribute="leading" secondItem="l4u-d3-1Ad" secondAttribute="leading" id="SXk-2j-Nsg"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="7Gt-hl-Sh0" secondAttribute="bottom" constant="3" id="UQb-ek-PHV"/>
+                                                <constraint firstItem="B6z-Dp-s4c" firstAttribute="top" secondItem="YHt-g1-fol" secondAttribute="topMargin" id="ois-w4-Vf1"/>
+                                                <constraint firstItem="7Gt-hl-Sh0" firstAttribute="leading" secondItem="l4u-d3-1Ad" secondAttribute="leading" id="rVS-8q-p12"/>
+                                                <constraint firstItem="l4u-d3-1Ad" firstAttribute="top" secondItem="YHt-g1-fol" secondAttribute="topMargin" constant="10" id="tHz-Hx-dU6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="myProfileImageView" destination="l4u-d3-1Ad" id="ysJ-02-XrF"/>
+                                            <outlet property="myProfileJobInfo" destination="vUA-Qn-wwJ" id="nHM-31-Ihe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GrayCell" rowHeight="15" id="i2U-ov-mgr" customClass="GrayTableViewCell" customModule="JobPlanetMyPage" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="218" width="414" height="15"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i2U-ov-mgr" id="jrL-wD-eDn">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MyPageListTableViewCell" rowHeight="50" id="qGC-8m-Pbl" customClass="MyPageListTableViewCell" customModule="JobPlanetMyPage" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="233" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qGC-8m-Pbl" id="Xj3-QK-ZlT">
+                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Waw-EE-jwf">
+                                                    <rect key="frame" x="20" y="15" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="구글 코리아 외 4개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqw-Pd-Es5">
+                                                    <rect key="frame" x="231" y="14" width="126.5" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemGray4Color"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Waw-EE-jwf" firstAttribute="leading" secondItem="Xj3-QK-ZlT" secondAttribute="leadingMargin" id="Gqy-c1-jJr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="pqw-Pd-Es5" secondAttribute="trailing" constant="20" id="Kl5-Nj-eyW"/>
+                                                <constraint firstItem="pqw-Pd-Es5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Waw-EE-jwf" secondAttribute="trailing" constant="8" symbolic="YES" id="LbW-gD-NE2"/>
+                                                <constraint firstItem="pqw-Pd-Es5" firstAttribute="top" secondItem="Xj3-QK-ZlT" secondAttribute="topMargin" constant="3" id="e1g-Gh-XHX"/>
+                                                <constraint firstItem="pqw-Pd-Es5" firstAttribute="centerY" secondItem="Waw-EE-jwf" secondAttribute="centerY" id="iZi-zy-SvA"/>
+                                                <constraint firstItem="Waw-EE-jwf" firstAttribute="centerY" secondItem="Xj3-QK-ZlT" secondAttribute="centerY" id="j5h-0O-FXX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="subDetailLabel" destination="pqw-Pd-Es5" id="s8B-4i-xIW"/>
+                                            <outlet property="titleLabel" destination="Waw-EE-jwf" id="uFC-UR-CTq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1HG-QV-p4v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LIA-kF-Nuu"/>
+                            <constraint firstItem="1HG-QV-p4v" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cj7-pc-yt7"/>
+                            <constraint firstItem="1HG-QV-p4v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="f9b-uo-HKv"/>
+                            <constraint firstItem="1HG-QV-p4v" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kdq-kR-um9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="마이페이지" id="1Zj-BA-wRv">
+                        <barButtonItem key="rightBarButtonItem" title="설정" id="vKI-KX-Ca1">
+                            <color key="tintColor" systemColor="systemGreenColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mypageTableView" destination="1HG-QV-p4v" id="uzd-I4-pxI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1355.072463768116" y="84.375"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="bn7-nk-X9T">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bNn-Er-0uS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="s9D-CK-N1s"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="faf-rs-K0l">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BxC-5D-Ea1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YeY-oj-Ms6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="444.92753623188412" y="84.375"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sAv-Q6-GQ5">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="KAV-GF-uHf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Esc-ku-bZt">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="bNn-Er-0uS" kind="relationship" relationship="viewControllers" id="fth-YD-yQk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O0S-Hp-c1S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-465.21739130434787" y="84.375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
