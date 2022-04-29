@@ -7,6 +7,10 @@
 
 import UIKit
 
+// TODO: 네비게이션 컨트롤러로 구현하지 않았네용~ 네비게이션 컨트롤러 구현부탁드려용
+// TODO: 노치가 없는 폰에서는 상단 부분이 어색해요 한 번 확인해보시고 수정해보세용
+// 화면도 이쁘게 잘 만드셨고 UI부분은 잘하셨습니다 :) 고생많으셨고요. TODO로 처리한 부분 한 번 고민해보시고 푸시해주세용!!
+
 final class MypageViewController: UIViewController {
     // 해당 클래스에서만 사용될 거 같으면 아래 처럼 구속시키는 것이 좋아요.
     struct ListInfo {
@@ -50,6 +54,8 @@ extension MypageViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // TODO: ReceivedOfferTableViewCell해당 셀처럼 캡슐화해서 처리해보세요.
+        // TODO: indexPath나 title로 구분 짓는 것 보단 enum으로 처리하는 법도 있는데 할 수 있으면 해보시고, 나중에 피드백 드릴게요!
         if indexPath.row == 0 {
             let profileCell = tableView.dequeueReusableCell(withIdentifier: "MyProfileTableViewCell", for: indexPath) as! ProfileFirstTableViewCell
             profileCell.myProfileImageView.image = UIImage(named: "me")
@@ -73,7 +79,7 @@ extension MypageViewController: UITableViewDataSource{
             }
         }
     }
-    
+    // TODO: 스토리보드를 잘 사용하신다면 height를 계산할 필요가 없어요!
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row{
         case 0:
@@ -89,6 +95,8 @@ extension MypageViewController: UITableViewDataSource{
 
 extension MypageViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // TODO: indexPath나 title로 구분 짓는 것 보단 enum으로 처리하는 법도 있는데 할 수 있으면 해보시고, 나중에 피드백 드릴게요!
+        // TODO: out of range가 발생해요 indexPath.row가 0인데 -1를 계산해서 발생했어요
         let title = myPageTableList[(indexPath.row)-1].title
         if title == "받은 제안" {
             guard let offerVC = self.storyboard?.instantiateViewController(withIdentifier: "ReceivedOfferViewController") as? ReceivedOfferViewController else { return }
