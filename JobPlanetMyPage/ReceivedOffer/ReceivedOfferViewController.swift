@@ -46,7 +46,7 @@ final class ReceivedOfferViewController: UIViewController {
     
     // 얘도 private가 된답니당 ~
     @IBAction private func backNaviBtn(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

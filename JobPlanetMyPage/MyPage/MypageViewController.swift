@@ -90,9 +90,7 @@ extension MypageViewController: UITableViewDelegate{
         if title == "받은 제안" {
             guard let offerVC = self.storyboard?.instantiateViewController(withIdentifier: "ReceivedOfferViewController") as? ReceivedOfferViewController else { return }
             offerVC.sentNavigationTItle = title
-            offerVC.modalTransitionStyle = .crossDissolve
-            offerVC.modalPresentationStyle = .fullScreen
-            self.present(offerVC, animated: true, completion: nil)
+            self.navigationController?.pushViewController(offerVC, animated: true)
         }
     }
 }
