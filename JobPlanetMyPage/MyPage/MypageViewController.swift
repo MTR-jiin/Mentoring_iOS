@@ -79,17 +79,6 @@ extension MypageViewController: UITableViewDataSource{
             }
         }
     }
-    // TODO: 스토리보드를 잘 사용하신다면 height를 계산할 필요가 없어요!
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row{
-        case 0:
-            return 175
-        case 1,5,7,11,13:
-            return 10;
-        default:
-            return 50
-        }
-    }
     
 }
 

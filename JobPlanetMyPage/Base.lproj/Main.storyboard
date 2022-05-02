@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gaB-sf-fA1">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="51.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이페이지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkL-mE-nvZ">
-                                        <rect key="frame" x="168" y="58.5" width="78" height="21.5"/>
+                                        <rect key="frame" x="168" y="15" width="78" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yW9-8g-jWt">
-                                        <rect key="frame" x="362" y="52.5" width="32" height="34"/>
+                                        <rect key="frame" x="362" y="9" width="32" height="34"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="설정">
@@ -36,22 +36,22 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="yW9-8g-jWt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xkL-mE-nvZ" secondAttribute="trailing" constant="8" symbolic="YES" id="Hwb-5U-CcT"/>
-                                    <constraint firstAttribute="trailing" secondItem="yW9-8g-jWt" secondAttribute="trailing" constant="20" id="TGw-oe-yT1"/>
-                                    <constraint firstItem="yW9-8g-jWt" firstAttribute="centerY" secondItem="xkL-mE-nvZ" secondAttribute="centerY" id="Vd5-60-FC2"/>
-                                    <constraint firstItem="xkL-mE-nvZ" firstAttribute="centerX" secondItem="gaB-sf-fA1" secondAttribute="centerX" id="aqf-Pc-C8G"/>
-                                    <constraint firstAttribute="bottom" secondItem="xkL-mE-nvZ" secondAttribute="bottom" constant="20" id="coc-HS-q2X"/>
-                                    <constraint firstAttribute="height" constant="100" id="l4V-6K-SlW"/>
+                                    <constraint firstAttribute="trailing" secondItem="yW9-8g-jWt" secondAttribute="trailing" constant="20" id="8Rp-n1-txL"/>
+                                    <constraint firstItem="yW9-8g-jWt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xkL-mE-nvZ" secondAttribute="trailing" constant="8" symbolic="YES" id="DWr-wr-Uzq"/>
+                                    <constraint firstItem="xkL-mE-nvZ" firstAttribute="top" secondItem="gaB-sf-fA1" secondAttribute="top" constant="15" id="JU2-zE-hou"/>
+                                    <constraint firstItem="yW9-8g-jWt" firstAttribute="centerY" secondItem="xkL-mE-nvZ" secondAttribute="centerY" id="Vze-L4-Hrk"/>
+                                    <constraint firstItem="xkL-mE-nvZ" firstAttribute="centerY" secondItem="gaB-sf-fA1" secondAttribute="centerY" id="bMg-NW-TGh"/>
+                                    <constraint firstItem="xkL-mE-nvZ" firstAttribute="centerX" secondItem="gaB-sf-fA1" secondAttribute="centerX" id="zdQ-gI-JlU"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1HG-QV-p4v">
-                                <rect key="frame" x="0.0" y="100" width="414" height="713"/>
+                                <rect key="frame" x="0.0" y="95.5" width="414" height="717.5"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyProfileTableViewCell" id="wqa-Ov-QU2" customClass="ProfileFirstTableViewCell" customModule="JobPlanetMyPage" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="173.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyProfileTableViewCell" rowHeight="175" id="wqa-Ov-QU2" customClass="ProfileFirstTableViewCell" customModule="JobPlanetMyPage" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wqa-Ov-QU2" id="YHt-g1-fol">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="173.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="175"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="l4u-d3-1Ad">
@@ -76,7 +76,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Gt-hl-Sh0">
-                                                    <rect key="frame" x="20" y="130" width="80" height="29.5"/>
+                                                    <rect key="frame" x="20" y="130" width="80" height="31"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                     <color key="tintColor" systemColor="systemGreenColor"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -125,17 +125,32 @@
                                             <outlet property="myProfileJobInfo" destination="vUA-Qn-wwJ" id="nHM-31-Ihe"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GrayCell" rowHeight="15" id="i2U-ov-mgr" customClass="GrayTableViewCell" customModule="JobPlanetMyPage" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="218" width="414" height="15"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GrayCell" rowHeight="10" id="i2U-ov-mgr" customClass="GrayTableViewCell" customModule="JobPlanetMyPage" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="219.5" width="414" height="10"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i2U-ov-mgr" id="jrL-wD-eDn">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="15"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="10"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgs-wQ-JAO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="10"/>
+                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="10" id="bW6-di-AgH"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="dgs-wQ-JAO" secondAttribute="bottom" id="CCZ-B0-PUx"/>
+                                                <constraint firstItem="dgs-wQ-JAO" firstAttribute="leading" secondItem="jrL-wD-eDn" secondAttribute="leading" id="NbE-fq-IE2"/>
+                                                <constraint firstItem="dgs-wQ-JAO" firstAttribute="top" secondItem="jrL-wD-eDn" secondAttribute="top" id="Vcs-9t-ltC"/>
+                                                <constraint firstAttribute="trailing" secondItem="dgs-wQ-JAO" secondAttribute="trailing" id="YOH-mX-ghI"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MyPageListTableViewCell" rowHeight="50" id="qGC-8m-Pbl" customClass="MyPageListTableViewCell" customModule="JobPlanetMyPage" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="233" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="229.5" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qGC-8m-Pbl" id="Xj3-QK-ZlT">
                                             <rect key="frame" x="0.0" y="0.0" width="385.5" height="50"/>
@@ -148,7 +163,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="구글 코리아 외 4개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqw-Pd-Es5">
-                                                    <rect key="frame" x="231" y="14" width="126.5" height="22"/>
+                                                    <rect key="frame" x="231" y="15" width="126.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemGray4Color"/>
                                                     <nil key="highlightedColor"/>
@@ -158,7 +173,6 @@
                                                 <constraint firstItem="Waw-EE-jwf" firstAttribute="leading" secondItem="Xj3-QK-ZlT" secondAttribute="leadingMargin" id="Gqy-c1-jJr"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="pqw-Pd-Es5" secondAttribute="trailing" constant="20" id="Kl5-Nj-eyW"/>
                                                 <constraint firstItem="pqw-Pd-Es5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Waw-EE-jwf" secondAttribute="trailing" constant="8" symbolic="YES" id="LbW-gD-NE2"/>
-                                                <constraint firstItem="pqw-Pd-Es5" firstAttribute="top" secondItem="Xj3-QK-ZlT" secondAttribute="topMargin" constant="3" id="e1g-Gh-XHX"/>
                                                 <constraint firstItem="pqw-Pd-Es5" firstAttribute="centerY" secondItem="Waw-EE-jwf" secondAttribute="centerY" id="iZi-zy-SvA"/>
                                                 <constraint firstItem="Waw-EE-jwf" firstAttribute="centerY" secondItem="Xj3-QK-ZlT" secondAttribute="centerY" id="j5h-0O-FXX"/>
                                             </constraints>
@@ -176,14 +190,13 @@
                         <constraints>
                             <constraint firstItem="gaB-sf-fA1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IrI-BC-TYr"/>
                             <constraint firstItem="1HG-QV-p4v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LIA-kF-Nuu"/>
+                            <constraint firstItem="1HG-QV-p4v" firstAttribute="top" secondItem="gaB-sf-fA1" secondAttribute="bottom" id="Pw9-GD-nXi"/>
                             <constraint firstItem="gaB-sf-fA1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RsL-2C-c2O"/>
-                            <constraint firstItem="gaB-sf-fA1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZhX-hX-iLz"/>
-                            <constraint firstItem="1HG-QV-p4v" firstAttribute="top" secondItem="gaB-sf-fA1" secondAttribute="bottom" id="ax6-Ww-5Mc"/>
+                            <constraint firstItem="gaB-sf-fA1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZhX-hX-iLz"/>
                             <constraint firstItem="1HG-QV-p4v" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cj7-pc-yt7"/>
                             <constraint firstItem="1HG-QV-p4v" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kdq-kR-um9"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="마이페이지" image="line.3.horizontal" catalog="system" id="j1K-oW-XAa"/>
                     <navigationItem key="navigationItem" title="마이페이지" id="1Zj-BA-wRv">
                         <barButtonItem key="rightBarButtonItem" title="설정" id="vKI-KX-Ca1">
                             <color key="tintColor" systemColor="systemGreenColor"/>
@@ -196,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2265.217391304348" y="84.375"/>
+            <point key="canvasLocation" x="3175.36231884058" y="84.375"/>
         </scene>
         <!--Received Offer View Controller-->
         <scene sceneID="1vd-6Q-iwL">
@@ -368,7 +381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2e-Oc-xBB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3034.7826086956525" y="83.705357142857139"/>
+            <point key="canvasLocation" x="3944.9275362318845" y="83.705357142857139"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sAv-Q6-GQ5">
@@ -382,12 +395,30 @@
                         <color key="selectedImageTintColor" systemColor="systemGrayColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="6Er-Po-6yl"/>
+                        <segue destination="4rv-h4-7w0" kind="relationship" relationship="viewControllers" id="6Er-Po-6yl"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O0S-Hp-c1S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1442" y="84"/>
+            <point key="canvasLocation" x="728" y="84"/>
+        </scene>
+        <!--마이페이지-->
+        <scene sceneID="wgO-pD-9WW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="4rv-h4-7w0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="마이페이지" image="line.3.horizontal" catalog="system" id="j1K-oW-XAa"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TdR-eN-VFa">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bMD-DM-EFD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LTu-JI-o3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2265.217391304348" y="84.375"/>
         </scene>
     </scenes>
     <resources>
