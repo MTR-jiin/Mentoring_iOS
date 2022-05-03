@@ -7,10 +7,17 @@
 
 import UIKit
 
-class MyPageListTableViewCell: UITableViewCell {
-
+class MyPageListTableViewCell: UITableViewCell, CellDataProtocol {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subDetailLabel: UILabel!
+    
+    var data: Any? {
+        didSet {
+            guard let data = data as? MypageViewController.ListData else { return }
+            titleLabel.text = data.type.rawValue
+            subDetailLabel.text = data.data as? String
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
