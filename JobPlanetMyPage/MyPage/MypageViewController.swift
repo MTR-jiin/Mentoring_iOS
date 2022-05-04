@@ -68,6 +68,12 @@ final class MypageViewController: UIViewController {
         mypageTableView.delegate = self
         navigationUnderLine(sendView: navigationView)
     }
+    
+    @IBAction func tappedSettingBtn(_ sender: UIButton) {
+        let settingVC = self.storyboard?.instantiateViewController(withIdentifier: "MyPageSettingViewController") as! MyPageSettingViewController
+        navigationController?.pushViewController(settingVC, animated: true)
+    }
+    
 
 }
 
