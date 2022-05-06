@@ -8,7 +8,7 @@
 import UIKit
 
 class MyPageSettingViewController: UIViewController {
-    
+    //TextField
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
@@ -16,7 +16,9 @@ class MyPageSettingViewController: UIViewController {
     @IBOutlet weak var birthTextField: UITextField!
     @IBOutlet weak var careerTextField: UITextField!
     @IBOutlet weak var nowJobTextField: UITextField!
-    
+    //Button
+    @IBOutlet weak var saveButton: UIButton!
+    //MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBarController?.tabBar.isHidden = true
@@ -24,25 +26,53 @@ class MyPageSettingViewController: UIViewController {
         nameTextField.becomeFirstResponder()
         hideKeyboardWhenTappedBackground()
     }
-    
+    //MARK: - Method
     private func configureUI() {
+        saveButton.isEnabled = false
         [nameTextField, emailTextField, phoneNumberTextField, genderTextField, birthTextField, careerTextField, nowJobTextField].forEach {
-            $0?.makeUnderLine()
+            $0?.makeUnderLine(.systemGray4)
+            $0?.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         }
     }
+    
+    @objc func textFieldDidChange(sender: UITextField) {
+        sender.text != "" ? sender.makeUnderLine(UIColor(named: "lightGreen")!) : sender.makeUnderLine(.systemGray4)
+        guard
+            let name = nameTextField.text, !name.isEmpty,
+            let email = emailTextField.text, !email.isEmpty,
+            let phone = phoneNumberTextField.text, !phone.isEmpty,
+            let gender = genderTextField.text, !gender.isEmpty,
+            let birth = birthTextField.text, !birth.isEmpty,
+            let career = careerTextField.text, !career.isEmpty,
+            let nowJob = nowJobTextField.text, !nowJob.isEmpty
+        else {
+            saveButton.isEnabled = false
+            return
+        }
+        saveButton.isEnabled = true
+        saveButton.tintColor = UIColor(named: "lightGreen")
 
+    }
+
+    //MARK: - IBAction
     @IBAction func tapBackBtn(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
-    
-}
 
+    @IBAction func enabledSaveBtn(_ sender: UIButton) {
+        if nameTextField.text != "" && emailTextField.text != "" {
+            sender.isEnabled = true
+            sender.tintColor = .red
+        }
+    }
+}
+//MARK: - Extenstion
 //텍스트 필드 밑줄 생성
 extension UITextField {
-    func makeUnderLine() {
+    func makeUnderLine(_ color: UIColor) {
         let bottomLine = CALayer()
         bottomLine.frame = CGRect(x: 0.0, y: self.frame.height - 1, width: self.frame.width - 25, height: 1.0)
-        bottomLine.backgroundColor = UIColor.systemGray5.cgColor
+        bottomLine.backgroundColor = color.cgColor
         borderStyle = UITextField.BorderStyle.none
         layer.addSublayer(bottomLine)
     }

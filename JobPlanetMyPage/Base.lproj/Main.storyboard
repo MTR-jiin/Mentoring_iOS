@@ -424,6 +424,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="저장">
                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="enabledSaveBtn:" destination="HjF-jq-Lqx" eventType="touchUpInside" id="Ump-E3-EU9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -709,6 +712,7 @@
                         <outlet property="nameTextField" destination="Q2u-IN-AgA" id="oRK-1l-LWE"/>
                         <outlet property="nowJobTextField" destination="Hjp-Lw-Ktq" id="Yg5-wt-Fpk"/>
                         <outlet property="phoneNumberTextField" destination="aZ4-Le-3jC" id="k35-N6-OOs"/>
+                        <outlet property="saveButton" destination="ZxV-eD-pYL" id="zyz-ua-2w7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H05-Lr-Hjn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
