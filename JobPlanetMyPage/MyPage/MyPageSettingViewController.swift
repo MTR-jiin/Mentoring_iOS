@@ -22,6 +22,7 @@ class MyPageSettingViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     //View
     @IBOutlet weak var tagListView: TagListView!
+    var keyHeight: CGFloat?
     
     //MARK: - View LifeCycle
     override func viewDidLoad() {
@@ -29,9 +30,9 @@ class MyPageSettingViewController: UIViewController {
         tabBarController?.tabBar.isHidden = true
         configureUI()
         makeTagListView()
-        nameTextField.becomeFirstResponder()
-        hideKeyboardWhenTappedBackground()
-    }
+        settingKeyboard()
+}
+  
     //MARK: - Method
     private func configureUI() {
         saveButton.isEnabled = false
@@ -41,6 +42,15 @@ class MyPageSettingViewController: UIViewController {
         }
         genderLabel.makeUnderLine(.systemGray4)
         tappedGenderLabel()
+    }
+    
+    private func settingKeyboard() {
+        nameTextField.becomeFirstResponder()
+        hideKeyboardWhenTappedBackground()
+        [nameTextField, emailTextField, phoneNumberTextField, birthTextField, careerTextField, nowJobTextField].forEach {
+            $0?.delegate = self
+            $0?.returnKeyType = .next
+        }
     }
     
     private func makeTagListView() {
@@ -57,6 +67,7 @@ class MyPageSettingViewController: UIViewController {
         
     }
     //MARK: - @objc method
+    //성별 라벨 탭할시
     @objc func selectedGender(sender: UITapGestureRecognizer) {
         let alert = UIAlertController(title: "성별 선택", message: nil, preferredStyle: .actionSheet)
         let male = UIAlertAction(title: "남자", style: .default) { action in
@@ -74,7 +85,7 @@ class MyPageSettingViewController: UIViewController {
         self.genderLabel.makeUnderLine(UIColor(named: "lightGreen")!)
        
     }
-    
+    //텍스트 필드 변하는거 감지
     @objc func textFieldDidChange(sender: UITextField) {
         sender.text != "" ? sender.makeUnderLine(UIColor(named: "lightGreen")!) : sender.makeUnderLine(.systemGray4)
         guard
@@ -107,6 +118,24 @@ class MyPageSettingViewController: UIViewController {
 }
 
 //MARK: - Extenstion
+extension MyPageSettingViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case nameTextField:
+            emailTextField.becomeFirstResponder()
+        case emailTextField:
+            phoneNumberTextField.becomeFirstResponder()
+        case phoneNumberTextField:
+            birthTextField.becomeFirstResponder()
+        case birthTextField:
+            careerTextField.becomeFirstResponder()
+        default:
+            careerTextField.resignFirstResponder()
+        }
+        return true
+    }
+}
+
 //텍스트 필드 밑줄 생성
 extension UIView {
     func makeUnderLine(_ color: UIColor) {
