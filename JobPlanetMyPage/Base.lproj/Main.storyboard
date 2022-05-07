@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -446,7 +447,7 @@
                                 <rect key="frame" x="0.0" y="100" width="414" height="1066"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNP-qq-bQu">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="951"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="833"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="l9s-x2-awa">
                                                 <rect key="frame" x="170" y="21.5" width="72" height="70"/>
@@ -457,7 +458,7 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Zqe-Gp-gIE">
-                                                <rect key="frame" x="20" y="110" width="374" height="821"/>
+                                                <rect key="frame" x="20" y="110" width="374" height="703"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ECw-E8-Jxa">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="62"/>
@@ -643,7 +644,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eZz-fB-z2f">
-                                                        <rect key="frame" x="0.0" y="644" width="374" height="177"/>
+                                                        <rect key="frame" x="0.0" y="644" width="374" height="59"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="업무 및 스킬 (필수)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgh-YA-cpz">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
@@ -652,7 +653,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ouJ-XH-kKn" customClass="TagListView" customModule="TagListView">
-                                                                <rect key="frame" x="0.0" y="27" width="374" height="150"/>
+                                                                <rect key="frame" x="0.0" y="27" width="374" height="32"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="paddingY">
                                                                         <real key="value" value="10"/>
@@ -681,6 +682,9 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="enableRemoveButton" value="NO"/>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
                                                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="tagSelectedBackgroundColor">
+                                                                        <color key="value" name="lightGreen"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
@@ -787,12 +791,20 @@
             <point key="canvasLocation" x="2265.217391304348" y="84.375"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="ouJ-XH-kKn">
+            <size key="intrinsicContentSize" width="374" height="32"/>
+        </designable>
+    </designables>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="64"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person.fill.badge.plus" catalog="system" width="128" height="124"/>
+        <namedColor name="lightGreen">
+            <color red="0.14117647058823529" green="0.83529411764705885" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
