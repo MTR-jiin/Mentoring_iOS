@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import TagListView
 
 class MyPageSettingViewController: UIViewController {
     //TextField
@@ -18,11 +19,15 @@ class MyPageSettingViewController: UIViewController {
     @IBOutlet weak var nowJobTextField: UITextField!
     //Button
     @IBOutlet weak var saveButton: UIButton!
+    //View
+    @IBOutlet weak var tagListView: TagListView!
+    
     //MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBarController?.tabBar.isHidden = true
         configureUI()
+        makeTagListView()
         nameTextField.becomeFirstResponder()
         hideKeyboardWhenTappedBackground()
     }
@@ -32,6 +37,14 @@ class MyPageSettingViewController: UIViewController {
         [nameTextField, emailTextField, phoneNumberTextField, genderTextField, birthTextField, careerTextField, nowJobTextField].forEach {
             $0?.makeUnderLine(.systemGray4)
             $0?.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        }
+        birthTextField.text = "1998년"
+    }
+    
+    private func makeTagListView() {
+        let tagList = ["UI디자인", "UX/UI디자인", "디자인", "RxSwift", "AutoLayout", "illustrator", "Sketch", "SwiftUI", "UIKit"]
+        tagList.forEach {
+            tagListView.addTag($0)
         }
     }
     
@@ -51,7 +64,6 @@ class MyPageSettingViewController: UIViewController {
         }
         saveButton.isEnabled = true
         saveButton.tintColor = UIColor(named: "lightGreen")
-
     }
 
     //MARK: - IBAction
@@ -66,6 +78,7 @@ class MyPageSettingViewController: UIViewController {
         }
     }
 }
+
 //MARK: - Extenstion
 //텍스트 필드 밑줄 생성
 extension UITextField {
@@ -85,7 +98,7 @@ extension UIViewController {
          tapEvent.cancelsTouchesInView = false
          view.addGestureRecognizer(tapEvent)
     }
-    
+
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
