@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22E3610394E2CACEAF2CD2BF /* Pods_JobPlanetMyPage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7BC45803FCF82EA29897E5 /* Pods_JobPlanetMyPage.framework */; };
+		6C14BBCC2828FB7E007C0ED5 /* UnderLineTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C14BBCB2828FB7E007C0ED5 /* UnderLineTextField.xib */; };
+		6C14BBD02828FBC5007C0ED5 /* UnderLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C14BBCF2828FBC5007C0ED5 /* UnderLineTextField.swift */; };
 		6C3F9D9F2822CBA300E0630A /* MyPageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F9D9E2822CBA300E0630A /* MyPageSettingViewController.swift */; };
 		6C54B51B281FE33F0068B211 /* CellDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54B51A281FE33F0068B211 /* CellDataProtocol.swift */; };
 		6C847823281A112000954861 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C847822281A112000954861 /* AppDelegate.swift */; };
@@ -16,6 +17,7 @@
 		6C84782A281A112100954861 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C847828281A112100954861 /* Main.storyboard */; };
 		6C84782C281A112100954861 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C84782B281A112100954861 /* Assets.xcassets */; };
 		6C84782F281A112100954861 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C84782D281A112100954861 /* LaunchScreen.storyboard */; };
+		6CB0BE762829114C000C838A /* TagListView in Frameworks */ = {isa = PBXBuildFile; productRef = 6CB0BE752829114C000C838A /* TagListView */; };
 		6CD8656C281B69EE000C8195 /* ProfileFirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD8656B281B69EE000C8195 /* ProfileFirstTableViewCell.swift */; };
 		6CD8656E281B6A8C000C8195 /* MyPageListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD8656D281B6A8C000C8195 /* MyPageListTableViewCell.swift */; };
 		6CD86570281B7471000C8195 /* GrayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD8656F281B7471000C8195 /* GrayTableViewCell.swift */; };
@@ -27,7 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5D7BC45803FCF82EA29897E5 /* Pods_JobPlanetMyPage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JobPlanetMyPage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C14BBCB2828FB7E007C0ED5 /* UnderLineTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnderLineTextField.xib; sourceTree = "<group>"; };
+		6C14BBCF2828FBC5007C0ED5 /* UnderLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLineTextField.swift; sourceTree = "<group>"; };
 		6C3F9D9E2822CBA300E0630A /* MyPageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyPageSettingViewController.swift; path = MyPage/MyPageSettingViewController.swift; sourceTree = "<group>"; };
 		6C54B51A281FE33F0068B211 /* CellDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDataProtocol.swift; sourceTree = "<group>"; };
 		6C84781F281A112000954861 /* JobPlanetMyPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobPlanetMyPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,13 +41,12 @@
 		6C84782B281A112100954861 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C84782E281A112100954861 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C847830281A112100954861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CB0BE7328291105000C838A /* TagListView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TagListView; sourceTree = "<group>"; };
 		6CD8656B281B69EE000C8195 /* ProfileFirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFirstTableViewCell.swift; sourceTree = "<group>"; };
 		6CD8656D281B6A8C000C8195 /* MyPageListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageListTableViewCell.swift; sourceTree = "<group>"; };
 		6CD8656F281B7471000C8195 /* GrayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayTableViewCell.swift; sourceTree = "<group>"; };
 		6CD86571281B79E1000C8195 /* ReceivedOfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedOfferViewController.swift; sourceTree = "<group>"; };
 		6CD86573281B9AC6000C8195 /* ReceivedOfferTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedOfferTableViewCell.swift; sourceTree = "<group>"; };
-		87CEE81833E4851B4E97B5F2 /* Pods-JobPlanetMyPage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobPlanetMyPage.release.xcconfig"; path = "Target Support Files/Pods-JobPlanetMyPage/Pods-JobPlanetMyPage.release.xcconfig"; sourceTree = "<group>"; };
-		FA9F9911515AB020C61C46E6 /* Pods-JobPlanetMyPage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobPlanetMyPage.debug.xcconfig"; path = "Target Support Files/Pods-JobPlanetMyPage/Pods-JobPlanetMyPage.debug.xcconfig"; sourceTree = "<group>"; };
 		FC6B973C281C47C300B3C40F /* Ex+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UIView.swift"; sourceTree = "<group>"; };
 		FC6B973E281C47DB00B3C40F /* Ex+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UIViewController.swift"; sourceTree = "<group>"; };
 		FC6B9740281C492A00B3C40F /* Ex+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UITableView.swift"; sourceTree = "<group>"; };
@@ -55,19 +57,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22E3610394E2CACEAF2CD2BF /* Pods_JobPlanetMyPage.framework in Frameworks */,
+				6CB0BE762829114C000C838A /* TagListView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00C7EB414A386DAB7FD57D80 /* Frameworks */ = {
+		6C14BBCE2828FBA9007C0ED5 /* UnderLine */ = {
 			isa = PBXGroup;
 			children = (
-				5D7BC45803FCF82EA29897E5 /* Pods_JobPlanetMyPage.framework */,
+				6C14BBCB2828FB7E007C0ED5 /* UnderLineTextField.xib */,
+				6C14BBCF2828FBC5007C0ED5 /* UnderLineTextField.swift */,
 			);
-			name = Frameworks;
+			path = UnderLine;
 			sourceTree = "<group>";
 		};
 		6C3F9D9D2822CB9300E0630A /* MyPageSetting */ = {
@@ -82,9 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				6C847821281A112000954861 /* JobPlanetMyPage */,
+				6CB0BE7228291100000C838A /* Vender */,
 				6C847820281A112000954861 /* Products */,
-				F30D0092C5D903C1C2CFBAFE /* Pods */,
-				00C7EB414A386DAB7FD57D80 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +113,14 @@
 				6C847830281A112100954861 /* Info.plist */,
 			);
 			path = JobPlanetMyPage;
+			sourceTree = "<group>";
+		};
+		6CB0BE7228291100000C838A /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				6CB0BE7328291105000C838A /* TagListView */,
+			);
+			path = Vender;
 			sourceTree = "<group>";
 		};
 		6CD86575281B9AD0000C8195 /* MyPage */ = {
@@ -142,19 +152,10 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		F30D0092C5D903C1C2CFBAFE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				FA9F9911515AB020C61C46E6 /* Pods-JobPlanetMyPage.debug.xcconfig */,
-				87CEE81833E4851B4E97B5F2 /* Pods-JobPlanetMyPage.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		FC6B973A281C47B600B3C40F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				6C14BBCE2828FBA9007C0ED5 /* UnderLine */,
 				FC6B973B281C47BB00B3C40F /* Ex */,
 			);
 			path = Helper;
@@ -177,17 +178,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C847833281A112100954861 /* Build configuration list for PBXNativeTarget "JobPlanetMyPage" */;
 			buildPhases = (
-				DFE8EF6B0FEB36FC257C466F /* [CP] Check Pods Manifest.lock */,
 				6C84781B281A112000954861 /* Sources */,
 				6C84781C281A112000954861 /* Frameworks */,
 				6C84781D281A112000954861 /* Resources */,
-				2D3F8CDFB6DC6B3540E8819C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = JobPlanetMyPage;
+			packageProductDependencies = (
+				6CB0BE752829114C000C838A /* TagListView */,
+			);
 			productName = JobPlanetMyPage;
 			productReference = 6C84781F281A112000954861 /* JobPlanetMyPage.app */;
 			productType = "com.apple.product-type.application";
@@ -232,53 +234,12 @@
 			files = (
 				6C84782F281A112100954861 /* LaunchScreen.storyboard in Resources */,
 				6C84782C281A112100954861 /* Assets.xcassets in Resources */,
+				6C14BBCC2828FB7E007C0ED5 /* UnderLineTextField.xib in Resources */,
 				6C84782A281A112100954861 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2D3F8CDFB6DC6B3540E8819C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JobPlanetMyPage/Pods-JobPlanetMyPage-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JobPlanetMyPage/Pods-JobPlanetMyPage-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JobPlanetMyPage/Pods-JobPlanetMyPage-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DFE8EF6B0FEB36FC257C466F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-JobPlanetMyPage-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6C84781B281A112000954861 /* Sources */ = {
@@ -289,6 +250,7 @@
 				6C54B51B281FE33F0068B211 /* CellDataProtocol.swift in Sources */,
 				6CD86572281B79E1000C8195 /* ReceivedOfferViewController.swift in Sources */,
 				6CD8656C281B69EE000C8195 /* ProfileFirstTableViewCell.swift in Sources */,
+				6C14BBD02828FBC5007C0ED5 /* UnderLineTextField.swift in Sources */,
 				6CD8656E281B6A8C000C8195 /* MyPageListTableViewCell.swift in Sources */,
 				FC6B973D281C47C300B3C40F /* Ex+UIView.swift in Sources */,
 				6C847823281A112000954861 /* AppDelegate.swift in Sources */,
@@ -441,7 +403,6 @@
 		};
 		6C847834281A112100954861 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA9F9911515AB020C61C46E6 /* Pods-JobPlanetMyPage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -470,7 +431,6 @@
 		};
 		6C847835281A112100954861 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87CEE81833E4851B4E97B5F2 /* Pods-JobPlanetMyPage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -519,6 +479,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6CB0BE752829114C000C838A /* TagListView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TagListView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6C847817281A112000954861 /* Project object */;
 }

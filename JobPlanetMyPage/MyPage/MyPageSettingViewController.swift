@@ -31,7 +31,7 @@ class MyPageSettingViewController: UIViewController {
         configureUI()
         makeTagListView()
         settingKeyboard()
-}
+    }
   
     //MARK: - Method
     private func configureUI() {

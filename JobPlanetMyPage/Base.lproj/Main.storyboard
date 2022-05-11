@@ -447,7 +447,7 @@
                                 <rect key="frame" x="0.0" y="100" width="414" height="1066"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNP-qq-bQu">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="833"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="966"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="l9s-x2-awa">
                                                 <rect key="frame" x="170" y="21.5" width="72" height="70"/>
@@ -458,10 +458,14 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Zqe-Gp-gIE">
-                                                <rect key="frame" x="20" y="110" width="374" height="703"/>
+                                                <rect key="frame" x="20" y="110" width="374" height="836"/>
                                                 <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1F-bY-aAU" customClass="UnderLineTextField" customModule="JobPlanetMyPage" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="85"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ECw-E8-Jxa">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="62"/>
+                                                        <rect key="frame" x="0.0" y="115" width="374" height="62"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름 (필수)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aR-QP-4Fe">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
@@ -487,7 +491,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VGu-3Z-z5t">
-                                                        <rect key="frame" x="0.0" y="92" width="374" height="62"/>
+                                                        <rect key="frame" x="0.0" y="207" width="374" height="62"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일 (필수)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSE-CC-Wep">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
@@ -513,7 +517,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SQb-JK-Vk2">
-                                                        <rect key="frame" x="0.0" y="184" width="374" height="62"/>
+                                                        <rect key="frame" x="0.0" y="299" width="374" height="62"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연락처 (필수)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETq-n4-Zif">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
@@ -539,7 +543,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="txk-OL-nSU">
-                                                        <rect key="frame" x="0.0" y="276" width="374" height="62"/>
+                                                        <rect key="frame" x="0.0" y="391" width="374" height="62"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성별 (필수)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9N-uJ-UAo">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
@@ -566,7 +570,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cyN-Nv-Nsg">
-                                                        <rect key="frame" x="0.0" y="368" width="374" height="62"/>
+                                                        <rect key="frame" x="0.0" y="483" width="374" height="62"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="출생년도 (필수)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3d-2R-jXO">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
@@ -592,7 +596,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GjN-ww-4Ft">
-                                                        <rect key="frame" x="0.0" y="460" width="374" height="62"/>
+                                                        <rect key="frame" x="0.0" y="575" width="374" height="62"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 경력 (필수)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UB4-tu-nUw">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
@@ -618,7 +622,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cam-Ex-FXi">
-                                                        <rect key="frame" x="0.0" y="552" width="374" height="62"/>
+                                                        <rect key="frame" x="0.0" y="667" width="374" height="62"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재(관심)직종 (필수)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3V-Yf-Zs8">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
@@ -644,7 +648,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eZz-fB-z2f">
-                                                        <rect key="frame" x="0.0" y="644" width="374" height="59"/>
+                                                        <rect key="frame" x="0.0" y="759" width="374" height="77"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="업무 및 스킬 (필수)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgh-YA-cpz">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
@@ -653,7 +657,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ouJ-XH-kKn" customClass="TagListView" customModule="TagListView">
-                                                                <rect key="frame" x="0.0" y="27" width="374" height="32"/>
+                                                                <rect key="frame" x="0.0" y="27" width="374" height="50"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="paddingY">
                                                                         <real key="value" value="10"/>
@@ -791,11 +795,6 @@
             <point key="canvasLocation" x="2265.217391304348" y="84.375"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="ouJ-XH-kKn">
-            <size key="intrinsicContentSize" width="374" height="32"/>
-        </designable>
-    </designables>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="house" catalog="system" width="128" height="106"/>
