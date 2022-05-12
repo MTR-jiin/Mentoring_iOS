@@ -416,6 +416,7 @@
                                         <connections>
                                             <action selector="backNaviBtn:" destination="MdQ-Sw-iS7" eventType="touchUpInside" id="xcu-h0-A99"/>
                                             <action selector="tapBackBtn:" destination="HjF-jq-Lqx" eventType="touchUpInside" id="EJt-zC-WmQ"/>
+                                            <action selector="tappedBackBtn:" destination="HjF-jq-Lqx" eventType="touchUpInside" id="kbv-LW-ktc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxV-eD-pYL">

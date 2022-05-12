@@ -8,33 +8,23 @@
 import Foundation
 import UIKit
 
-enum LineColor {
-    case gray, green
-}
-
 class UnderLineTextField: UIView {
     
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var textField: UITextField!
-    @IBOutlet private weak var lineView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var lineView: UIView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadView()
+        self.textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         loadView()
     }
-    
-//    convenience init(frame: CGRect, title: String, placeHolder: String, underLine: LineColor) {
-//        self.init(frame: frame)
-//        self.titleLabel.text = title
-//        self.textField.placeholder = placeHolder
-//        self.lineView.tintColor = underLine == .gray ? .systemGray5 : UIColor(named: "lightGreen")
-//    }
-//
+
     private func loadView() {
         guard let xibName = NSStringFromClass(self.classForCoder).components(separatedBy: ".").last,
               let view = Bundle.main.loadNibNamed(xibName, owner: self, options: nil)?.first as? UIView else { return }
@@ -43,7 +33,7 @@ class UnderLineTextField: UIView {
         self.addSubview(view)
     }
     
-    func loadViewFromNib(nib: String) -> UIView? {
+    private func loadViewFromNib(nib: String) -> UIView? {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: nib, bundle: bundle)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
@@ -52,7 +42,14 @@ class UnderLineTextField: UIView {
     func configure(infoData: textFieldInfo) {
         self.titleLabel.text = infoData.title
         self.textField.placeholder = infoData.placeHolder
-        self.lineView.tintColor = infoData.underLine == .gray ? .systemGray5 : UIColor(named: "lightGreen")
     }
-        
+    
+    @objc func textFieldDidChange(sender: UITextField) {
+        if sender.text != "" {
+            lineView.backgroundColor = UIColor(named: "lightGreen")
+        } else {
+            lineView.backgroundColor = .systemGray5
+        }
+    }
 }
+
