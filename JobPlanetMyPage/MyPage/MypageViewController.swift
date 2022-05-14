@@ -21,6 +21,7 @@ final class MypageViewController: UIViewController {
         case occupation = "관심 직종"
         case industry = "관심 산업군"
         case lecture = "내 강좌"
+        case satisfaction = "직군별 만족도"
         
         var cellIdentifer: String {
             switch self {
@@ -47,6 +48,8 @@ final class MypageViewController: UIViewController {
         .init(type: .account),
         .init(type: .activity),
         .init(type: .university),
+        .init(type: .line),
+        .init(type: .satisfaction),
         .init(type: .line),
         .init(type: .offer, data: "구글코리아 외 4개"),
         .init(type: .line),
@@ -102,6 +105,10 @@ extension MypageViewController: UITableViewDelegate{
             guard let offerVC = self.storyboard?.instantiateViewController(withIdentifier: "ReceivedOfferViewController") as? ReceivedOfferViewController else { return }
             offerVC.sentNavigationTItle = cellData.type.rawValue
             self.navigationController?.pushViewController(offerVC, animated: true)
+        case .satisfaction:
+            guard let jobVC = self.storyboard?.instantiateViewController(withIdentifier: "JobGroupViewController") as? JobGroupViewController else { return }
+            //데이터 전달
+            self.navigationController?.pushViewController(jobVC, animated: true)
         default: return
         }
     }
