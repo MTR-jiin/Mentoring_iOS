@@ -8,12 +8,24 @@
 import Foundation
 import UIKit
 
+struct UnderLineData {
+    let title: String
+    let placeholder: String
+}
+
 class UnderLineTextField: UIView {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var lineView: UIView!
     
+    public var data: UnderLineData? {
+        didSet {
+            guard let data = data else { return }
+            configure(infoData: data)
+        }
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadView()
@@ -23,6 +35,11 @@ class UnderLineTextField: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         loadView()
+    }
+    
+    convenience init(infoData: UnderLineData) {
+        self.init(frame: .zero)
+        configure(infoData: infoData)
     }
 
     private func loadView() {
@@ -39,9 +56,9 @@ class UnderLineTextField: UIView {
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
     
-    func configure(infoData: textFieldInfo) {
+    private func configure(infoData: UnderLineData) {
         self.titleLabel.text = infoData.title
-        self.textField.placeholder = infoData.placeHolder
+        self.textField.placeholder = infoData.placeholder
     }
     
     @objc func textFieldDidChange(sender: UITextField) {

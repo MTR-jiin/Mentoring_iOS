@@ -414,8 +414,6 @@
                                             <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="backNaviBtn:" destination="MdQ-Sw-iS7" eventType="touchUpInside" id="xcu-h0-A99"/>
-                                            <action selector="tapBackBtn:" destination="HjF-jq-Lqx" eventType="touchUpInside" id="EJt-zC-WmQ"/>
                                             <action selector="tappedBackBtn:" destination="HjF-jq-Lqx" eventType="touchUpInside" id="kbv-LW-ktc"/>
                                         </connections>
                                     </button>
@@ -557,6 +555,7 @@
                     <size key="freeformSize" width="414" height="1200"/>
                     <connections>
                         <outlet property="myPageStackView" destination="Zqe-Gp-gIE" id="kJd-vs-nbB"/>
+                        <outlet property="navigationView" destination="Ba5-nI-6I8" id="gla-PE-fmR"/>
                         <outlet property="saveButton" destination="ZxV-eD-pYL" id="zyz-ua-2w7"/>
                         <outlet property="tagListView" destination="ouJ-XH-kKn" id="3v2-MV-R0C"/>
                     </connections>
