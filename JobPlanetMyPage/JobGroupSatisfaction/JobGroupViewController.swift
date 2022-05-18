@@ -7,16 +7,17 @@
 
 import UIKit
 
-class JobGroupViewController: UIViewController {
-    
-    struct cellData {
-        let title: String
-        let rating: Float
-        init(title: String, rating: Float) {
-            self.title = title
-            self.rating = rating
-        }
+struct cellData {
+    let title: String
+    let rating: Float
+    init(title: String, rating: Float) {
+        self.title = title
+        self.rating = rating
     }
+}
+
+class JobGroupViewController: UIViewController {
+    @IBOutlet private weak var tableView: UITableView!
     
     private var dataList: [cellData] = [
         .init(title: "연구 개발", rating: 4.8),
@@ -28,8 +29,7 @@ class JobGroupViewController: UIViewController {
         .init(title: "경영/기획/컨설팅", rating: 4.2),
         .init(title: "어쩌고", rating: 1.0)
     ]
-
-    @IBOutlet private weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -39,6 +39,12 @@ class JobGroupViewController: UIViewController {
     private func sortedtableList() {
         dataList.sort { return $0.rating > $1.rating } //비율로 정렬
     }
+    
+    @IBAction func tappedBackBtn(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
 
 extension JobGroupViewController: UITableViewDataSource {
@@ -48,8 +54,7 @@ extension JobGroupViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "JobGroupTableViewCell", for: indexPath) as? JobGroupTableViewCell else { return UITableViewCell() }
-        cell.titleLabel.text = dataList[indexPath.row].title
-        cell.percentLabel.text = "\(dataList[indexPath.row].rating)"
+        cell.data = dataList[indexPath.row]
         return cell
     }
 }

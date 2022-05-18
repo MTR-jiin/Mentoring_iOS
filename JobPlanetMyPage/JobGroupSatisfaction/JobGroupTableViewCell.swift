@@ -13,14 +13,21 @@ class JobGroupTableViewCell: UITableViewCell {
     @IBOutlet weak var percentLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     
+    public var data: cellData? {
+        didSet {
+            guard let data = data else { return }
+            titleLabel.text = data.title
+            percentLabel.text = "\(data.rating)"
+            progressBar.progress = data.rating / 5
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        progressBar.transform = progressBar.transform.scaledBy(x: 1, y: 2.5)
-//        progressBar.layer.cornerRadius = 12
-//        progressBar.clipsToBounds = true
-//        progressBar.layer.sublayers![1].cornerRadius = 12
-//        progressBar.subviews[1].clipsToBounds = true
+        progressBar.layer.cornerRadius = 5
+        progressBar.clipsToBounds = true
+        progressBar.layer.sublayers![1].cornerRadius = 5
+        progressBar.subviews[1].clipsToBounds = true
         
     }
 
