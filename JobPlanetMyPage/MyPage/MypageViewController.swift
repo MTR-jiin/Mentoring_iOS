@@ -70,6 +70,7 @@ final class MypageViewController: UIViewController {
         mypageTableView.dataSource = self
         mypageTableView.delegate = self
         navigationUnderLine(sendView: navigationView)
+        
     }
     
     @IBAction func tappedSettingBtn(_ sender: UIButton) {
@@ -108,7 +109,10 @@ extension MypageViewController: UITableViewDelegate{
         case .satisfaction:
             guard let jobVC = self.storyboard?.instantiateViewController(withIdentifier: "JobGroupViewController") as? JobGroupViewController else { return }
             //데이터 전달
-            self.navigationController?.pushViewController(jobVC, animated: true)
+            jobVC.modalPresentationStyle = .fullScreen
+            self.present(jobVC, animated: true)
+            
+            
         default: return
         }
     }
