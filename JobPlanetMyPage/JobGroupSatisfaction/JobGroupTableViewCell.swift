@@ -16,8 +16,12 @@ class JobGroupTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        progressBar.transform = progressBar.transform.scaledBy(x: 1, y: 5)
-
+        progressBar.transform = progressBar.transform.scaledBy(x: 1, y: 2.5)
+//        progressBar.layer.cornerRadius = 12
+//        progressBar.clipsToBounds = true
+//        progressBar.layer.sublayers![1].cornerRadius = 12
+//        progressBar.subviews[1].clipsToBounds = true
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
