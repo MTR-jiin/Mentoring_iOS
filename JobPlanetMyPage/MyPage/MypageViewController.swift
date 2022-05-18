@@ -74,7 +74,8 @@ final class MypageViewController: UIViewController {
     }
     
     @IBAction func tappedSettingBtn(_ sender: UIButton) {
-        let settingVC = self.storyboard?.instantiateViewController(withIdentifier: "MyPageSettingViewController") as! MyPageSettingViewController
+        let storyboard = UIStoryboard.init(name: "MypageSetting", bundle: nil)
+        let settingVC = storyboard.instantiateViewController(withIdentifier: "MyPageSettingViewController") as! MyPageSettingViewController
         navigationController?.pushViewController(settingVC, animated: true)
     }
     
@@ -107,7 +108,8 @@ extension MypageViewController: UITableViewDelegate{
             offerVC.sentNavigationTItle = cellData.type.rawValue
             self.navigationController?.pushViewController(offerVC, animated: true)
         case .satisfaction:
-            guard let jobVC = self.storyboard?.instantiateViewController(withIdentifier: "JobGroupViewController") as? JobGroupViewController else { return }
+            let storyboard = UIStoryboard.init(name: "JobGroup", bundle: nil)
+            guard let jobVC = storyboard.instantiateViewController(withIdentifier: "JobGroupViewController") as? JobGroupViewController else { return }
             //데이터 전달
             jobVC.modalPresentationStyle = .fullScreen
             self.present(jobVC, animated: true)

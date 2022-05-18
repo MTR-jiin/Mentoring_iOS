@@ -13,6 +13,8 @@
 		6C1E9276282FBF8000ECC87D /* JobGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E9275282FBF8000ECC87D /* JobGroupTableViewCell.swift */; };
 		6C3F9D9F2822CBA300E0630A /* MyPageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F9D9E2822CBA300E0630A /* MyPageSettingViewController.swift */; };
 		6C54B51B281FE33F0068B211 /* CellDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54B51A281FE33F0068B211 /* CellDataProtocol.swift */; };
+		6C75CE832834F6AD00105406 /* JobGroup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C75CE822834F6AD00105406 /* JobGroup.storyboard */; };
+		6C75CE872834F6FF00105406 /* MypageSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C75CE862834F6FF00105406 /* MypageSetting.storyboard */; };
 		6C847823281A112000954861 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C847822281A112000954861 /* AppDelegate.swift */; };
 		6C847825281A112000954861 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C847824281A112000954861 /* SceneDelegate.swift */; };
 		6C847827281A112000954861 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C847826281A112000954861 /* MypageViewController.swift */; };
@@ -37,6 +39,8 @@
 		6C1E9275282FBF8000ECC87D /* JobGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobGroupTableViewCell.swift; sourceTree = "<group>"; };
 		6C3F9D9E2822CBA300E0630A /* MyPageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyPageSettingViewController.swift; path = MyPage/MyPageSettingViewController.swift; sourceTree = "<group>"; };
 		6C54B51A281FE33F0068B211 /* CellDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDataProtocol.swift; sourceTree = "<group>"; };
+		6C75CE822834F6AD00105406 /* JobGroup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobGroup.storyboard; sourceTree = "<group>"; };
+		6C75CE862834F6FF00105406 /* MypageSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MypageSetting.storyboard; sourceTree = "<group>"; };
 		6C84781F281A112000954861 /* JobPlanetMyPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobPlanetMyPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C847822281A112000954861 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C847824281A112000954861 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 			children = (
 				6C1E9275282FBF8000ECC87D /* JobGroupTableViewCell.swift */,
 				6C1E9273282FBA0800ECC87D /* JobGroupViewController.swift */,
+				6C75CE822834F6AD00105406 /* JobGroup.storyboard */,
 			);
 			path = JobGroupSatisfaction;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				6C3F9D9E2822CBA300E0630A /* MyPageSettingViewController.swift */,
+				6C75CE862834F6FF00105406 /* MypageSetting.storyboard */,
 			);
 			name = MyPageSetting;
 			sourceTree = "<group>";
@@ -246,6 +252,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C75CE872834F6FF00105406 /* MypageSetting.storyboard in Resources */,
+				6C75CE832834F6AD00105406 /* JobGroup.storyboard in Resources */,
 				6C84782F281A112100954861 /* LaunchScreen.storyboard in Resources */,
 				6C84782C281A112100954861 /* Assets.xcassets in Resources */,
 				6C14BBCC2828FB7E007C0ED5 /* UnderLineTextField.xib in Resources */,
