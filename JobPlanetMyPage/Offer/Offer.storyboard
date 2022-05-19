@@ -210,14 +210,25 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="backNaviBtn:" destination="kA8-R9-xwV" eventType="touchUpInside" id="qrZ-8s-S4T"/>
+                                            <action selector="tappedBackBtn:" destination="dkg-dX-3gQ" eventType="touchUpInside" id="5QD-Nb-yDC"/>
                                         </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAJ-Y8-Xmw">
+                                        <rect key="frame" x="324" y="53.5" width="80" height="32"/>
+                                        <color key="tintColor" red="0.27322944510000002" green="0.27322944510000002" blue="0.27322944510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="기업 정보" titleAlignment="trailing">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                        </buttonConfiguration>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Efy-wP-Ldz" firstAttribute="centerY" secondItem="tlD-Y4-bd0" secondAttribute="centerY" id="9St-QK-yKy"/>
                                     <constraint firstItem="tlD-Y4-bd0" firstAttribute="centerX" secondItem="Kpo-uL-Dwe" secondAttribute="centerX" id="ArM-xg-LBb"/>
+                                    <constraint firstItem="vAJ-Y8-Xmw" firstAttribute="centerY" secondItem="tlD-Y4-bd0" secondAttribute="centerY" id="CMa-wX-TuI"/>
                                     <constraint firstItem="Efy-wP-Ldz" firstAttribute="leading" secondItem="Kpo-uL-Dwe" secondAttribute="leading" constant="10" id="TLh-Aj-tzd"/>
+                                    <constraint firstAttribute="trailing" secondItem="vAJ-Y8-Xmw" secondAttribute="trailing" constant="10" id="X1z-4Y-2x5"/>
                                     <constraint firstAttribute="height" constant="100" id="msZ-3F-SFa"/>
                                     <constraint firstAttribute="bottom" secondItem="tlD-Y4-bd0" secondAttribute="bottom" constant="20" id="who-Oa-VEs"/>
                                 </constraints>
@@ -228,7 +239,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fN-i0-svR">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="글로벌 마케팅 대행 및 플랫폼 운영팀 리더 (Project Leader)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfz-3R-XgH">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="글로벌 마케팅 대행 및 플랫폼 운영팀 리더 (Project Leader)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfz-3R-XgH">
                                                 <rect key="frame" x="20" y="20" width="374" height="48"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <nil key="textColor"/>
@@ -335,9 +346,15 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="kgW-EP-jbw"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="NX0-r4-ZYA"/>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSX-JF-BwI" userLabel="buttonView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSX-JF-BwI">
                                 <rect key="frame" x="0.0" y="1086" width="414" height="80"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLC-lu-dmp">
+                                        <rect key="frame" x="207" y="40" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qqd-B7-Apu">
                                         <rect key="frame" x="20" y="20" width="374" height="50"/>
                                         <subviews>
@@ -345,19 +362,23 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="182" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ux0-j2-UEF">
-                                                        <rect key="frame" x="45" y="10" width="92" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="50"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="거절">
                                                             <color key="titleColor" red="0.27322944510000002" green="0.27322944510000002" blue="0.27322944510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="tappedAcceptOrDenyBtn:" destination="dkg-dX-3gQ" eventType="touchUpInside" id="fhe-Cu-dpY"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <constraints>
-                                                    <constraint firstItem="ux0-j2-UEF" firstAttribute="centerX" secondItem="Fcr-dC-leM" secondAttribute="centerX" id="Dav-gQ-WHn"/>
-                                                    <constraint firstItem="ux0-j2-UEF" firstAttribute="centerY" secondItem="Fcr-dC-leM" secondAttribute="centerY" id="VND-pd-Aff"/>
-                                                    <constraint firstItem="ux0-j2-UEF" firstAttribute="leading" secondItem="Fcr-dC-leM" secondAttribute="leading" constant="45" id="sNd-J0-dng"/>
+                                                    <constraint firstItem="ux0-j2-UEF" firstAttribute="leading" secondItem="Fcr-dC-leM" secondAttribute="leading" id="Kis-0o-qLm"/>
+                                                    <constraint firstItem="ux0-j2-UEF" firstAttribute="top" secondItem="Fcr-dC-leM" secondAttribute="top" id="TFK-3h-mtc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ux0-j2-UEF" secondAttribute="trailing" id="x6Z-PI-cpf"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ux0-j2-UEF" secondAttribute="bottom" id="xnv-OG-4MY"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
@@ -369,19 +390,24 @@
                                                 <rect key="frame" x="192" y="0.0" width="182" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tp9-7k-aKV">
-                                                        <rect key="frame" x="76" y="10" width="30" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="50"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                         <color key="tintColor" red="0.27322944510000002" green="0.27322944510000002" blue="0.27322944510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="수락">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="tappedAcceptOrDenyBtn:" destination="dkg-dX-3gQ" eventType="touchUpInside" id="XTR-tw-Zki"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" name="lightGreen"/>
                                                 <constraints>
-                                                    <constraint firstItem="Tp9-7k-aKV" firstAttribute="centerX" secondItem="53a-Vx-FGc" secondAttribute="centerX" id="2NP-mJ-7R6"/>
-                                                    <constraint firstItem="Tp9-7k-aKV" firstAttribute="centerY" secondItem="53a-Vx-FGc" secondAttribute="centerY" id="cgN-ki-zxP"/>
+                                                    <constraint firstItem="Tp9-7k-aKV" firstAttribute="leading" secondItem="53a-Vx-FGc" secondAttribute="leading" id="1NK-oB-eK0"/>
+                                                    <constraint firstItem="Tp9-7k-aKV" firstAttribute="top" secondItem="53a-Vx-FGc" secondAttribute="top" id="Czq-8h-lx3"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Tp9-7k-aKV" secondAttribute="bottom" id="P60-Ef-rI2"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Tp9-7k-aKV" secondAttribute="trailing" id="dWA-3R-wpU"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
@@ -395,6 +421,8 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="9gX-Sa-daJ"/>
+                                    <constraint firstItem="HLC-lu-dmp" firstAttribute="centerX" secondItem="PSX-JF-BwI" secondAttribute="centerX" id="G9v-2R-NdV"/>
+                                    <constraint firstItem="HLC-lu-dmp" firstAttribute="centerY" secondItem="PSX-JF-BwI" secondAttribute="centerY" id="INn-fw-8wP"/>
                                     <constraint firstItem="Qqd-B7-Apu" firstAttribute="leading" secondItem="PSX-JF-BwI" secondAttribute="leading" constant="20" id="ZiK-kZ-D7B"/>
                                     <constraint firstAttribute="trailing" secondItem="Qqd-B7-Apu" secondAttribute="trailing" constant="20" id="g1X-TT-Gvc"/>
                                     <constraint firstAttribute="bottom" secondItem="Qqd-B7-Apu" secondAttribute="bottom" constant="10" id="hZy-Tz-7Vy"/>
@@ -418,6 +446,11 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="1200"/>
+                    <connections>
+                        <outlet property="offerButtonsStackView" destination="Qqd-B7-Apu" id="bc8-YF-EIU"/>
+                        <outlet property="offerButtonsView" destination="PSX-JF-BwI" id="VAB-Nw-QNa"/>
+                        <outlet property="offerDescriptionLabel" destination="HLC-lu-dmp" id="QA3-V5-H5d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bhe-CE-5Rs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
