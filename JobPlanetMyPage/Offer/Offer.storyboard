@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -222,7 +223,7 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1yl-zz-zh8">
-                                <rect key="frame" x="0.0" y="100" width="414" height="1100"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="986"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fN-i0-svR">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
@@ -251,31 +252,6 @@
                                                     <constraint firstItem="n7r-jp-XZl" firstAttribute="leading" secondItem="02U-3c-cPc" secondAttribute="leading" constant="5" id="uy5-Ut-VOZ"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhY-tJ-u6f" userLabel="LineView">
-                                                <rect key="frame" x="0.0" y="170.5" width="414" height="7"/>
-                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="7" id="jeC-dZ-FKM"/>
-                                                </constraints>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8e-Ik-3qb">
-                                                <rect key="frame" x="20" y="197.5" width="374" height="568.5"/>
-                                                <mutableString key="text">안녕하세요. 저는 더하트포드스팀보일러인스펙숀앤드인슈런스컴패니오브커넥티컷한국지점의 인사담당자입니다.
-
-등록하신 프로필을 상세히 검토했으며, 현재 저희 회사에서 채용중인 포지션에 적합하다고 판단하여 면접을 제안드립니다.
-
-관심이 있으시다면 긍정적인 검토 부탁드립니다.
-
-
-회사소개
-
-잡플래닛은 직장인과 취업준비생, 기업이 함께 만드는 기업 정보 소셜 미디어입니다. 전현직 임직원이 평가한 기업의 장/단점, 분야별 평점, 직급별 연봉 정보, 면접 경험, 복지제도별 만족도, 세부 기업 문화 등 기업 평가에 필수적인 정보를 공유합니다. 현재 280만 건이 넘는 기업 데이터를 보유하고 있으며, 1억 건이 넘는 콘텐츠 조회, 월간 방문자 300만 건을 돌파 하였습니다
-
-잡플래닛은 직장인과 취업준비생, 기업이 함께 만드는 기업 정보 소셜 미디어입니다. 전현직 임직원이 평가한 기업의 장/단점, 분야별 평점, 직급별 연봉 정보, 면접 경험, 복지제도별 만족도, 세부 기업 문화 등 기업 평가에 필수적인 정보를 공유합니다. 현재 280만 건이 넘는 기업 데이터를 보유하고 있으며, 1억 건이 넘는 콘텐츠 조회, 월간 방문자 300만 건을 돌파 하였습니다</mutableString>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TU3-2O-4ng">
                                                 <rect key="frame" x="0.0" y="116" width="414" height="54.5"/>
                                                 <subviews>
@@ -301,9 +277,35 @@
                                                     <constraint firstItem="ZnY-L5-gd7" firstAttribute="top" secondItem="TU3-2O-4ng" secondAttribute="top" constant="20" id="ZgR-yp-jaL"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhY-tJ-u6f" userLabel="LineView">
+                                                <rect key="frame" x="0.0" y="170.5" width="414" height="7"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="7" id="jeC-dZ-FKM"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8e-Ik-3qb">
+                                                <rect key="frame" x="20" y="197.5" width="374" height="568.5"/>
+                                                <mutableString key="text">안녕하세요. 저는 더하트포드스팀보일러인스펙숀앤드인슈런스컴패니오브커넥티컷한국지점의 인사담당자입니다.
+
+등록하신 프로필을 상세히 검토했으며, 현재 저희 회사에서 채용중인 포지션에 적합하다고 판단하여 면접을 제안드립니다.
+
+관심이 있으시다면 긍정적인 검토 부탁드립니다.
+
+
+회사소개
+
+잡플래닛은 직장인과 취업준비생, 기업이 함께 만드는 기업 정보 소셜 미디어입니다. 전현직 임직원이 평가한 기업의 장/단점, 분야별 평점, 직급별 연봉 정보, 면접 경험, 복지제도별 만족도, 세부 기업 문화 등 기업 평가에 필수적인 정보를 공유합니다. 현재 280만 건이 넘는 기업 데이터를 보유하고 있으며, 1억 건이 넘는 콘텐츠 조회, 월간 방문자 300만 건을 돌파 하였습니다
+
+잡플래닛은 직장인과 취업준비생, 기업이 함께 만드는 기업 정보 소셜 미디어입니다. 전현직 임직원이 평가한 기업의 장/단점, 분야별 평점, 직급별 연봉 정보, 면접 경험, 복지제도별 만족도, 세부 기업 문화 등 기업 평가에 필수적인 정보를 공유합니다. 현재 280만 건이 넘는 기업 데이터를 보유하고 있으며, 1억 건이 넘는 콘텐츠 조회, 월간 방문자 300만 건을 돌파 하였습니다</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="x8e-Ik-3qb" secondAttribute="bottom" constant="20" id="4CB-bq-Zfv"/>
                                             <constraint firstAttribute="trailing" secondItem="jhY-tJ-u6f" secondAttribute="trailing" id="8sw-ly-cX6"/>
                                             <constraint firstAttribute="trailing" secondItem="x8e-Ik-3qb" secondAttribute="trailing" constant="20" id="9go-wP-i75"/>
                                             <constraint firstAttribute="trailing" secondItem="TU3-2O-4ng" secondAttribute="trailing" id="9mC-JR-rkQ"/>
@@ -319,32 +321,100 @@
                                             <constraint firstAttribute="trailing" secondItem="rfz-3R-XgH" secondAttribute="trailing" constant="20" id="kq7-2d-KvM"/>
                                             <constraint firstItem="x8e-Ik-3qb" firstAttribute="top" secondItem="jhY-tJ-u6f" secondAttribute="bottom" constant="20" id="mYn-9n-zCN"/>
                                             <constraint firstItem="ZnY-L5-gd7" firstAttribute="leading" secondItem="rfz-3R-XgH" secondAttribute="leading" id="naP-QD-hbk"/>
-                                            <constraint firstAttribute="bottom" secondItem="x8e-Ik-3qb" secondAttribute="bottom" constant="20" id="pA0-nd-zJN"/>
                                             <constraint firstItem="02U-3c-cPc" firstAttribute="top" secondItem="rfz-3R-XgH" secondAttribute="bottom" constant="20" id="xfn-bE-4dM"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="5fN-i0-svR" firstAttribute="top" secondItem="kgW-EP-jbw" secondAttribute="top" id="JYG-Jy-7CW"/>
-                                    <constraint firstItem="5fN-i0-svR" firstAttribute="bottom" secondItem="kgW-EP-jbw" secondAttribute="bottom" id="Tta-WS-BCP"/>
-                                    <constraint firstItem="5fN-i0-svR" firstAttribute="trailing" secondItem="kgW-EP-jbw" secondAttribute="trailing" id="dA4-ag-Us7"/>
-                                    <constraint firstItem="5fN-i0-svR" firstAttribute="leading" secondItem="kgW-EP-jbw" secondAttribute="leading" id="lxB-zZ-WYp"/>
-                                    <constraint firstItem="5fN-i0-svR" firstAttribute="width" secondItem="NX0-r4-ZYA" secondAttribute="width" id="nx3-Ft-m6P"/>
+                                    <constraint firstItem="5fN-i0-svR" firstAttribute="trailing" secondItem="kgW-EP-jbw" secondAttribute="trailing" id="5cZ-Lq-a9r"/>
+                                    <constraint firstItem="5fN-i0-svR" firstAttribute="leading" secondItem="kgW-EP-jbw" secondAttribute="leading" id="IfI-Ob-acu"/>
+                                    <constraint firstItem="5fN-i0-svR" firstAttribute="top" secondItem="kgW-EP-jbw" secondAttribute="top" id="X50-zt-CJG"/>
+                                    <constraint firstItem="5fN-i0-svR" firstAttribute="width" secondItem="NX0-r4-ZYA" secondAttribute="width" id="ZBW-ek-i7S"/>
+                                    <constraint firstItem="5fN-i0-svR" firstAttribute="bottom" secondItem="kgW-EP-jbw" secondAttribute="bottom" id="dEc-0z-CSf"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="kgW-EP-jbw"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="NX0-r4-ZYA"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSX-JF-BwI" userLabel="buttonView">
+                                <rect key="frame" x="0.0" y="1086" width="414" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qqd-B7-Apu">
+                                        <rect key="frame" x="20" y="20" width="374" height="50"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fcr-dC-leM">
+                                                <rect key="frame" x="0.0" y="0.0" width="182" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ux0-j2-UEF">
+                                                        <rect key="frame" x="45" y="10" width="92" height="30"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="거절">
+                                                            <color key="titleColor" red="0.27322944510000002" green="0.27322944510000002" blue="0.27322944510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <constraints>
+                                                    <constraint firstItem="ux0-j2-UEF" firstAttribute="centerX" secondItem="Fcr-dC-leM" secondAttribute="centerX" id="Dav-gQ-WHn"/>
+                                                    <constraint firstItem="ux0-j2-UEF" firstAttribute="centerY" secondItem="Fcr-dC-leM" secondAttribute="centerY" id="VND-pd-Aff"/>
+                                                    <constraint firstItem="ux0-j2-UEF" firstAttribute="leading" secondItem="Fcr-dC-leM" secondAttribute="leading" constant="45" id="sNd-J0-dng"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53a-Vx-FGc">
+                                                <rect key="frame" x="192" y="0.0" width="182" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tp9-7k-aKV">
+                                                        <rect key="frame" x="76" y="10" width="30" height="30"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <color key="tintColor" red="0.27322944510000002" green="0.27322944510000002" blue="0.27322944510000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="수락">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" name="lightGreen"/>
+                                                <constraints>
+                                                    <constraint firstItem="Tp9-7k-aKV" firstAttribute="centerX" secondItem="53a-Vx-FGc" secondAttribute="centerX" id="2NP-mJ-7R6"/>
+                                                    <constraint firstItem="Tp9-7k-aKV" firstAttribute="centerY" secondItem="53a-Vx-FGc" secondAttribute="centerY" id="cgN-ki-zxP"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="9gX-Sa-daJ"/>
+                                    <constraint firstItem="Qqd-B7-Apu" firstAttribute="leading" secondItem="PSX-JF-BwI" secondAttribute="leading" constant="20" id="ZiK-kZ-D7B"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qqd-B7-Apu" secondAttribute="trailing" constant="20" id="g1X-TT-Gvc"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qqd-B7-Apu" secondAttribute="bottom" constant="10" id="hZy-Tz-7Vy"/>
+                                    <constraint firstItem="Qqd-B7-Apu" firstAttribute="top" secondItem="PSX-JF-BwI" secondAttribute="top" constant="20" id="vXi-qG-J1J"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b1b-W4-LJH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1yl-zz-zh8" firstAttribute="top" secondItem="Kpo-uL-Dwe" secondAttribute="bottom" id="7VK-UL-6bL"/>
-                            <constraint firstItem="1yl-zz-zh8" firstAttribute="bottom" secondItem="n5Q-6I-sCh" secondAttribute="bottom" id="AmN-pM-sOX"/>
-                            <constraint firstItem="Kpo-uL-Dwe" firstAttribute="trailing" secondItem="b1b-W4-LJH" secondAttribute="trailing" id="Qo5-72-0UP"/>
-                            <constraint firstItem="Kpo-uL-Dwe" firstAttribute="leading" secondItem="1yl-zz-zh8" secondAttribute="leading" id="VFp-ai-ciI"/>
-                            <constraint firstItem="1yl-zz-zh8" firstAttribute="leading" secondItem="b1b-W4-LJH" secondAttribute="leading" id="VnQ-NU-USk"/>
-                            <constraint firstItem="Kpo-uL-Dwe" firstAttribute="top" secondItem="n5Q-6I-sCh" secondAttribute="top" id="aMd-Dc-hvR"/>
-                            <constraint firstItem="1yl-zz-zh8" firstAttribute="trailing" secondItem="b1b-W4-LJH" secondAttribute="trailing" id="pb2-rJ-Qtf"/>
+                            <constraint firstItem="Kpo-uL-Dwe" firstAttribute="trailing" secondItem="1yl-zz-zh8" secondAttribute="trailing" id="F0f-VS-AeN"/>
+                            <constraint firstItem="1yl-zz-zh8" firstAttribute="leading" secondItem="b1b-W4-LJH" secondAttribute="leading" id="N0O-ok-PGK"/>
+                            <constraint firstItem="Kpo-uL-Dwe" firstAttribute="leading" secondItem="1yl-zz-zh8" secondAttribute="leading" id="Qch-6B-QfZ"/>
+                            <constraint firstItem="PSX-JF-BwI" firstAttribute="leading" secondItem="b1b-W4-LJH" secondAttribute="leading" id="Rdk-yS-upO"/>
+                            <constraint firstItem="PSX-JF-BwI" firstAttribute="trailing" secondItem="b1b-W4-LJH" secondAttribute="trailing" id="Tm8-W8-Zez"/>
+                            <constraint firstItem="1yl-zz-zh8" firstAttribute="top" secondItem="Kpo-uL-Dwe" secondAttribute="bottom" id="cR0-xj-pmW"/>
+                            <constraint firstItem="b1b-W4-LJH" firstAttribute="bottom" secondItem="PSX-JF-BwI" secondAttribute="bottom" id="dKw-uJ-QwR"/>
+                            <constraint firstItem="Kpo-uL-Dwe" firstAttribute="top" secondItem="n5Q-6I-sCh" secondAttribute="top" id="dcP-cM-62Y"/>
+                            <constraint firstItem="1yl-zz-zh8" firstAttribute="trailing" secondItem="b1b-W4-LJH" secondAttribute="trailing" id="l1b-jT-W6s"/>
+                            <constraint firstItem="PSX-JF-BwI" firstAttribute="top" secondItem="1yl-zz-zh8" secondAttribute="bottom" id="uOX-Kt-bXF"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="1200"/>
@@ -358,6 +428,9 @@
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <namedColor name="lightGreen">
+            <color red="0.14117647058823529" green="0.83529411764705885" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
