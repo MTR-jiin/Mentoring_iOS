@@ -9,11 +9,11 @@ import UIKit
 
 class JobGroupTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var percentLabel: UILabel!
-    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var percentLabel: UILabel!
+    @IBOutlet private weak var progressBar: UIProgressView!
     
-    public var data: cellData? {
+    public var data: CellData? {
         didSet {
             guard let data = data else { return }
             titleLabel.text = data.title

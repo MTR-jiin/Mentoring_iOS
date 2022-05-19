@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct cellData {
+struct CellData {
     let title: String
     let rating: Float
     init(title: String, rating: Float) {
@@ -19,7 +19,7 @@ struct cellData {
 class JobGroupViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
-    private var dataList: [cellData] = [
+    private var dataList: [CellData] = [
         .init(title: "연구 개발", rating: 4.8),
         .init(title: "생산/제조", rating: 3.9),
         .init(title: "영업/제휴", rating: 3.5),
