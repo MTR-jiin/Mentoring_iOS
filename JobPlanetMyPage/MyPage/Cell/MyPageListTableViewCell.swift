@@ -13,7 +13,7 @@ class MyPageListTableViewCell: UITableViewCell, CellDataProtocol {
     
     var data: Any? {
         didSet {
-            guard let data = data as? MypageViewController.ListData else { return }
+            guard let data = data as? MainViewController.ListData else { return }
             titleLabel.text = data.type.rawValue
             subDetailLabel.text = data.data as? String
         }

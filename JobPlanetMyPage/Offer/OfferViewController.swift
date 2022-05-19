@@ -20,7 +20,7 @@ struct CompanyData {
     var offerState: OfferState
 }
 
-final class ReceivedOfferViewController: UIViewController {
+final class OfferViewController: UIViewController {
     @IBOutlet private weak var navigationTitle: UILabel!
     @IBOutlet private weak var offerListTableView: UITableView!
     @IBOutlet private weak var navigationView: UIView!
@@ -41,6 +41,7 @@ final class ReceivedOfferViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         offerListTableView.dataSource = self
+        offerListTableView.delegate = self
         navigationUnderLine(sendView: navigationView)
     }
     
@@ -50,13 +51,13 @@ final class ReceivedOfferViewController: UIViewController {
     }
 }
 
-extension ReceivedOfferViewController: UITableViewDataSource{
+extension OfferViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return offerCompanyList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeue(type: ReceivedOfferTableViewCell.self, for: indexPath) else {
+        guard let cell = tableView.dequeue(type: OfferTableViewCell.self, for: indexPath) else {
             return .init()
         }
         
@@ -64,3 +65,12 @@ extension ReceivedOfferViewController: UITableViewDataSource{
         return cell
     }
 }
+
+extension OfferViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "OfferDetailViewController") as? OfferDetailViewController else { return }
+//        offerVC.sentNavigationTItle = cellData.type.rawValue
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
