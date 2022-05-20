@@ -16,7 +16,7 @@ struct CellData {
     }
 }
 
-class JobGroupViewController: UIViewController {
+final class JobGroupViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     private var dataList: [CellData] = [
@@ -40,7 +40,7 @@ class JobGroupViewController: UIViewController {
         dataList.sort { return $0.rating > $1.rating } //비율로 정렬
     }
     
-    @IBAction func tappedBackBtn(_ sender: UIButton) {
+    @IBAction private func tappedBackBtn(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
