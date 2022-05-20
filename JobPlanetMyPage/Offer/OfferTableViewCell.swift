@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ReceivedOfferTableViewCell: UITableViewCell {
+final class OfferTableViewCell: UITableViewCell {
     @IBOutlet private weak var companyIcon: UIImageView!
     @IBOutlet private weak var companyName: UILabel!
     @IBOutlet private weak var offeredDate: UILabel!

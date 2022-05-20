@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MypageViewController: UIViewController {
+final class MainViewController: UIViewController {
     @IBOutlet private weak var mypageTableView: UITableView!
     @IBOutlet private weak var navigationView: UIView!
  
@@ -21,6 +21,7 @@ final class MypageViewController: UIViewController {
         case occupation = "관심 직종"
         case industry = "관심 산업군"
         case lecture = "내 강좌"
+        case JobGroup = "직군별 만족도"
         
         var cellIdentifer: String {
             switch self {
@@ -48,6 +49,8 @@ final class MypageViewController: UIViewController {
         .init(type: .activity),
         .init(type: .university),
         .init(type: .line),
+        .init(type: .JobGroup),
+        .init(type: .line),
         .init(type: .offer, data: "구글코리아 외 4개"),
         .init(type: .line),
         .init(type: .following, data: "잡플래닛 외 1개"),
@@ -67,17 +70,19 @@ final class MypageViewController: UIViewController {
         mypageTableView.dataSource = self
         mypageTableView.delegate = self
         navigationUnderLine(sendView: navigationView)
+        
     }
     
     @IBAction func tappedSettingBtn(_ sender: UIButton) {
-        let settingVC = self.storyboard?.instantiateViewController(withIdentifier: "MyPageSettingViewController") as! MyPageSettingViewController
+        let storyboard = UIStoryboard.init(name: "MypageSetting", bundle: nil)
+        let settingVC = storyboard.instantiateViewController(withIdentifier: "MyPageSettingViewController") as! MyPageSettingViewController
         navigationController?.pushViewController(settingVC, animated: true)
     }
     
 
 }
 
-extension MypageViewController: UITableViewDataSource{
+extension MainViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableList.count
     }
@@ -91,17 +96,32 @@ extension MypageViewController: UITableViewDataSource{
         }
         return cell
     }
-    
+    func makeStoryboard(name: String, type: MainViewController.MyPageListType) {
+        let storyboard = UIStoryboard.init(name: "\(name)", bundle: nil)
+        guard let offerVC = storyboard.instantiateViewController(withIdentifier: "\(name)ViewController") as? OfferViewController else { return }
+        self.navigationController?.pushViewController(offerVC, animated: true)
+        
+    }
 }
 
-extension MypageViewController: UITableViewDelegate{
+extension MainViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellData = tableList[indexPath.row]
         switch cellData.type {
+        //이거 재사용한 코드 만들기
         case .offer:
-            guard let offerVC = self.storyboard?.instantiateViewController(withIdentifier: "ReceivedOfferViewController") as? ReceivedOfferViewController else { return }
-            offerVC.sentNavigationTItle = cellData.type.rawValue
+            let storyboard = UIStoryboard.init(name: "Offer", bundle: nil)
+            guard let offerVC = storyboard.instantiateViewController(withIdentifier: "OfferViewController") as? OfferViewController else { return }
+            offerVC.sentNavigationTitle = cellData.type.rawValue
             self.navigationController?.pushViewController(offerVC, animated: true)
+        case .JobGroup:
+            let storyboard = UIStoryboard.init(name: "JobGroup", bundle: nil)
+            guard let jobVC = storyboard.instantiateViewController(withIdentifier: "JobGroupViewController") as? JobGroupViewController else { return }
+            //데이터 전달
+            jobVC.modalPresentationStyle = .fullScreen
+            self.present(jobVC, animated: true)
+            
+            
         default: return
         }
     }
