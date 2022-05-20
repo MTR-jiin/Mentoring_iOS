@@ -112,7 +112,7 @@ extension MainViewController: UITableViewDelegate{
         case .offer:
             let storyboard = UIStoryboard.init(name: "Offer", bundle: nil)
             guard let offerVC = storyboard.instantiateViewController(withIdentifier: "OfferViewController") as? OfferViewController else { return }
-            offerVC.sentNavigationTItle = cellData.type.rawValue
+            offerVC.sentNavigationTitle = cellData.type.rawValue
             self.navigationController?.pushViewController(offerVC, animated: true)
         case .JobGroup:
             let storyboard = UIStoryboard.init(name: "JobGroup", bundle: nil)
