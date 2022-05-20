@@ -15,6 +15,8 @@ class MyPageSettingViewController: UIViewController {
     
     @IBOutlet private weak var myPageStackView: UIStackView!
     
+    private var buttonState: Bool = false
+    
     private var inputInfoList = [
         UnderLineData(title: "이름 (필수)", placeholder: "예) 김잡플"),
         UnderLineData(title: "이메일 (필수)", placeholder: "예) kj980926@naver.com"),
@@ -43,15 +45,27 @@ class MyPageSettingViewController: UIViewController {
         inputInfoList.enumerated().forEach {
             let makeView = UnderLineTextField()
             makeView.data = $1
-//            UnderLineTextField(infoData: $1)
             textFieldList.append(makeView.textField)
-//            makeView.textField.delegate = self
+            makeView.textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
             makeView.textField.returnKeyType = .next
             if $0 == 0 {
                 makeView.textField.becomeFirstResponder()
             }
             myPageStackView.insertArrangedSubview(makeView, at: $0)
         }
+    }
+    
+    @objc func textFieldDidChange(sender: UITextField) {
+        inputInfoList.forEach {
+            if $0.filledState == false { //1개라도 채워지지 않으면 false
+                buttonState = false
+            }
+        }
+        if buttonState == true {
+            saveButton.isEnabled = true
+            saveButton.tintColor = UIColor(named: "lightGreen")
+        }
+        print(buttonState)
     }
 
     
@@ -82,10 +96,3 @@ extension UIViewController {
     }
 }
 
-//extension MyPageSettingViewController: UITextFieldDelegate {
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        switch textField {
-//        case textField.title
-//        }
-//    }
-//}

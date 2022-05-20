@@ -11,6 +11,7 @@ import UIKit
 struct UnderLineData {
     let title: String
     let placeholder: String
+    var filledState: Bool?
 }
 
 class UnderLineTextField: UIView {
@@ -18,7 +19,7 @@ class UnderLineTextField: UIView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var lineView: UIView!
-    
+        
     public var data: UnderLineData? {
         didSet {
             guard let data = data else { return }
@@ -59,14 +60,17 @@ class UnderLineTextField: UIView {
     private func configure(infoData: UnderLineData) {
         self.titleLabel.text = infoData.title
         self.textField.placeholder = infoData.placeholder
+//        self.data?.filledState = !(infoData.filledState ?? false)
     }
     
     @objc func textFieldDidChange(sender: UITextField) {
-        if sender.text != "" {
+        if sender.text?.isEmpty == false{
             lineView.backgroundColor = UIColor(named: "lightGreen")
+            data?.filledState = true
         } else {
             lineView.backgroundColor = .systemGray5
+            data?.filledState = false
         }
+
     }
 }
-
