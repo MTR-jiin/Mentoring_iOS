@@ -6,23 +6,34 @@
 //
 
 import UIKit
+// MVVM + Rx -> 약간.. 순수 Swift
+// Swift를 못하면 Rx를 잘 할 수 없다. 구조가 원래 그런데..
+// [Foundation] / [UIKit]
+// 코딩테스트 통과하는 시점까지만 :)
+//
+
+protocol OfferDetailViewDelegate: AnyObject {
+    func closeCompanyData(_ data: CompanyData)
+}
 
 final class OfferDetailViewController: UIViewController {
-
     @IBOutlet private weak var offerButtonsStackView: UIStackView!
     @IBOutlet private weak var offerDescriptionLabel: UILabel!
     @IBOutlet private weak var offerButtonsView: UIView!
     @IBOutlet private weak var navigationTitle: UILabel!
     
-    var infoData: CompanyData = CompanyData(offerState: .none)
-    var tableIndexPath: Int = 10
+    private var infoData: CompanyData = CompanyData(offerState: .none)
+    public weak var delegate: OfferDetailViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         makeViewShadow()
-        self.navigationTitle.text = infoData.companyName
     }
 
+    public func setup(data: CompanyData) {
+        infoData = data
+        navigationTitle.text = data.companyName
+    }
     
     private func makeViewShadow() {
         offerButtonsView.layer.shadowOpacity = 0.2
@@ -45,12 +56,7 @@ final class OfferDetailViewController: UIViewController {
     }
     
     @IBAction private func tappedBackBtn(_ sender: UIButton) {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "OfferViewController") as? OfferViewController else { return }
-        print(infoData.offerState)
-        print(tableIndexPath)
-        vc.offerCompanyList[tableIndexPath].offerState = infoData.offerState
+        delegate?.closeCompanyData(infoData)
         self.navigationController?.popViewController(animated: true)
     }
-    
-    
 }
