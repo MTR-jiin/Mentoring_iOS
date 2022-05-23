@@ -22,17 +22,18 @@ final class OfferDetailViewController: UIViewController {
     @IBOutlet private weak var offerButtonsView: UIView!
     @IBOutlet private weak var navigationTitle: UILabel!
     
-    private var infoData: CompanyData = CompanyData(offerState: .none)
+    var infoData: CompanyData = CompanyData(offerState: .none)
     public weak var delegate: OfferDetailViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         makeViewShadow()
+        setup(data: infoData)
     }
 
     public func setup(data: CompanyData) {
         infoData = data
-        navigationTitle.text = data.companyName
+        navigationTitle.text = infoData.companyName ?? "없음"
     }
     
     private func makeViewShadow() {

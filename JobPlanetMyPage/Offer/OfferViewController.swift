@@ -74,7 +74,7 @@ extension OfferViewController: UITableViewDelegate{
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "OfferDetailViewController") as? OfferDetailViewController else { return }
         let data = offerCompanyList[indexPath.row]
         self.selectedIndex = indexPath
-        vc.setup(data: data)
+        vc.infoData = data
         vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
