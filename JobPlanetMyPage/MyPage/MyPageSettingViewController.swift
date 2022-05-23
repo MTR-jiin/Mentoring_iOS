@@ -45,8 +45,8 @@ class MyPageSettingViewController: UIViewController {
         inputInfoList.enumerated().forEach {
             let makeView = UnderLineTextField()
             makeView.data = $1
+            makeView.delegate = self
             textFieldList.append(makeView.textField)
-            makeView.textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
             makeView.textField.returnKeyType = .next
             if $0 == 0 {
                 makeView.textField.becomeFirstResponder()
@@ -55,19 +55,6 @@ class MyPageSettingViewController: UIViewController {
         }
     }
     
-    @objc func textFieldDidChange(sender: UITextField) {
-        inputInfoList.forEach {
-            if $0.filledState == false { //1개라도 채워지지 않으면 false
-                buttonState = false
-            }
-        }
-        if buttonState == true {
-            saveButton.isEnabled = true
-            saveButton.tintColor = UIColor(named: "lightGreen")
-        }
-        print(buttonState)
-    }
-
     
     //MARK: - private funcb
     //태그 리스트 구성
@@ -80,6 +67,20 @@ class MyPageSettingViewController: UIViewController {
     
     @IBAction private func tappedBackBtn(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+}
+
+extension MyPageSettingViewController: UnderLineTextFieldDelegate {
+    func underLineDidChange(sender: UITextField) {
+        var state: Bool = true
+        inputInfoList.forEach {
+            if $0.filledState == false { //1개라도 채워지지 않으면 false
+                state = false
+            }
+        }
+        
+        saveButton.isEnabled = state
+        saveButton.tintColor = state ? UIColor(named: "lightGreen") : UIColor(named: "")
     }
 }
 

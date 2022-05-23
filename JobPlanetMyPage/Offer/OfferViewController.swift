@@ -27,6 +27,7 @@ final class OfferViewController: UIViewController {
     @IBOutlet private weak var navigationView: UIView!
     
     public var sentNavigationTitle: String = ""
+    private var selectedIndex: IndexPath?
     var offerCompanyList: [CompanyData] = [
         CompanyData(companyName: "구글 코리아", offerDate: "2019. 08. 30", offerState: .none),
         CompanyData(companyIcon: UIImage(systemName: "house"), companyName: "드라마앤 컴패니", offerDate: "2019. 08. 30", offerState: .permit),
@@ -71,9 +72,17 @@ extension OfferViewController: UITableViewDataSource{
 extension OfferViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "OfferDetailViewController") as? OfferDetailViewController else { return }
-        vc.infoData = offerCompanyList[indexPath.row]
-        vc.tableIndexPath = indexPath.row
+        let data = offerCompanyList[indexPath.row]
+        self.selectedIndex = indexPath
+        vc.infoData = data
+        vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
+extension OfferViewController: OfferDetailViewDelegate {
+    func closeCompanyData(_ data: CompanyData) {
+        guard let selected = self.selectedIndex else { return }
+        offerCompanyList[selected.row].offerState = data.offerState
+    }
+}

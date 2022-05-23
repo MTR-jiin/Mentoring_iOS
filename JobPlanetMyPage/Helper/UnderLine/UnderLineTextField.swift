@@ -14,11 +14,16 @@ struct UnderLineData {
     var filledState: Bool?
 }
 
+protocol UnderLineTextFieldDelegate: AnyObject {
+    func underLineDidChange(sender: UITextField)
+}
+
 class UnderLineTextField: UIView {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var lineView: UIView!
+    public weak var delegate: UnderLineTextFieldDelegate?
         
     public var data: UnderLineData? {
         didSet {
@@ -71,6 +76,6 @@ class UnderLineTextField: UIView {
             lineView.backgroundColor = .systemGray5
             data?.filledState = false
         }
-
+        delegate?.underLineDidChange(sender: sender)
     }
 }

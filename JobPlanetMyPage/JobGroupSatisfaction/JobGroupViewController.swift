@@ -7,6 +7,15 @@
 
 import UIKit
 
+/**
+ 앱 개발
+ 수락 -> API -> 서버 -> db update -> back -> API -> [수락 리스트]
+ Rx -> behavior -> 방출 하도록. 값을 변경한다.
+ 1. black -> 몇번째 수정했다.
+ 2. delegate -> func -> 수정한 값을 전달하는 거죠.
+ 3. notification -> post -> 수정된 값을 전달하면서 ,
+ */
+
 struct CellData {
     let title: String
     let rating: Float
@@ -53,7 +62,7 @@ extension JobGroupViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "JobGroupTableViewCell", for: indexPath) as? JobGroupTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeue(type: JobGroupTableViewCell.self) else { return .init() }
         cell.data = dataList[indexPath.row]
         return cell
     }
