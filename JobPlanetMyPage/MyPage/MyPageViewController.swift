@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MainViewController: UIViewController {
+final class MyPageViewController: UIViewController {
     @IBOutlet private weak var mypageTableView: UITableView!
     @IBOutlet private weak var navigationView: UIView!
  
@@ -82,7 +82,7 @@ final class MainViewController: UIViewController {
 
 }
 
-extension MainViewController: UITableViewDataSource{
+extension MyPageViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableList.count
     }
@@ -96,7 +96,7 @@ extension MainViewController: UITableViewDataSource{
         }
         return cell
     }
-    func makeStoryboard(name: String, type: MainViewController.MyPageListType) {
+    func makeStoryboard(name: String, type: MyPageViewController.MyPageListType) {
         let storyboard = UIStoryboard.init(name: "\(name)", bundle: nil)
         guard let offerVC = storyboard.instantiateViewController(withIdentifier: "\(name)ViewController") as? OfferViewController else { return }
         self.navigationController?.pushViewController(offerVC, animated: true)
@@ -104,7 +104,7 @@ extension MainViewController: UITableViewDataSource{
     }
 }
 
-extension MainViewController: UITableViewDelegate{
+extension MyPageViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellData = tableList[indexPath.row]
         switch cellData.type {
