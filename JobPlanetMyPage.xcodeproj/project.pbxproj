@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C0E5FF3283B72DE006FB8FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0E5FF2283B72DE006FB8FD /* HomeViewController.swift */; };
+		6C14BBCC2828FB7E007C0ED5 /* UnderLineTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C14BBCB2828FB7E007C0ED5 /* UnderLineTextField.xib */; };
+		6C14BBD02828FBC5007C0ED5 /* UnderLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C14BBCF2828FBC5007C0ED5 /* UnderLineTextField.swift */; };
+		6C1E9274282FBA0800ECC87D /* JobGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E9273282FBA0800ECC87D /* JobGroupViewController.swift */; };
+		6C1E9276282FBF8000ECC87D /* JobGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E9275282FBF8000ECC87D /* JobGroupTableViewCell.swift */; };
+		6C3F9D9F2822CBA300E0630A /* MyPageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F9D9E2822CBA300E0630A /* MyPageSettingViewController.swift */; };
+		6C54B51B281FE33F0068B211 /* CellDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C54B51A281FE33F0068B211 /* CellDataProtocol.swift */; };
+		6C75CE832834F6AD00105406 /* JobGroup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C75CE822834F6AD00105406 /* JobGroup.storyboard */; };
+		6C75CE872834F6FF00105406 /* MypageSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C75CE862834F6FF00105406 /* MypageSetting.storyboard */; };
+		6C75CE962835010300105406 /* Offer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C75CE952835010300105406 /* Offer.storyboard */; };
+		6C75CE982835098D00105406 /* OfferDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C75CE972835098D00105406 /* OfferDetailViewController.swift */; };
+		6C847823281A112000954861 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C847822281A112000954861 /* AppDelegate.swift */; };
+		6C847825281A112000954861 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C847824281A112000954861 /* SceneDelegate.swift */; };
+		6C847827281A112000954861 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C847826281A112000954861 /* MyPageViewController.swift */; };
+		6C84782A281A112100954861 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C847828281A112100954861 /* Main.storyboard */; };
+		6C84782C281A112100954861 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C84782B281A112100954861 /* Assets.xcassets */; };
+		6C84782F281A112100954861 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C84782D281A112100954861 /* LaunchScreen.storyboard */; };
+		6CB0BE762829114C000C838A /* TagListView in Frameworks */ = {isa = PBXBuildFile; productRef = 6CB0BE752829114C000C838A /* TagListView */; };
+		6CD8656C281B69EE000C8195 /* ProfileFirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD8656B281B69EE000C8195 /* ProfileFirstTableViewCell.swift */; };
+		6CD8656E281B6A8C000C8195 /* MyPageListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD8656D281B6A8C000C8195 /* MyPageListTableViewCell.swift */; };
+		6CD86570281B7471000C8195 /* GrayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD8656F281B7471000C8195 /* GrayTableViewCell.swift */; };
+		6CD86572281B79E1000C8195 /* OfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD86571281B79E1000C8195 /* OfferViewController.swift */; };
+		6CD86574281B9AC6000C8195 /* OfferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD86573281B9AC6000C8195 /* OfferTableViewCell.swift */; };
+		FC6B973D281C47C300B3C40F /* Ex+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6B973C281C47C300B3C40F /* Ex+UIView.swift */; };
+		FC6B973F281C47DB00B3C40F /* Ex+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6B973E281C47DB00B3C40F /* Ex+UIViewController.swift */; };
+		FC6B9741281C492A00B3C40F /* Ex+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6B9740281C492A00B3C40F /* Ex+UITableView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6C0E5FF2283B72DE006FB8FD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6C14BBCB2828FB7E007C0ED5 /* UnderLineTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnderLineTextField.xib; sourceTree = "<group>"; };
+		6C14BBCF2828FBC5007C0ED5 /* UnderLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLineTextField.swift; sourceTree = "<group>"; };
+		6C1E9273282FBA0800ECC87D /* JobGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobGroupViewController.swift; sourceTree = "<group>"; };
+		6C1E9275282FBF8000ECC87D /* JobGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobGroupTableViewCell.swift; sourceTree = "<group>"; };
+		6C3F9D9E2822CBA300E0630A /* MyPageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyPageSettingViewController.swift; path = MyPage/MyPageSettingViewController.swift; sourceTree = "<group>"; };
+		6C54B51A281FE33F0068B211 /* CellDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDataProtocol.swift; sourceTree = "<group>"; };
+		6C75CE822834F6AD00105406 /* JobGroup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobGroup.storyboard; sourceTree = "<group>"; };
+		6C75CE862834F6FF00105406 /* MypageSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MypageSetting.storyboard; sourceTree = "<group>"; };
+		6C75CE952835010300105406 /* Offer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Offer.storyboard; sourceTree = "<group>"; };
+		6C75CE972835098D00105406 /* OfferDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailViewController.swift; sourceTree = "<group>"; };
+		6C84781F281A112000954861 /* JobPlanetMyPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobPlanetMyPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C847822281A112000954861 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6C847824281A112000954861 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6C847826281A112000954861 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		6C847829281A112100954861 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6C84782B281A112100954861 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6C84782E281A112100954861 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6C847830281A112100954861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CB0BE7328291105000C838A /* TagListView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TagListView; sourceTree = "<group>"; };
+		6CD8656B281B69EE000C8195 /* ProfileFirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFirstTableViewCell.swift; sourceTree = "<group>"; };
+		6CD8656D281B6A8C000C8195 /* MyPageListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageListTableViewCell.swift; sourceTree = "<group>"; };
+		6CD8656F281B7471000C8195 /* GrayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayTableViewCell.swift; sourceTree = "<group>"; };
+		6CD86571281B79E1000C8195 /* OfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferViewController.swift; sourceTree = "<group>"; };
+		6CD86573281B9AC6000C8195 /* OfferTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferTableViewCell.swift; sourceTree = "<group>"; };
+		FC6B973C281C47C300B3C40F /* Ex+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UIView.swift"; sourceTree = "<group>"; };
+		FC6B973E281C47DB00B3C40F /* Ex+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UIViewController.swift"; sourceTree = "<group>"; };
+		FC6B9740281C492A00B3C40F /* Ex+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UITableView.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6C84781C281A112000954861 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CB0BE762829114C000C838A /* TagListView in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C0E5FF1283B72CF006FB8FD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6C0E5FF2283B72DE006FB8FD /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6C14BBCE2828FBA9007C0ED5 /* UnderLine */ = {
+			isa = PBXGroup;
+			children = (
+				6C14BBCB2828FB7E007C0ED5 /* UnderLineTextField.xib */,
+				6C14BBCF2828FBC5007C0ED5 /* UnderLineTextField.swift */,
+			);
+			path = UnderLine;
+			sourceTree = "<group>";
+		};
+		6C1E9272282FB9C400ECC87D /* JobGroupSatisfaction */ = {
+			isa = PBXGroup;
+			children = (
+				6C1E9275282FBF8000ECC87D /* JobGroupTableViewCell.swift */,
+				6C1E9273282FBA0800ECC87D /* JobGroupViewController.swift */,
+				6C75CE822834F6AD00105406 /* JobGroup.storyboard */,
+			);
+			path = JobGroupSatisfaction;
+			sourceTree = "<group>";
+		};
+		6C3F9D9D2822CB9300E0630A /* MyPageSetting */ = {
+			isa = PBXGroup;
+			children = (
+				6C3F9D9E2822CBA300E0630A /* MyPageSettingViewController.swift */,
+				6C75CE862834F6FF00105406 /* MypageSetting.storyboard */,
+			);
+			name = MyPageSetting;
+			sourceTree = "<group>";
+		};
+		6C847816281A112000954861 = {
+			isa = PBXGroup;
+			children = (
+				6C847821281A112000954861 /* JobPlanetMyPage */,
+				6CB0BE7228291100000C838A /* Vender */,
+				6C847820281A112000954861 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6C847820281A112000954861 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C84781F281A112000954861 /* JobPlanetMyPage.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C847821281A112000954861 /* JobPlanetMyPage */ = {
+			isa = PBXGroup;
+			children = (
+				6C0E5FF1283B72CF006FB8FD /* Home */,
+				FC6B973A281C47B600B3C40F /* Helper */,
+				6CD86575281B9AD0000C8195 /* MyPage */,
+				6C3F9D9D2822CB9300E0630A /* MyPageSetting */,
+				6CD86576281B9AD5000C8195 /* Offer */,
+				6C1E9272282FB9C400ECC87D /* JobGroupSatisfaction */,
+				6C847822281A112000954861 /* AppDelegate.swift */,
+				6C847824281A112000954861 /* SceneDelegate.swift */,
+				6C847828281A112100954861 /* Main.storyboard */,
+				6C84782B281A112100954861 /* Assets.xcassets */,
+				6C84782D281A112100954861 /* LaunchScreen.storyboard */,
+				6C847830281A112100954861 /* Info.plist */,
+			);
+			path = JobPlanetMyPage;
+			sourceTree = "<group>";
+		};
+		6CB0BE7228291100000C838A /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				6CB0BE7328291105000C838A /* TagListView */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		6CD86575281B9AD0000C8195 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				6C847826281A112000954861 /* MyPageViewController.swift */,
+				6CD86577281B9AEE000C8195 /* Cell */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		6CD86576281B9AD5000C8195 /* Offer */ = {
+			isa = PBXGroup;
+			children = (
+				6CD86571281B79E1000C8195 /* OfferViewController.swift */,
+				6CD86573281B9AC6000C8195 /* OfferTableViewCell.swift */,
+				6C75CE972835098D00105406 /* OfferDetailViewController.swift */,
+				6C75CE952835010300105406 /* Offer.storyboard */,
+			);
+			path = Offer;
+			sourceTree = "<group>";
+		};
+		6CD86577281B9AEE000C8195 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6C54B51A281FE33F0068B211 /* CellDataProtocol.swift */,
+				6CD8656B281B69EE000C8195 /* ProfileFirstTableViewCell.swift */,
+				6CD8656D281B6A8C000C8195 /* MyPageListTableViewCell.swift */,
+				6CD8656F281B7471000C8195 /* GrayTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FC6B973A281C47B600B3C40F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6C14BBCE2828FBA9007C0ED5 /* UnderLine */,
+				FC6B973B281C47BB00B3C40F /* Ex */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		FC6B973B281C47BB00B3C40F /* Ex */ = {
+			isa = PBXGroup;
+			children = (
+				FC6B973C281C47C300B3C40F /* Ex+UIView.swift */,
+				FC6B973E281C47DB00B3C40F /* Ex+UIViewController.swift */,
+				FC6B9740281C492A00B3C40F /* Ex+UITableView.swift */,
+			);
+			path = Ex;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C84781E281A112000954861 /* JobPlanetMyPage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C847833281A112100954861 /* Build configuration list for PBXNativeTarget "JobPlanetMyPage" */;
+			buildPhases = (
+				6C84781B281A112000954861 /* Sources */,
+				6C84781C281A112000954861 /* Frameworks */,
+				6C84781D281A112000954861 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JobPlanetMyPage;
+			packageProductDependencies = (
+				6CB0BE752829114C000C838A /* TagListView */,
+			);
+			productName = JobPlanetMyPage;
+			productReference = 6C84781F281A112000954861 /* JobPlanetMyPage.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6C847817281A112000954861 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					6C84781E281A112000954861 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 6C84781A281A112000954861 /* Build configuration list for PBXProject "JobPlanetMyPage" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6C847816281A112000954861;
+			productRefGroup = 6C847820281A112000954861 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C84781E281A112000954861 /* JobPlanetMyPage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6C84781D281A112000954861 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C75CE872834F6FF00105406 /* MypageSetting.storyboard in Resources */,
+				6C75CE832834F6AD00105406 /* JobGroup.storyboard in Resources */,
+				6C84782F281A112100954861 /* LaunchScreen.storyboard in Resources */,
+				6C84782C281A112100954861 /* Assets.xcassets in Resources */,
+				6C14BBCC2828FB7E007C0ED5 /* UnderLineTextField.xib in Resources */,
+				6C75CE962835010300105406 /* Offer.storyboard in Resources */,
+				6C84782A281A112100954861 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6C84781B281A112000954861 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C847827281A112000954861 /* MyPageViewController.swift in Sources */,
+				6C1E9276282FBF8000ECC87D /* JobGroupTableViewCell.swift in Sources */,
+				6C54B51B281FE33F0068B211 /* CellDataProtocol.swift in Sources */,
+				6CD86572281B79E1000C8195 /* OfferViewController.swift in Sources */,
+				6CD8656C281B69EE000C8195 /* ProfileFirstTableViewCell.swift in Sources */,
+				6C0E5FF3283B72DE006FB8FD /* HomeViewController.swift in Sources */,
+				6C14BBD02828FBC5007C0ED5 /* UnderLineTextField.swift in Sources */,
+				6CD8656E281B6A8C000C8195 /* MyPageListTableViewCell.swift in Sources */,
+				FC6B973D281C47C300B3C40F /* Ex+UIView.swift in Sources */,
+				6C1E9274282FBA0800ECC87D /* JobGroupViewController.swift in Sources */,
+				6C847823281A112000954861 /* AppDelegate.swift in Sources */,
+				6CD86570281B7471000C8195 /* GrayTableViewCell.swift in Sources */,
+				FC6B9741281C492A00B3C40F /* Ex+UITableView.swift in Sources */,
+				6CD86574281B9AC6000C8195 /* OfferTableViewCell.swift in Sources */,
+				6C3F9D9F2822CBA300E0630A /* MyPageSettingViewController.swift in Sources */,
+				6C847825281A112000954861 /* SceneDelegate.swift in Sources */,
+				6C75CE982835098D00105406 /* OfferDetailViewController.swift in Sources */,
+				FC6B973F281C47DB00B3C40F /* Ex+UIViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6C847828281A112100954861 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C847829281A112100954861 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6C84782D281A112100954861 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C84782E281A112100954861 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6C847831281A112100954861 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6C847832281A112100954861 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6C847834281A112100954861 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TLRL588DB6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JobPlanetMyPage/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.julia.test.JobPlanetMyPage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6C847835281A112100954861 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TLRL588DB6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JobPlanetMyPage/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.julia.test.JobPlanetMyPage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6C84781A281A112000954861 /* Build configuration list for PBXProject "JobPlanetMyPage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C847831281A112100954861 /* Debug */,
+				6C847832281A112100954861 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C847833281A112100954861 /* Build configuration list for PBXNativeTarget "JobPlanetMyPage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C847834281A112100954861 /* Debug */,
+				6C847835281A112100954861 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6CB0BE752829114C000C838A /* TagListView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TagListView;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 6C847817281A112000954861 /* Project object */;
+}
