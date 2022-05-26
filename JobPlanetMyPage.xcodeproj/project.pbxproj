@@ -25,11 +25,13 @@
 		6C84782C281A112100954861 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C84782B281A112100954861 /* Assets.xcassets */; };
 		6C84782F281A112100954861 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C84782D281A112100954861 /* LaunchScreen.storyboard */; };
 		6CB0BE762829114C000C838A /* TagListView in Frameworks */ = {isa = PBXBuildFile; productRef = 6CB0BE752829114C000C838A /* TagListView */; };
+		6CB7159A283B94340051B632 /* SearchHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB71599283B94340051B632 /* SearchHeaderTableViewCell.swift */; };
 		6CD8656C281B69EE000C8195 /* ProfileFirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD8656B281B69EE000C8195 /* ProfileFirstTableViewCell.swift */; };
 		6CD8656E281B6A8C000C8195 /* MyPageListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD8656D281B6A8C000C8195 /* MyPageListTableViewCell.swift */; };
 		6CD86570281B7471000C8195 /* GrayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD8656F281B7471000C8195 /* GrayTableViewCell.swift */; };
 		6CD86572281B79E1000C8195 /* OfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD86571281B79E1000C8195 /* OfferViewController.swift */; };
 		6CD86574281B9AC6000C8195 /* OfferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD86573281B9AC6000C8195 /* OfferTableViewCell.swift */; };
+		6CEF1B4C283B86AB00BA8C4C /* SearchCompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF1B4B283B86AB00BA8C4C /* SearchCompanyTableViewCell.swift */; };
 		FC6B973D281C47C300B3C40F /* Ex+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6B973C281C47C300B3C40F /* Ex+UIView.swift */; };
 		FC6B973F281C47DB00B3C40F /* Ex+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6B973E281C47DB00B3C40F /* Ex+UIViewController.swift */; };
 		FC6B9741281C492A00B3C40F /* Ex+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6B9740281C492A00B3C40F /* Ex+UITableView.swift */; };
@@ -56,11 +58,13 @@
 		6C84782E281A112100954861 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C847830281A112100954861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CB0BE7328291105000C838A /* TagListView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TagListView; sourceTree = "<group>"; };
+		6CB71599283B94340051B632 /* SearchHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		6CD8656B281B69EE000C8195 /* ProfileFirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFirstTableViewCell.swift; sourceTree = "<group>"; };
 		6CD8656D281B6A8C000C8195 /* MyPageListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageListTableViewCell.swift; sourceTree = "<group>"; };
 		6CD8656F281B7471000C8195 /* GrayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayTableViewCell.swift; sourceTree = "<group>"; };
 		6CD86571281B79E1000C8195 /* OfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferViewController.swift; sourceTree = "<group>"; };
 		6CD86573281B9AC6000C8195 /* OfferTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferTableViewCell.swift; sourceTree = "<group>"; };
+		6CEF1B4B283B86AB00BA8C4C /* SearchCompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCompanyTableViewCell.swift; sourceTree = "<group>"; };
 		FC6B973C281C47C300B3C40F /* Ex+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UIView.swift"; sourceTree = "<group>"; };
 		FC6B973E281C47DB00B3C40F /* Ex+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UIViewController.swift"; sourceTree = "<group>"; };
 		FC6B9740281C492A00B3C40F /* Ex+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UITableView.swift"; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				6C0E5FF2283B72DE006FB8FD /* HomeViewController.swift */,
+				6CB71599283B94340051B632 /* SearchHeaderTableViewCell.swift */,
+				6CEF1B4B283B86AB00BA8C4C /* SearchCompanyTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -287,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C847827281A112000954861 /* MyPageViewController.swift in Sources */,
+				6CEF1B4C283B86AB00BA8C4C /* SearchCompanyTableViewCell.swift in Sources */,
 				6C1E9276282FBF8000ECC87D /* JobGroupTableViewCell.swift in Sources */,
 				6C54B51B281FE33F0068B211 /* CellDataProtocol.swift in Sources */,
 				6CD86572281B79E1000C8195 /* OfferViewController.swift in Sources */,
@@ -301,6 +308,7 @@
 				FC6B9741281C492A00B3C40F /* Ex+UITableView.swift in Sources */,
 				6CD86574281B9AC6000C8195 /* OfferTableViewCell.swift in Sources */,
 				6C3F9D9F2822CBA300E0630A /* MyPageSettingViewController.swift in Sources */,
+				6CB7159A283B94340051B632 /* SearchHeaderTableViewCell.swift in Sources */,
 				6C847825281A112000954861 /* SceneDelegate.swift in Sources */,
 				6C75CE982835098D00105406 /* OfferDetailViewController.swift in Sources */,
 				FC6B973F281C47DB00B3C40F /* Ex+UIViewController.swift in Sources */,
