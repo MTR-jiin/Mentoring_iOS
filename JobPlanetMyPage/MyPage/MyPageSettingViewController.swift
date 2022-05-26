@@ -32,7 +32,6 @@ class MyPageSettingViewController: UIViewController {
     //MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBarController?.tabBar.isHidden = true
         self.navigationController?.title = "마이페이지"
         configureStackView()
         makeTagListView()
