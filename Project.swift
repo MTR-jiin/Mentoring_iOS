@@ -33,7 +33,13 @@ class BaseProjectFactory: ProjectFactory {
 
     let dependencies: [TargetDependency] = [
       .external(name: "RxSwift"),
-      .external(name: "TagListView")
+      .package(product: "TagListView"),
+      .package(product: "UnderLineTextField"),
+    ]
+    
+    let packages: [Package] = [
+        .local(path: .relativeToRoot("vendor/TagListView")),
+        .local(path: .relativeToRoot("vendor/UnderLineTextField")),
     ]
 
     func generate() -> [Target] {
@@ -64,5 +70,6 @@ let factory = BaseProjectFactory()
 let project: Project = .init(
     name: factory.projectName,
     organizationName: factory.projectName,
+    packages: factory.packages,
     targets: factory.generate()
 )

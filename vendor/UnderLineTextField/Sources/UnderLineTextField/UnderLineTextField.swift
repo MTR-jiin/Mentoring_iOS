@@ -5,24 +5,29 @@
 //  Created by 김지인 on 2022/05/09.
 //
 
-import Foundation
 import UIKit
 
-struct UnderLineData {
-    let title: String
-    let placeholder: String
-    var filledState: Bool?
+public struct UnderLineData {
+    public let title: String
+    public let placeholder: String
+    public var filledState: Bool?
+    
+    public init(title: String, placeholder: String, filledState: Bool? = nil) {
+        self.title = title
+        self.placeholder = placeholder
+        self.filledState = filledState
+    }
 }
 
-protocol UnderLineTextFieldDelegate: AnyObject {
+public protocol UnderLineTextFieldDelegate: AnyObject {
     func underLineDidChange(sender: UITextField)
 }
 
-class UnderLineTextField: UIView {
+public class UnderLineTextField: UIView {
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var lineView: UIView!
+    @IBOutlet public weak var titleLabel: UILabel!
+    @IBOutlet public weak var textField: UITextField!
+    @IBOutlet public weak var lineView: UIView!
     public weak var delegate: UnderLineTextFieldDelegate?
         
     public var data: UnderLineData? {
@@ -50,7 +55,7 @@ class UnderLineTextField: UIView {
 
     private func loadView() {
         guard let xibName = NSStringFromClass(self.classForCoder).components(separatedBy: ".").last,
-              let view = Bundle.main.loadNibNamed(xibName, owner: self, options: nil)?.first as? UIView else { return }
+              let view = Bundle.module.loadNibNamed(xibName, owner: self, options: nil)?.first as? UIView else { return }
         view.frame = self.bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(view)
@@ -70,10 +75,10 @@ class UnderLineTextField: UIView {
     
     @objc func textFieldDidChange(sender: UITextField) {
         if sender.text?.isEmpty == false{
-            lineView.backgroundColor = UIColor(named: "lightGreen")
+            lineView.backgroundColor = UIColor(red: 0.0, green: 195.0 / 255.0, blue: 98.0 / 255.0, alpha: 1.0)
             data?.filledState = true
         } else {
-            lineView.backgroundColor = .systemGray5
+            lineView.backgroundColor = UIColor(red: 229.0 / 255.0, green: 230.0 / 255.0, blue: 233.0 / 255.0, alpha: 1.0)
             data?.filledState = false
         }
         delegate?.underLineDidChange(sender: sender)
