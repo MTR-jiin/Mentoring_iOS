@@ -44,7 +44,7 @@ class BaseProjectFactory: ProjectFactory {
                 product: .app,
                 bundleId: "com.julia.test.\(projectName)",
                 deploymentTarget: .iOS(targetVersion: "13.0", devices: [.iphone]),
-                infoPlist: "\(projectName)/Sources/Application/Info.plist",
+                infoPlist: "\(projectName)/Info.plist",
                 sources: ["\(projectName)/**/*.swift",],
                 resources: [
                     "\(projectName)/**/*.storyboard",
