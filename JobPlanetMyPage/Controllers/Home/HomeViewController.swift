@@ -22,7 +22,7 @@ struct SearchCompany {
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
+    private let repo = SearchHomeMockRepository()
     
     private var dummy: SearchCompany = SearchCompany(header: "실시간 어쩌고", items: [
                                     SearchCompany.Item(ranking: 1, company_id: 2123, company_name: "카카오"),
@@ -35,6 +35,21 @@ class HomeViewController: UIViewController {
         makeSearchBar()
         tableView.dataSource = self
         tableView.delegate = self
+        repo.getHeadLine { result in
+            switch result {
+            case .success(let data):
+                print("data", data)
+            default: break
+            }
+        }
+        
+        repo.getRanking { result in
+            switch result {
+            case .success(let data):
+                print("data", data)
+            default: break
+            }
+        }
     }
     
     private func makeSearchBar() {

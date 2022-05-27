@@ -56,6 +56,7 @@ class BaseProjectFactory: ProjectFactory {
                     "\(projectName)/**/*.storyboard",
                     "\(projectName)/**/*.xib",
                     "\(projectName)/**/*.xcassets",
+                    "\(projectName)/**/*.json",
                 ],
                 dependencies: dependencies
             )
