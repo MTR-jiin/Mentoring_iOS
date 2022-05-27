@@ -32,10 +32,29 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="McU-Bb-Uau" userLabel="Logo View">
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="McU-Bb-Uau" userLabel="Logo View">
             <rect key="frame" x="0.0" y="0.0" width="414" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="248" verticalCompressionResistancePriority="748" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QT9-Np-ZPz">
+                    <rect key="frame" x="0.0" y="84" width="414" height="261"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2K-oB-miK">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+                            <color key="backgroundColor" name="Gray30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="260" id="gUL-PO-91X"/>
+                            </constraints>
+                        </tableView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IB1-Ia-69C" userLabel="Line View">
+                            <rect key="frame" x="0.0" y="260" width="414" height="1"/>
+                            <color key="backgroundColor" name="Gray50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="INA-8E-Cm8"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzD-XO-yEn" customClass="UIControl">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
                     <subviews>
@@ -183,25 +202,6 @@
                         <constraint firstAttribute="bottom" secondItem="qgK-PN-9FW" secondAttribute="bottom" id="zCD-53-MwU"/>
                     </constraints>
                 </view>
-                <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="248" verticalCompressionResistancePriority="748" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QT9-Np-ZPz">
-                    <rect key="frame" x="0.0" y="84" width="414" height="261"/>
-                    <subviews>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2K-oB-miK">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
-                            <color key="backgroundColor" name="Gray30"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="260" id="gUL-PO-91X"/>
-                            </constraints>
-                        </tableView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IB1-Ia-69C" userLabel="Line View">
-                            <rect key="frame" x="0.0" y="260" width="414" height="1"/>
-                            <color key="backgroundColor" name="Gray50"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="1" id="INA-8E-Cm8"/>
-                            </constraints>
-                        </view>
-                    </subviews>
-                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="VeU-so-RNM"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>

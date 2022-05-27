@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-629" y="138"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Home View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="SearchHomeViewController" customModule="JobPlanetMyPage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,16 +39,30 @@
                                     <constraint firstAttribute="height" constant="84" id="qyJ-Yy-GGj"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yz-l7-fbE" userLabel="Menu View">
+                                <rect key="frame" x="0.0" y="128" width="414" height="52"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="gyM-CF-QfG"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="8yz-l7-fbE" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="16h-gr-aDX"/>
                             <constraint firstItem="AWU-NM-cx9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ETM-tZ-1dC"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="AWU-NM-cx9" secondAttribute="trailing" id="VaL-6x-kkF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8yz-l7-fbE" secondAttribute="trailing" id="aHX-CU-VFb"/>
                             <constraint firstItem="AWU-NM-cx9" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="thH-Bd-YFC"/>
+                            <constraint firstItem="8yz-l7-fbE" firstAttribute="top" secondItem="AWU-NM-cx9" secondAttribute="bottom" id="xf2-2V-hMf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HkW-sY-t68"/>
+                    <connections>
+                        <outlet property="headerView" destination="AWU-NM-cx9" id="7Kk-fS-Fdw"/>
+                        <outlet property="headerViewHeight" destination="qyJ-Yy-GGj" id="9Rj-GS-CfR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,6 +72,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
