@@ -10,6 +10,17 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+protocol SearchHomeHeaderDatable {
+    var ranking: Int { get }
+    var companyID: Int { get }
+    var fluctuation: Int { get }
+    var companyName: String { get }
+}
+
+protocol SearchHomeHeaderViewDelegate: AnyObject {
+    func tapDropDown(state: Bool)
+}
+
 final class SearchHomeHeaderView: DesignView {
     @IBOutlet private weak var searchButton: UIControl!
     @IBOutlet private weak var searchTermsButton: UIControl!
@@ -22,6 +33,9 @@ final class SearchHomeHeaderView: DesignView {
     @IBOutlet private weak var fluctuationView: UIView!
     @IBOutlet private weak var NEWLabel: UILabel!
     @IBOutlet private weak var tableView: UITableView!
+    
+    fileprivate let items: PublishSubject<[SearchHomeHeaderDatable]> = .init()
+    public weak var delegate: SearchHomeHeaderViewDelegate?
     
     public var isFold: Bool = true {
         didSet {
@@ -40,10 +54,26 @@ final class SearchHomeHeaderView: DesignView {
         tableView.contentInset = .init(top: 8, left: 0, bottom: 8, right: 0)
         isFold = true
         
-        Observable.just(Array(0...9))
-            .bind(to: tableView.rx.items(cellIdentifier: "SearchHomeHeaderRankCell", cellType: SearchHomeHeaderRankCell.self)) { row, item, cell in
-                cell.bind()
-            }
-            .disposed(by: disposeBag)
+        items.bind(to: tableView.rx.items(cellIdentifier: "SearchHomeHeaderRankCell", cellType: SearchHomeHeaderRankCell.self)) { row, item, cell in
+            cell.bind(item: item)
+        }
+        .disposed(by: disposeBag)
     }
 }
+
+extension Reactive where Base: SearchHomeHeaderView {
+    var items: Binder<[SearchHomeHeaderDatable]> {
+        return Binder(self.base) { (_, items) in
+            self.base.items.onNext(items)
+        }
+    }
+    
+    private var delegate: RxSearchHomeHeaderViewDelegateProxy {
+        return RxSearchHomeHeaderViewDelegateProxy.proxy(for: self.base)
+    }
+    
+    var tapDropDown: ControlEvent<Bool> {
+        return delegate.tapDropDown
+    }
+}
+

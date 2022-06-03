@@ -13,23 +13,42 @@ final class SearchHomeViewController: UIViewController {
     @IBOutlet private weak var headerView: SearchHomeHeaderView!
     @IBOutlet private weak var headerViewHeight: NSLayoutConstraint!
     
+    private let viewModel: SearchHomeViewModel = .init()
     private let disposeBag: DisposeBag = .init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupLayout()
+        bind()
+    }
+}
 
-        headerView.dropDownButton.rx.throttleTap
-            .subscribe(onNext: { [weak self] in
-                guard let self = self else { return }
-                let isFold = !self.headerView.isFold
-                let height = isFold ? Self.Layout.headerClose : Self.Layout.headerOpen
-                self.headerViewHeight.constant = height
-                UIView.animate(withDuration: 0.3, animations: {
-                    self.headerView.isFold = isFold
-                    self.view.layoutIfNeeded()
-                })
-            })
-            .disposed(by: disposeBag)
+extension SearchHomeViewController {
+    private func setupLayout() {
+        
+    }
+    
+    private func bind() {
+        let requestRank = headerView.dropDownButton.rx.throttleTap
+            .do(onNext: { [weak self] in self?.toggleHeaderView() })
+
+        let input: SearchHomeViewModel.Input = .init(
+            requestRank: requestRank
+        )
+        
+        let output = viewModel.transform(input: input)
+        output.rankData.bind(to: headerView.rx.items).disposed(by: disposeBag)
+    }
+    
+    private func toggleHeaderView() {
+        let isFold = !headerView.isFold
+        let height = isFold ? Self.Layout.headerClose : Self.Layout.headerOpen
+        headerViewHeight.constant = height
+        UIView.animate(withDuration: 0.3, animations: {
+            self.headerView.isFold = isFold
+            self.view.layoutIfNeeded()
+        })
     }
 }
 

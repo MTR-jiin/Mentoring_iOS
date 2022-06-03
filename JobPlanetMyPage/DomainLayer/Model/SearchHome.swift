@@ -19,7 +19,7 @@ extension SearchHome {
             let items: [Item]
         }
 
-        struct Item: Codable {
+        struct Item: Codable, SearchHomeHeaderDatable {
             let ranking, companyID, fluctuation: Int
             let companyName: String
 

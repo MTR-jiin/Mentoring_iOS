@@ -35,21 +35,6 @@ class HomeViewController: UIViewController {
         makeSearchBar()
         tableView.dataSource = self
         tableView.delegate = self
-        repo.getHeadLine { result in
-            switch result {
-            case .success(let data):
-                print("data", data)
-            default: break
-            }
-        }
-        
-        repo.getRanking { result in
-            switch result {
-            case .success(let data):
-                print("data", data)
-            default: break
-            }
-        }
     }
     
     private func makeSearchBar() {

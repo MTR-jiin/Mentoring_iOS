@@ -7,18 +7,19 @@
 //
 
 import Foundation
+import RxSwift
 
-protocol SearchHomeMockRepositoriable {
-    func getRanking(_ completion: (Result<SearchHome.Ranking, Error>)->())
-    func getHeadLine(_ completion: (Result<SearchHome.HeadLine, Error>)->())
+protocol SearchHomeRepositoriable {
+    func getRanking() -> Observable<Result<SearchHome.Ranking, Error>>
+    func getHeadLine() -> Observable<Result<SearchHome.HeadLine, Error>>
 }
 
-struct SearchHomeMockRepository: SearchHomeMockRepositoriable {
-    func getRanking(_ completion: (Result<SearchHome.Ranking, Error>) -> ()) {
-        completion(MentoringMockData.SearchHome.getRankingResponse)
+struct SearchHomeMockRepository: SearchHomeRepositoriable {
+    func getRanking() -> Observable<Result<SearchHome.Ranking, Error>> {
+        .just(MentoringMockData.SearchHome.getRankingResponse)
     }
     
-    func getHeadLine(_ completion: (Result<SearchHome.HeadLine, Error>)->()) {
-        completion(MentoringMockData.SearchHome.getHeadLineResponse)
+    func getHeadLine() -> Observable<Result<SearchHome.HeadLine, Error>> {
+        .just(MentoringMockData.SearchHome.getHeadLineResponse)
     }
 }
