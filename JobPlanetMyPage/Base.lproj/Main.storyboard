@@ -282,10 +282,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJk-91-oWD" customClass="SearchHomeHeaderView" customModule="JobPlanetMyPage" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="200"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="2YJ-9z-9xr"/>
+                                    <constraint firstAttribute="height" constant="80" id="2YJ-9z-9xr"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -298,6 +298,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fDn-cZ-Efn"/>
+                    <connections>
+                        <outlet property="headerView" destination="HJk-91-oWD" id="c5H-v8-WU0"/>
+                        <outlet property="headerViewHeight" destination="2YJ-9z-9xr" id="jCF-Dy-5Ld"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Rk-8Z-CCc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

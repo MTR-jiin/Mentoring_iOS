@@ -10,21 +10,29 @@ import UIKit
 
 class SearchHomeViewController: UIViewController {
 
+    @IBOutlet weak var headerView: SearchHomeHeaderView!
+    @IBOutlet weak var headerViewHeight: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        headerView.companyListDropDown.addTarget(self, action: #selector(tappedDropDown(_:)), for: .touchUpInside)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func tappedDropDown(_ btn: UIControl) {
+        let fold = !self.headerView.isFold
+        let height = !fold ? Self.Layout.headerClose : Self.Layout.headerOpen
+        self.headerView.isFold = fold
+        self.headerViewHeight.constant = height
+//        UIView.animate(withDuration: 0.3, animations: {
+//            self.view.layoutIfNeeded()
+//        })
     }
-    */
 
+}
+
+extension SearchHomeViewController {
+    struct Layout {
+        static let headerOpen: CGFloat = 343.0
+        static let headerClose: CGFloat = 84.0
+    }
 }

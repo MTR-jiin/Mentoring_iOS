@@ -15,6 +15,7 @@
                 <outlet property="dropImage" destination="hbK-xy-ZEd" id="v7X-fq-NTh"/>
                 <outlet property="searchBar" destination="oEP-T2-E1C" id="auM-Sn-Ai9"/>
                 <outlet property="tableView" destination="Grd-jJ-cDt" id="CAc-kT-K02"/>
+                <outlet property="underLineView" destination="TJu-ws-Asq" id="ubl-iE-FAU"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -97,17 +98,17 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4qJ-TE-qxt">
-                    <rect key="frame" x="0.0" y="83" width="559" height="261"/>
+                    <rect key="frame" x="0.0" y="83" width="559" height="256"/>
                     <subviews>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Grd-jJ-cDt">
-                            <rect key="frame" x="0.0" y="0.0" width="559" height="260"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="25" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Grd-jJ-cDt">
+                            <rect key="frame" x="0.0" y="0.0" width="559" height="255"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="260" id="OOE-J2-Vgf"/>
+                                <constraint firstAttribute="height" constant="255" id="OOE-J2-Vgf"/>
                             </constraints>
                         </tableView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJu-ws-Asq">
-                            <rect key="frame" x="0.0" y="260" width="559" height="1"/>
+                            <rect key="frame" x="0.0" y="255" width="559" height="1"/>
                             <color key="backgroundColor" name="lightGreen"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="xLc-O3-o9a"/>

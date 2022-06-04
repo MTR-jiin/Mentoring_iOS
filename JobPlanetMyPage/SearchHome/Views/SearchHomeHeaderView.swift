@@ -14,15 +14,17 @@ class SearchHomeHeaderView: DesignView {
     @IBOutlet weak var companyListDropDown: UIControl!
     @IBOutlet weak var dropImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var underLineView: UIView!
     
     private let repository = SearchHomeRepostiory()
     private var viewModel = [SearchHome.Ranking.Item]()
     
-    public var isFold: Bool = true {
+    public var isFold: Bool = false {
         didSet {
             let image = isFold ? "chevron.down" : "chevron.up"
             dropImage.image = UIImage(systemName: image)
-            tableView.isHidden = true
+            tableView.isHidden = !isFold
+            underLineView.isHidden = !isFold
         }
     }
     
@@ -41,6 +43,7 @@ class SearchHomeHeaderView: DesignView {
         let nibName = UINib(nibName: "SearchHomeHeaderRankCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "SearchHomeHeaderRankCell")
     }
+    
     
     override func loaded() {
         super.loaded()
