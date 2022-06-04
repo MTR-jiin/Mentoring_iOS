@@ -1,0 +1,58 @@
+{
+    "status": "success",
+    "code": 200,
+    "data": {
+        "header": "실시간 급상승 검색 기업",
+        "items": [{
+            "ranking": 1,
+            "company_id": 354407,
+            "company_name": "(주)블랙팀",
+            "fluctuation": 0
+        }, {
+            "ranking": 2,
+            "company_id": 370270,
+            "company_name": "(주)그린키친",
+            "fluctuation": 3
+        }, {
+            "ranking": 3,
+            "company_id": 63252,
+            "company_name": "엠티지(주)",
+            "fluctuation": 0
+        }, {
+            "ranking": 4,
+            "company_id": 373533,
+            "company_name": "(주)레인보우브레인",
+            "fluctuation": 999
+        }, {
+            "ranking": 5,
+            "company_id": 267442,
+            "company_name": "샘터사(주)",
+            "fluctuation": 1
+        }, {
+            "ranking": 6,
+            "company_id": 42823,
+            "company_name": "(주)나래트랜드",
+            "fluctuation": 1
+        }, {
+            "ranking": 7,
+            "company_id": 98433,
+            "company_name": "호야텍스(주)",
+            "fluctuation": 1
+        }, {
+            "ranking": 8,
+            "company_id": 88592,
+            "company_name": "웹투어(주)",
+            "fluctuation": 3
+        }, {
+            "ranking": 9,
+            "company_id": 342658,
+            "company_name": "완도대성병원",
+            "fluctuation": 999
+        }, {
+            "ranking": 10,
+            "company_id": 352834,
+            "company_name": "(사)희망조약돌",
+            "fluctuation": -1
+        }]
+    }
+}
