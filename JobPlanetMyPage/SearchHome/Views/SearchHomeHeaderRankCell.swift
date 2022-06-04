@@ -14,4 +14,12 @@ class SearchHomeHeaderRankCell: UITableViewCell {
     @IBOutlet private weak var companyName: UILabel!
     @IBOutlet private weak var rankState: UILabel!
     
+    var data: SearchHome.Ranking.Item? {
+        didSet {
+            guard let data = data else { return }
+            rankLabel.text = "\(data.ranking)"
+            companyName.text = data.companyName
+//            rankState.text = data.ra
+        }
+    }
 }

@@ -15,10 +15,10 @@ protocol SearchHomeRepositable {
 
 class SearchHomeRepostiory: SearchHomeRepositable{
     func getRanking(_ comletionHandler: @escaping (Result<SearchHome.Ranking, Error>) -> ()) {
-        comletionHandler(MentoringMockData.SearchHomeData.getRankingResponse)
+        comletionHandler(SearchHomeData.getRankingResponse)
     }
     
     func getHeadLine(_ comletionHandler: @escaping (Result<SearchHome.HeadLine, Error>) -> ()) {
-        comletionHandler(MentoringMockData.SearchHomeData.getHeadLineResponse)
+        comletionHandler(SearchHomeData.getHeadLineResponse)
     }
 }
