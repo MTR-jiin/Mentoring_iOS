@@ -33,15 +33,16 @@ class BaseProjectFactory: ProjectFactory {
 
     let dependencies: [TargetDependency] = [
       .external(name: "RxSwift"),
+      .package(product: "HeadPageKit"),
       .package(product: "TagListView"),
       .package(product: "UnderLineTextField"),
-
+      
     ]
     
     let packages: [Package] = [
         .local(path: .relativeToRoot("vendor/UnderLineTextField")),
         .local(path: .relativeToRoot("vendor/TagListView")),
-
+        .remote(url: "https://github.com/bugkingK/HeadPageKit", requirement: .branch("main"))
     ]
 
     func generate() -> [Target] {
