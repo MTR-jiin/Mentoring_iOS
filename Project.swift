@@ -33,6 +33,7 @@ class BaseProjectFactory: ProjectFactory {
 
     let dependencies: [TargetDependency] = [
       .external(name: "RxSwift"),
+      .external(name: "RxHeadPageKit"),
       .package(product: "TagListView"),
       .package(product: "UnderLineTextField"),
     ]
