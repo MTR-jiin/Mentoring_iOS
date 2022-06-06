@@ -7,38 +7,34 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class SearchHomeViewController: UIViewController {
     
     @IBOutlet weak var headerView: SearchHomeHeaderView!
     @IBOutlet weak var headerViewHeight: NSLayoutConstraint!
-    private var delegate: SearchHomeHeaderDelegate?
+    private let viewModel: SearchHomeViewModel = .init()
+    private let disposeBag: DisposeBag = .init()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        delegate = self
+        bind() //dataSource
+        headerView.delegate = self //delegate
     }
-//    
-//    private func fetchData() {
-//        repository.getRanking { result in
-//            switch result {
-//            case .success(let data):
-//                self.viewModel = data.data.items
-//            case .failure(let error):
-//                debugPrint(error)
-//            }
-//        }
-//    }
+    
+    private func bind() {
+        viewModel.rankModelData
+            .bind(to: headerView.tableView.rx.items(cellType: SearchHomeHeaderRankCell.self)){ idx, item, cell in
+                cell.bind(to: item)
+            }
+            .disposed(by: disposeBag)
+    }
     
 }
 
 extension SearchHomeViewController: SearchHomeHeaderDelegate {
-    func tappedCompanyRanking(_ sender: UIControl) {
-        sender.addTarget(self, action: #selector(isFoldHeaderView(_:)), for: .touchUpInside)
-    }
-    
-    @objc func isFoldHeaderView(_ btn: UIControl) {
-        print("tapped")
+    func tappedCompanyRanking() {
         let fold = !self.headerView.isFold
         let height = !fold ? Self.Layout.headerClose : Self.Layout.headerOpen
         self.headerViewHeight.constant = height
@@ -53,5 +49,16 @@ extension SearchHomeViewController {
     struct Layout {
         static let headerOpen: CGFloat = 343.0
         static let headerClose: CGFloat = 84.0
+    }
+}
+
+extension Reactive where Base: UITableView {
+    public func items<Sequence: Swift.Sequence, Cell: UITableViewCell, Source: ObservableType>
+    (cellType: Cell.Type = Cell.self)
+    -> (_ source: Source)
+    -> (_ configureCell: @escaping (Int, Sequence.Element, Cell) -> Void)
+    -> Disposable
+    where Source.Element == Sequence {
+        return self.items(cellIdentifier: String(describing: Cell.self), cellType: Cell.self)
     }
 }

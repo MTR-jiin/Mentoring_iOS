@@ -9,9 +9,9 @@
 import Foundation
 import RxRelay
 
-class SearchHomeRankViewModel {
+class SearchHomeViewModel {
     let repository = SearchHomeRepostiory()
-    var rankModelData = BehaviorRelay(value: [SearchHome.Ranking.Item]())
+    var rankModelData = BehaviorRelay(value: [SearchHomeHeaderDatable]())
     
     init() {
         loadData()

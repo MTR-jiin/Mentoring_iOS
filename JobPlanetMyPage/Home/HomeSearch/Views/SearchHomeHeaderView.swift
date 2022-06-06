@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SearchHomeHeaderDelegate: AnyObject {
-    func tappedCompanyRanking(_ sender: UIControl)
+    func tappedCompanyRanking()
 }
 
 class SearchHomeHeaderView: DesignView {
@@ -17,14 +17,12 @@ class SearchHomeHeaderView: DesignView {
     @IBOutlet private weak var searchBar: UIControl!
     @IBOutlet private weak var companyListDropDown: UIControl!
     @IBOutlet private weak var dropImage: UIImageView!
-    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet public weak var tableView: UITableView!
     @IBOutlet private weak var underLineView: UIView!
     
     private let repository = SearchHomeRepostiory()
-//    private var viewModel = [SearchHome.Ranking.Item]()
-    private var delegate: SearchHomeHeaderDelegate?
+    public var delegate: SearchHomeHeaderDelegate?
 
-    
     public var isFold: Bool = false {
         didSet {
             let image = isFold ? "chevron.down" : "chevron.up"
@@ -33,41 +31,21 @@ class SearchHomeHeaderView: DesignView {
             underLineView.isHidden = !isFold
         }
     }
-    
-//    private func fetchData() {
-//        repository.getRanking { result in
-//            switch result {
-//            case .success(let data):
-//                self.viewModel = data.data.items
-//            case .failure(let error):
-//                debugPrint(error)
-//            }
-//        }
-//    }
+
     
     private func registerXib() {
         let nibName = UINib(nibName: "SearchHomeHeaderRankCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "SearchHomeHeaderRankCell")
     }
     
-    
     override func loaded() {
         super.loaded()
         registerXib()
-        tableView.dataSource = self
-        delegate?.tappedCompanyRanking(companyListDropDown)
-    }
-}
-
-extension SearchHomeHeaderView: UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        companyListDropDown.addTarget(self, action: #selector(tappedDropDown), for: .touchUpInside)
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeue(type: SearchHomeHeaderRankCell.self, for: indexPath) else { return UITableViewCell() }
-        cell.bind(to: <#T##headerRank#>)
-        return cell
+    @objc func tappedDropDown() {
+        print("view - tapped")
+        delegate?.tappedCompanyRanking()
     }
-
 }

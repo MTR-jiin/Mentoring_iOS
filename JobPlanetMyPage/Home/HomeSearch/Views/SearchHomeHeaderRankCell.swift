@@ -8,10 +8,10 @@
 
 import UIKit
 
-protocol headerRank {
-    var rankLabel: String { get }
+protocol SearchHomeHeaderDatable {
+    var ranking: Int { get }
     var companyName: String { get }
-    var rankState: String { get }
+    var fluctuation: Int { get }
 }
 
 class SearchHomeHeaderRankCell: UITableViewCell {
@@ -20,9 +20,8 @@ class SearchHomeHeaderRankCell: UITableViewCell {
     @IBOutlet private weak var companyName: UILabel!
     @IBOutlet private weak var rankState: UILabel!
     
-    func bind(to viewModel: headerRank) {
-//        guard let viewModel = viewModel else { return }
-        rankLabel.text = viewModel.rankLabel
+    func bind(to viewModel: SearchHomeHeaderDatable) {
+        rankLabel.text = String(viewModel.ranking)
         companyName.text = viewModel.companyName
     }
 

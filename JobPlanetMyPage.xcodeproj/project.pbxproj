@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		13418E908E60A058C8B3BE5F /* Offer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218A1B4408794647643A31B6 /* Offer.storyboard */; };
 		178BCAA3C7498EEC337F9C9D /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C655CE46B3D55582A6253A4 /* MyPageViewController.swift */; };
+		2560FAA9BB89BB7C07AD9A45 /* SearchHomeHeaderRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319208BEDA2ABD9CBB8B9139 /* SearchHomeHeaderRankCell.swift */; };
 		28E1C02FB4780ED96279C14B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66A49FC1FA55EF605CE615 /* AppDelegate.swift */; };
 		2DB63EFEC6C814AA3C38BE32 /* MyPageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057345DFA74AC7DF88784EF /* MyPageSettingViewController.swift */; };
 		30A27A24CA6CA205AC578A28 /* TagListView in Frameworks */ = {isa = PBXBuildFile; productRef = E5F2EDEF25C740F0356F5BD1 /* TagListView */; };
@@ -17,42 +18,36 @@
 		39E091CB14F5A685FAAAC4BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371E10D9880CA638629D00FE /* Main.storyboard */; };
 		3BAB200B0BC34EA132E3A85D /* UnderLineTextField in Frameworks */ = {isa = PBXBuildFile; productRef = 83DAD738632442B36EB224D9 /* UnderLineTextField */; };
 		3EC7F16D48523CFF572EE56E /* JobGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A66A41C03188C87EA175C5C /* JobGroupTableViewCell.swift */; };
-		44B13F7738299C77912D242C /* SearchHomeHeaderRankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758CDB4668F6942FE7F9D116 /* SearchHomeHeaderRankCell.xib */; };
-		45237C8D3BC600FC6D2B43F8 /* UnderLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748BD65DFA0628658A105C4 /* UnderLineTextField.swift */; };
-		46686C7C1F9466444C7C33F4 /* SearchHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4214A5B5B097696CFE3CDD45 /* SearchHomeViewController.swift */; };
-		4830EDDB2A0C32FD302379A6 /* SearchHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210D25F621CFF558445D31FB /* SearchHome.swift */; };
 		49538D72406939C01203A9E1 /* MypageSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F0B72389653E8585005FF7 /* MypageSetting.storyboard */; };
 		4B9988707E1BBF5ECD8859BC /* OfferDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CC0AC235CB7621CA79FB1 /* OfferDetailViewController.swift */; };
+		4E5E15A5A18BAD6C88756D7C /* SearchHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738E8A4B60DA40FBBD627C34 /* SearchHomeViewController.swift */; };
 		4E66327B132742533E4A3F01 /* OfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C6A54FBF8B80A60DF15AF6 /* OfferViewController.swift */; };
 		501FA72EDE4F3A428DD06927 /* MyPageListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450D84CEE8D6531B1A3175D0 /* MyPageListTableViewCell.swift */; };
 		5265454670D66BB040CE5931 /* HeadPageKit in Frameworks */ = {isa = PBXBuildFile; productRef = E5151EC7C11CCF61499A4DEB /* HeadPageKit */; };
 		560B62A4244CF8FBCC6C790B /* JobGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDF22B8C6A72B5266B735D8 /* JobGroupViewController.swift */; };
-		5A7323B404522870883F77E0 /* SearchHomeRepostiory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8B3016C44DF796A519E9E /* SearchHomeRepostiory.swift */; };
-		6C8E41CB284B7F54003E1D19 /* HomeHeaderChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8E41CA284B7F54003E1D19 /* HomeHeaderChildViewController.swift */; };
-		6C8E41CF284C6999003E1D19 /* SlideImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C8E41CE284C6999003E1D19 /* SlideImage.xib */; };
-		6C8E41D3284C944A003E1D19 /* SearchHomeRankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8E41D2284C944A003E1D19 /* SearchHomeRankViewModel.swift */; };
+		5F66553C0D8BFCDB19310C74 /* MentoringMockData.SearchHome.HeadLine.json in Resources */ = {isa = PBXBuildFile; fileRef = 26809D55DAFE7B14093912F5 /* MentoringMockData.SearchHome.HeadLine.json */; };
+		6080A846F45ED3659097894B /* SearchHomeHeaderRankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEA1399DEDF6C4374237F6E0 /* SearchHomeHeaderRankCell.xib */; };
+		613158D6A7792903CC39CD8E /* SearchHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F84FFD647A1B5D0DB68786 /* SearchHomeHeaderView.swift */; };
 		745F5C0FD8B9F5B136896B6E /* ProfileFirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D2267E8B1F23274AD6D7AD /* ProfileFirstTableViewCell.swift */; };
 		8A0D09C8D813E2438056A8E3 /* Ex+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE773DF5271D2D24805398 /* Ex+UITableView.swift */; };
 		95ADD894E6D48A182880F954 /* OfferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE71E150EC456B4CF1B8F26 /* OfferTableViewCell.swift */; };
-		9B9431380FB3831AEF402D8F /* SearchHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87D543F548038DEBCE5DD25E /* SearchHomeHeaderView.xib */; };
+		95EC4CC587B200F14E92DF63 /* SearchHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E8267EB29556B18604CAD5A /* SearchHomeHeaderView.xib */; };
 		9C411963958A45D404A34D57 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BD5DD2958896EECE7E4E0C /* RxSwift.framework */; platformFilter = ios; };
-		9CB50F2D7FB94AB6E9FFBC54 /* MentoringMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF98D94774D048B6E5FDBB1A /* MentoringMockData.swift */; };
 		9DF4E45FA8F1C0CDBA108DC1 /* TuistBundle+JobPlanetMyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7746319FD82F3E1350FCA564 /* TuistBundle+JobPlanetMyPage.swift */; };
-		A9C5C0076418E4A0666106FD /* SearchHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2163113DC5DF466396853B09 /* SearchHomeHeaderView.swift */; };
 		AB65C112DB4144DF12BB0975 /* CellDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11721477868C46E12FA169E /* CellDataProtocol.swift */; };
 		AC04BCC8389DB100D19CA7C3 /* Ex+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0740E1F303D957966C7CF937 /* Ex+UIViewController.swift */; };
 		AC3E37FEC79FC0895BAFBE02 /* TuistAssets+JobPlanetMyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38227F335D6853723D04F948 /* TuistAssets+JobPlanetMyPage.swift */; };
 		AF41ED97E74569E2D1CB1F37 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0BD5DD2958896EECE7E4E0C /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B64852286A36E18A4927F38C /* MentoringMockData.SearchHome.Ranking.json in Resources */ = {isa = PBXBuildFile; fileRef = 2046346DC2CE234B84CFE755 /* MentoringMockData.SearchHome.Ranking.json */; };
+		BC9952EB41951002ABABE598 /* MentoringMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183934B919B48B47DFE80275 /* MentoringMockData.swift */; };
+		BDB119032FB2F371FD528A47 /* SearchHomeRepostiory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DA0B8CC73309DD7027D670 /* SearchHomeRepostiory.swift */; };
 		BEC2194F4A08A0A2FA6CE713 /* APIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF109EAC74D79F16F85358D /* APIKit.swift */; };
-		C14232F24FF3A604A4228B6E /* UnderLineTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C45A5C0573D01AF53C7DBA6 /* UnderLineTextField.xib */; };
 		C4D3F2AFE8CB0B58F2FB10EF /* JobGroup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2518B42C890F04483018C0B9 /* JobGroup.storyboard */; };
-		C5909C12606510B373CFB69A /* MentoringMockData.SearchHome.HeadLine.json in Resources */ = {isa = PBXBuildFile; fileRef = BD4461AF2CBDD57903F18FD5 /* MentoringMockData.SearchHome.HeadLine.json */; };
 		C99E3A3A0A5FEBA729FB28B9 /* GrayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682B96789A463262AF1D02DA /* GrayTableViewCell.swift */; };
-		CA66E80739DE66462641F9B5 /* SearchHomeHeaderRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C41E50FC12D4FEF69D7D809 /* SearchHomeHeaderRankCell.swift */; };
+		ECF3FB6552AB08B24C7BF30F /* SearchHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795B82F7AB6A1EADA72311B0 /* SearchHome.swift */; };
 		ED962EE1FE6677C54B454878 /* DesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B92275D3F7D6D3EC5ED2DD5 /* DesignView.swift */; };
-		EE4E9C3CABF78E7109B872C0 /* HomeSlideImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A001425250FE4F2188B7160A /* HomeSlideImageViewController.swift */; };
-		F552751280E11061960E3491 /* MentoringMockData.SearchHome.Ranking.json in Resources */ = {isa = PBXBuildFile; fileRef = E625201550100AE6A776CDC0 /* MentoringMockData.SearchHome.Ranking.json */; };
 		F6B859BC92858F2ADCED497B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB7C9F4E81B55D0380E164AC /* Assets.xcassets */; };
+		FEEAF71DEB0A5B7C8832F3C9 /* SearchHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D385201A77A61EC1C24035 /* SearchHomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,47 +68,42 @@
 		01BE773DF5271D2D24805398 /* Ex+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UITableView.swift"; sourceTree = "<group>"; };
 		0740E1F303D957966C7CF937 /* Ex+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UIViewController.swift"; sourceTree = "<group>"; };
 		0DE71E150EC456B4CF1B8F26 /* OfferTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferTableViewCell.swift; sourceTree = "<group>"; };
+		183934B919B48B47DFE80275 /* MentoringMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentoringMockData.swift; sourceTree = "<group>"; };
 		1D66A49FC1FA55EF605CE615 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		210D25F621CFF558445D31FB /* SearchHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHome.swift; sourceTree = "<group>"; };
-		2163113DC5DF466396853B09 /* SearchHomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeHeaderView.swift; sourceTree = "<group>"; };
+		2046346DC2CE234B84CFE755 /* MentoringMockData.SearchHome.Ranking.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MentoringMockData.SearchHome.Ranking.json; sourceTree = "<group>"; };
 		218A1B4408794647643A31B6 /* Offer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Offer.storyboard; sourceTree = "<group>"; };
 		2518B42C890F04483018C0B9 /* JobGroup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobGroup.storyboard; sourceTree = "<group>"; };
+		26809D55DAFE7B14093912F5 /* MentoringMockData.SearchHome.HeadLine.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MentoringMockData.SearchHome.HeadLine.json; sourceTree = "<group>"; };
 		27E4F20CBB71774622D1C64A /* Ex+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UIView.swift"; sourceTree = "<group>"; };
+		28DA0B8CC73309DD7027D670 /* SearchHomeRepostiory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeRepostiory.swift; sourceTree = "<group>"; };
+		319208BEDA2ABD9CBB8B9139 /* SearchHomeHeaderRankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeHeaderRankCell.swift; sourceTree = "<group>"; };
 		38227F335D6853723D04F948 /* TuistAssets+JobPlanetMyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+JobPlanetMyPage.swift"; sourceTree = "<group>"; };
-		4214A5B5B097696CFE3CDD45 /* SearchHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeViewController.swift; sourceTree = "<group>"; };
 		42D2267E8B1F23274AD6D7AD /* ProfileFirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFirstTableViewCell.swift; sourceTree = "<group>"; };
 		450D84CEE8D6531B1A3175D0 /* MyPageListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageListTableViewCell.swift; sourceTree = "<group>"; };
 		4667C0A5F23DC9C1962FC97E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4748BD65DFA0628658A105C4 /* UnderLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLineTextField.swift; sourceTree = "<group>"; };
 		4B2CC0AC235CB7621CA79FB1 /* OfferDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailViewController.swift; sourceTree = "<group>"; };
 		4B92275D3F7D6D3EC5ED2DD5 /* DesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignView.swift; sourceTree = "<group>"; };
-		4C41E50FC12D4FEF69D7D809 /* SearchHomeHeaderRankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeHeaderRankCell.swift; sourceTree = "<group>"; };
 		5481CCD21EB4933DC54F54C7 /* JobPlanetMyPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobPlanetMyPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F0B72389653E8585005FF7 /* MypageSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MypageSetting.storyboard; sourceTree = "<group>"; };
 		59C6A54FBF8B80A60DF15AF6 /* OfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferViewController.swift; sourceTree = "<group>"; };
 		5C655CE46B3D55582A6253A4 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
-		5EC8B3016C44DF796A519E9E /* SearchHomeRepostiory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeRepostiory.swift; sourceTree = "<group>"; };
 		682B96789A463262AF1D02DA /* GrayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayTableViewCell.swift; sourceTree = "<group>"; };
-		6C8E41CA284B7F54003E1D19 /* HomeHeaderChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderChildViewController.swift; sourceTree = "<group>"; };
-		6C8E41CE284C6999003E1D19 /* SlideImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideImage.xib; sourceTree = "<group>"; };
-		6C8E41D2284C944A003E1D19 /* SearchHomeRankViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeRankViewModel.swift; sourceTree = "<group>"; };
-		758CDB4668F6942FE7F9D116 /* SearchHomeHeaderRankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHomeHeaderRankCell.xib; sourceTree = "<group>"; };
+		738E8A4B60DA40FBBD627C34 /* SearchHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeViewController.swift; sourceTree = "<group>"; };
 		7746319FD82F3E1350FCA564 /* TuistBundle+JobPlanetMyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+JobPlanetMyPage.swift"; sourceTree = "<group>"; };
-		7C45A5C0573D01AF53C7DBA6 /* UnderLineTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnderLineTextField.xib; sourceTree = "<group>"; };
-		87D543F548038DEBCE5DD25E /* SearchHomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHomeHeaderView.xib; sourceTree = "<group>"; };
+		795B82F7AB6A1EADA72311B0 /* SearchHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHome.swift; sourceTree = "<group>"; };
+		7E8267EB29556B18604CAD5A /* SearchHomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHomeHeaderView.xib; sourceTree = "<group>"; };
 		8A66A41C03188C87EA175C5C /* JobGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobGroupTableViewCell.swift; sourceTree = "<group>"; };
 		9CDF22B8C6A72B5266B735D8 /* JobGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobGroupViewController.swift; sourceTree = "<group>"; };
-		A001425250FE4F2188B7160A /* HomeSlideImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSlideImageViewController.swift; sourceTree = "<group>"; };
+		A2D385201A77A61EC1C24035 /* SearchHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeViewModel.swift; sourceTree = "<group>"; };
+		AEA1399DEDF6C4374237F6E0 /* SearchHomeHeaderRankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHomeHeaderRankCell.xib; sourceTree = "<group>"; };
 		B39F315AEC6836BE878618FD /* TagListView */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TagListView; path = vendor/TagListView; sourceTree = "<group>"; };
-		BD4461AF2CBDD57903F18FD5 /* MentoringMockData.SearchHome.HeadLine.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MentoringMockData.SearchHome.HeadLine.json; sourceTree = "<group>"; };
 		C25BB1C71A7EE5C962F8AEFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6E4A324C3D1D4D9B6FE1A82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C6E74BBC525463CDAF86DE9A /* UnderLineTextField */ = {isa = PBXFileReference; lastKnownFileType = folder; name = UnderLineTextField; path = vendor/UnderLineTextField; sourceTree = "<group>"; };
 		CB7C9F4E81B55D0380E164AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D11721477868C46E12FA169E /* CellDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDataProtocol.swift; sourceTree = "<group>"; };
-		DF98D94774D048B6E5FDBB1A /* MentoringMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentoringMockData.swift; sourceTree = "<group>"; };
 		E0BD5DD2958896EECE7E4E0C /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E625201550100AE6A776CDC0 /* MentoringMockData.SearchHome.Ranking.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MentoringMockData.SearchHome.Ranking.json; sourceTree = "<group>"; };
+		E3F84FFD647A1B5D0DB68786 /* SearchHomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeHeaderView.swift; sourceTree = "<group>"; };
 		F057345DFA74AC7DF88784EF /* MyPageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingViewController.swift; sourceTree = "<group>"; };
 		FCF109EAC74D79F16F85358D /* APIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,14 +128,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2AC25C13C415501159F43834 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				210D25F621CFF558445D31FB /* SearchHome.swift */,
-			);
-			path = Entity;
 			sourceTree = "<group>";
 		};
 		2F9AD00E12C1C82CEA881271 /* Sources */ = {
@@ -204,6 +186,16 @@
 			path = JobGroupSatisfaction;
 			sourceTree = "<group>";
 		};
+		50364F30ECFEFE4D50B39EF4 /* HomeSearch */ = {
+			isa = PBXGroup;
+			children = (
+				C03C1DEAF01486B1F40C855D /* Entity */,
+				F4CE960E65ACE0609CA680C5 /* Views */,
+				738E8A4B60DA40FBBD627C34 /* SearchHomeViewController.swift */,
+			);
+			path = HomeSearch;
+			sourceTree = "<group>";
+		};
 		60BFE7462DB9B532937F10A3 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,16 +205,6 @@
 				42D2267E8B1F23274AD6D7AD /* ProfileFirstTableViewCell.swift */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		6220DA58312FAE0F2D6859D0 /* HomeSearch */ = {
-			isa = PBXGroup;
-			children = (
-				2AC25C13C415501159F43834 /* Entity */,
-				D3469BDF6DC92D83537BBD5F /* Views */,
-				4214A5B5B097696CFE3CDD45 /* SearchHomeViewController.swift */,
-			);
-			path = HomeSearch;
 			sourceTree = "<group>";
 		};
 		6AA973163F2A951BCAC3EA53 /* Project */ = {
@@ -239,19 +221,9 @@
 			children = (
 				AFCC200BEC4B2672855C6ED1 /* APIKit */,
 				9BF87058AD8C53454417FF86 /* Ex */,
-				F0824538F9DCF3B1B3BD094D /* UnderLine */,
 				473668EDF08FC160F585B1B5 /* View */,
 			);
 			path = Helper;
-			sourceTree = "<group>";
-		};
-		73AF69044C5DB406E722C311 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				E26F8FBBE1C55DA1004ED5B2 /* MockData */,
-				5EC8B3016C44DF796A519E9E /* SearchHomeRepostiory.swift */,
-			);
-			path = Repository;
 			sourceTree = "<group>";
 		};
 		913D7A166A3EC3A088A1883A = {
@@ -318,24 +290,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D3469BDF6DC92D83537BBD5F /* Views */ = {
+		C03C1DEAF01486B1F40C855D /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				4C41E50FC12D4FEF69D7D809 /* SearchHomeHeaderRankCell.swift */,
-				758CDB4668F6942FE7F9D116 /* SearchHomeHeaderRankCell.xib */,
-				2163113DC5DF466396853B09 /* SearchHomeHeaderView.swift */,
-				87D543F548038DEBCE5DD25E /* SearchHomeHeaderView.xib */,
-				6C8E41D2284C944A003E1D19 /* SearchHomeRankViewModel.swift */,
+				795B82F7AB6A1EADA72311B0 /* SearchHome.swift */,
 			);
-			path = Views;
+			path = Entity;
 			sourceTree = "<group>";
 		};
-		E26F8FBBE1C55DA1004ED5B2 /* MockData */ = {
+		DB19E8CCB94AC4E0F100B136 /* MockData */ = {
 			isa = PBXGroup;
 			children = (
-				BD4461AF2CBDD57903F18FD5 /* MentoringMockData.SearchHome.HeadLine.json */,
-				E625201550100AE6A776CDC0 /* MentoringMockData.SearchHome.Ranking.json */,
-				DF98D94774D048B6E5FDBB1A /* MentoringMockData.swift */,
+				26809D55DAFE7B14093912F5 /* MentoringMockData.SearchHome.HeadLine.json */,
+				2046346DC2CE234B84CFE755 /* MentoringMockData.SearchHome.Ranking.json */,
+				183934B919B48B47DFE80275 /* MentoringMockData.swift */,
 			);
 			path = MockData;
 			sourceTree = "<group>";
@@ -343,30 +311,31 @@
 		E5ACCCAA4D92BC54B94A5AFB /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				73AF69044C5DB406E722C311 /* Repository */,
-				F2306B385C27DA6B9ACF7F6E /* HomeHeader */,
-				6220DA58312FAE0F2D6859D0 /* HomeSearch */,
+				50364F30ECFEFE4D50B39EF4 /* HomeSearch */,
+				F155E773CAADD5F26A20B84C /* Repository */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		F0824538F9DCF3B1B3BD094D /* UnderLine */ = {
+		F155E773CAADD5F26A20B84C /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				4748BD65DFA0628658A105C4 /* UnderLineTextField.swift */,
-				7C45A5C0573D01AF53C7DBA6 /* UnderLineTextField.xib */,
+				DB19E8CCB94AC4E0F100B136 /* MockData */,
+				28DA0B8CC73309DD7027D670 /* SearchHomeRepostiory.swift */,
 			);
-			path = UnderLine;
+			path = Repository;
 			sourceTree = "<group>";
 		};
-		F2306B385C27DA6B9ACF7F6E /* HomeHeader */ = {
+		F4CE960E65ACE0609CA680C5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A001425250FE4F2188B7160A /* HomeSlideImageViewController.swift */,
-				6C8E41CA284B7F54003E1D19 /* HomeHeaderChildViewController.swift */,
-				6C8E41CE284C6999003E1D19 /* SlideImage.xib */,
+				319208BEDA2ABD9CBB8B9139 /* SearchHomeHeaderRankCell.swift */,
+				E3F84FFD647A1B5D0DB68786 /* SearchHomeHeaderView.swift */,
+				A2D385201A77A61EC1C24035 /* SearchHomeViewModel.swift */,
+				AEA1399DEDF6C4374237F6E0 /* SearchHomeHeaderRankCell.xib */,
+				7E8267EB29556B18604CAD5A /* SearchHomeHeaderView.xib */,
 			);
-			path = HomeHeader;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,12 +399,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				39E091CB14F5A685FAAAC4BA /* Main.storyboard in Resources */,
-				C14232F24FF3A604A4228B6E /* UnderLineTextField.xib in Resources */,
-				C5909C12606510B373CFB69A /* MentoringMockData.SearchHome.HeadLine.json in Resources */,
-				6C8E41CF284C6999003E1D19 /* SlideImage.xib in Resources */,
-				F552751280E11061960E3491 /* MentoringMockData.SearchHome.Ranking.json in Resources */,
-				44B13F7738299C77912D242C /* SearchHomeHeaderRankCell.xib in Resources */,
-				9B9431380FB3831AEF402D8F /* SearchHomeHeaderView.xib in Resources */,
+				6080A846F45ED3659097894B /* SearchHomeHeaderRankCell.xib in Resources */,
+				95EC4CC587B200F14E92DF63 /* SearchHomeHeaderView.xib in Resources */,
+				5F66553C0D8BFCDB19310C74 /* MentoringMockData.SearchHome.HeadLine.json in Resources */,
+				B64852286A36E18A4927F38C /* MentoringMockData.SearchHome.Ranking.json in Resources */,
 				C4D3F2AFE8CB0B58F2FB10EF /* JobGroup.storyboard in Resources */,
 				49538D72406939C01203A9E1 /* MypageSetting.storyboard in Resources */,
 				13418E908E60A058C8B3BE5F /* Offer.storyboard in Resources */,
@@ -458,17 +425,14 @@
 				8A0D09C8D813E2438056A8E3 /* Ex+UITableView.swift in Sources */,
 				3305EE7D3F092E410DAF1105 /* Ex+UIView.swift in Sources */,
 				AC04BCC8389DB100D19CA7C3 /* Ex+UIViewController.swift in Sources */,
-				6C8E41D3284C944A003E1D19 /* SearchHomeRankViewModel.swift in Sources */,
-				45237C8D3BC600FC6D2B43F8 /* UnderLineTextField.swift in Sources */,
 				ED962EE1FE6677C54B454878 /* DesignView.swift in Sources */,
-				6C8E41CB284B7F54003E1D19 /* HomeHeaderChildViewController.swift in Sources */,
-				EE4E9C3CABF78E7109B872C0 /* HomeSlideImageViewController.swift in Sources */,
-				4830EDDB2A0C32FD302379A6 /* SearchHome.swift in Sources */,
-				9CB50F2D7FB94AB6E9FFBC54 /* MentoringMockData.swift in Sources */,
-				5A7323B404522870883F77E0 /* SearchHomeRepostiory.swift in Sources */,
-				46686C7C1F9466444C7C33F4 /* SearchHomeViewController.swift in Sources */,
-				CA66E80739DE66462641F9B5 /* SearchHomeHeaderRankCell.swift in Sources */,
-				A9C5C0076418E4A0666106FD /* SearchHomeHeaderView.swift in Sources */,
+				ECF3FB6552AB08B24C7BF30F /* SearchHome.swift in Sources */,
+				4E5E15A5A18BAD6C88756D7C /* SearchHomeViewController.swift in Sources */,
+				2560FAA9BB89BB7C07AD9A45 /* SearchHomeHeaderRankCell.swift in Sources */,
+				613158D6A7792903CC39CD8E /* SearchHomeHeaderView.swift in Sources */,
+				FEEAF71DEB0A5B7C8832F3C9 /* SearchHomeViewModel.swift in Sources */,
+				BC9952EB41951002ABABE598 /* MentoringMockData.swift in Sources */,
+				BDB119032FB2F371FD528A47 /* SearchHomeRepostiory.swift in Sources */,
 				3EC7F16D48523CFF572EE56E /* JobGroupTableViewCell.swift in Sources */,
 				560B62A4244CF8FBCC6C790B /* JobGroupViewController.swift in Sources */,
 				AB65C112DB4144DF12BB0975 /* CellDataProtocol.swift in Sources */,
