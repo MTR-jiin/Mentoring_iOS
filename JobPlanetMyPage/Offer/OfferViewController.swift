@@ -7,9 +7,8 @@
 
 import UIKit
 
-// 하지만 앞 문자는 대문자로 조금만 더 신경 써주시면 좋을 거 같아용
+
 struct CompanyData {
-    // state를 enum 으로 처리하는 거 아주 좋았습니다 :)
     enum OfferState{
         case permit, deny, none
     }
@@ -22,12 +21,12 @@ struct CompanyData {
 }
 
 final class OfferViewController: UIViewController {
-    @IBOutlet private weak var navigationTitle: UILabel!
     @IBOutlet private weak var offerListTableView: UITableView!
-    @IBOutlet private weak var navigationView: UIView!
+    @IBOutlet private weak var navigationView: NavigationView!
     
     public var sentNavigationTitle: String = ""
     private var selectedIndex: IndexPath?
+
     var offerCompanyList: [CompanyData] = [
         CompanyData(companyName: "구글 코리아", offerDate: "2019. 08. 30", offerState: .none),
         CompanyData(companyIcon: UIImage(systemName: "house"), companyName: "드라마앤 컴패니", offerDate: "2019. 08. 30", offerState: .permit),
@@ -37,8 +36,6 @@ final class OfferViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationTitle.text = sentNavigationTitle
-        print(offerCompanyList[3].offerState)
         self.offerListTableView.reloadData()
     }
     
@@ -46,12 +43,13 @@ final class OfferViewController: UIViewController {
         super.viewDidLoad()
         offerListTableView.dataSource = self
         offerListTableView.delegate = self
-        navigationUnderLine(sendView: navigationView)
+        settingNavigation()
     }
     
-    // 얘도 private가 된답니당 ~
-    @IBAction private func backNaviBtn(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+    private func settingNavigation() {
+        navigationUnderLine(sendView: navigationView)
+        navigationView.delegate = self
+        navigationView.title = "받은 제안"
     }
 }
 
@@ -72,9 +70,7 @@ extension OfferViewController: UITableViewDataSource{
 extension OfferViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "OfferDetailViewController") as? OfferDetailViewController else { return }
-        let data = offerCompanyList[indexPath.row]
         self.selectedIndex = indexPath
-        vc.infoData = data
         vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -86,3 +82,11 @@ extension OfferViewController: OfferDetailViewDelegate {
         offerCompanyList[selected.row].offerState = data.offerState
     }
 }
+
+extension OfferViewController: NavigationDelegate {
+    func tappedBack() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+}
+

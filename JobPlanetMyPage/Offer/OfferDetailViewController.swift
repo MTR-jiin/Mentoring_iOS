@@ -6,11 +6,6 @@
 //
 
 import UIKit
-// MVVM + Rx -> 약간.. 순수 Swift
-// Swift를 못하면 Rx를 잘 할 수 없다. 구조가 원래 그런데..
-// [Foundation] / [UIKit]
-// 코딩테스트 통과하는 시점까지만 :)
-//
 
 protocol OfferDetailViewDelegate: AnyObject {
     func closeCompanyData(_ data: CompanyData)
@@ -20,7 +15,8 @@ final class OfferDetailViewController: UIViewController {
     @IBOutlet private weak var offerButtonsStackView: UIStackView!
     @IBOutlet private weak var offerDescriptionLabel: UILabel!
     @IBOutlet private weak var offerButtonsView: UIView!
-    @IBOutlet private weak var navigationTitle: UILabel!
+    @IBOutlet weak var navigationView: NavigationView!
+    
     
     var infoData: CompanyData = CompanyData(offerState: .none)
     public weak var delegate: OfferDetailViewDelegate?
@@ -32,8 +28,9 @@ final class OfferDetailViewController: UIViewController {
     }
 
     public func setup(data: CompanyData) {
-        infoData = data
-        navigationTitle.text = infoData.companyName ?? "없음"
+        print("")
+        navigationView.title = data.companyName
+        navigationView.delegate = self
     }
     
     private func makeViewShadow() {
@@ -56,7 +53,10 @@ final class OfferDetailViewController: UIViewController {
         }
     }
     
-    @IBAction private func tappedBackBtn(_ sender: UIButton) {
+}
+
+extension OfferDetailViewController: NavigationDelegate {
+    func tappedBack() {
         delegate?.closeCompanyData(infoData)
         self.navigationController?.popViewController(animated: true)
     }

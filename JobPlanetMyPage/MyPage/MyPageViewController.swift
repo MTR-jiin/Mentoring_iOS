@@ -7,10 +7,15 @@
 
 import UIKit
 
+protocol NaviTitleDelegate: AnyObject {
+    func sendToTitle(_ title: String)
+}
+
 final class MyPageViewController: UIViewController {
     @IBOutlet private weak var mypageTableView: UITableView!
     @IBOutlet private weak var navigationView: UIView!
- 
+    public weak var delegate: NaviTitleDelegate?
+
     enum MyPageListType: String {
         case header, line = ""
         case account = "계정"
@@ -70,7 +75,6 @@ final class MyPageViewController: UIViewController {
         mypageTableView.dataSource = self
         mypageTableView.delegate = self
         navigationUnderLine(sendView: navigationView)
-        
     }
     
     @IBAction func tappedSettingBtn(_ sender: UIButton) {
@@ -107,12 +111,13 @@ extension MyPageViewController: UITableViewDataSource{
 extension MyPageViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellData = tableList[indexPath.row]
+        print("data \(cellData.type.rawValue)")
+        delegate?.sendToTitle(cellData.type.rawValue)
         switch cellData.type {
         //이거 재사용한 코드 만들기
         case .offer:
             let storyboard = UIStoryboard.init(name: "Offer", bundle: nil)
             guard let offerVC = storyboard.instantiateViewController(withIdentifier: "OfferViewController") as? OfferViewController else { return }
-            offerVC.sentNavigationTitle = cellData.type.rawValue
             self.navigationController?.pushViewController(offerVC, animated: true)
         case .JobGroup:
             let storyboard = UIStoryboard.init(name: "JobGroup", bundle: nil)
@@ -120,8 +125,6 @@ extension MyPageViewController: UITableViewDelegate{
             //데이터 전달
             jobVC.modalPresentationStyle = .fullScreen
             self.present(jobVC, animated: true)
-            
-            
         default: return
         }
     }

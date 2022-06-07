@@ -27,6 +27,7 @@ struct CellData {
 
 final class JobGroupViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var navigationTitle: UILabel!
     
     private var dataList: [CellData] = [
         .init(title: "연구 개발", rating: 4.8),
@@ -52,8 +53,7 @@ final class JobGroupViewController: UIViewController {
     @IBAction private func tappedBackBtn(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
+
 }
 
 extension JobGroupViewController: UITableViewDataSource {
