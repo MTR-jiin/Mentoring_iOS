@@ -70,7 +70,6 @@ public class UnderLineTextField: UIView {
     private func configure(infoData: UnderLineData) {
         self.titleLabel.text = infoData.title
         self.textField.placeholder = infoData.placeholder
-//        self.data?.filledState = !(infoData.filledState ?? false)
     }
     
     @objc func textFieldDidChange(sender: UITextField) {
