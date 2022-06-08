@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "HeadPageKit",
+        "repositoryURL": "https://github.com/bugkingK/HeadPageKit",
+        "state": {
+          "branch": "main",
+          "revision": "e9db80a5185322ada20485b6c11a8442de6a8f09",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

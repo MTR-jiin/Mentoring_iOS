@@ -33,11 +33,16 @@ class BaseProjectFactory: ProjectFactory {
 
     let dependencies: [TargetDependency] = [
       .external(name: "RxSwift"),
+      .package(product: "HeadPageKit"),
       .package(product: "TagListView"),
+      .package(product: "UnderLineTextField"),
+      
     ]
     
     let packages: [Package] = [
+        .local(path: .relativeToRoot("vendor/UnderLineTextField")),
         .local(path: .relativeToRoot("vendor/TagListView")),
+        .remote(url: "https://github.com/bugkingK/HeadPageKit", requirement: .branch("main"))
     ]
 
     func generate() -> [Target] {
@@ -48,12 +53,13 @@ class BaseProjectFactory: ProjectFactory {
                 product: .app,
                 bundleId: "com.julia.test.\(projectName)",
                 deploymentTarget: .iOS(targetVersion: "13.0", devices: [.iphone]),
-                infoPlist: "\(projectName)/Info.plist",
+                infoPlist: "\(projectName)/Support Files/Info.plist",
                 sources: ["\(projectName)/**/*.swift",],
                 resources: [
                     "\(projectName)/**/*.storyboard",
                     "\(projectName)/**/*.xib",
                     "\(projectName)/**/*.xcassets",
+                    "\(projectName)/**/*.json",
                 ],
                 dependencies: dependencies
             )

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4rv-h4-7w0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eoP-SV-Uc6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,13 +12,13 @@
         <!--마이페이지-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="JobPlanetMyPage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyPageViewController" id="BYZ-38-t0r" customClass="MyPageViewController" customModule="JobPlanetMyPage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1HG-QV-p4v">
-                                <rect key="frame" x="0.0" y="95.5" width="414" height="766.5"/>
+                                <rect key="frame" x="0.0" y="95.5" width="414" height="717.5"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyProfileTableViewCell" rowHeight="175" id="wqa-Ov-QU2" customClass="ProfileFirstTableViewCell" customModule="JobPlanetMyPage" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="175"/>
@@ -213,13 +214,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3175.36231884058" y="84.375"/>
+            <point key="canvasLocation" x="4085.507246376812" y="84.375"/>
         </scene>
-        <!--마이페이지-->
+        <!--MY-->
         <scene sceneID="wgO-pD-9WW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="4rv-h4-7w0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="마이페이지" image="line.3.horizontal" catalog="system" id="j1K-oW-XAa"/>
+                    <tabBarItem key="tabBarItem" title="MY" image="person.fill" catalog="system" id="j1K-oW-XAa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TdR-eN-VFa">
                         <autoresizingMask key="autoresizingMask"/>
@@ -231,12 +232,106 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTu-JI-o3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2265.217391304348" y="84.375"/>
+            <point key="canvasLocation" x="3175.36231884058" y="84.375"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="x6h-PO-Cc0">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="eoP-SV-Uc6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5kK-h5-bb0">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gDF-tD-gra" kind="relationship" relationship="viewControllers" id="Bkg-hp-egC"/>
+                        <segue destination="4rv-h4-7w0" kind="relationship" relationship="viewControllers" id="I9j-Ko-x1c"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zoN-OU-N83" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1977" y="-333"/>
+        </scene>
+        <!--홈-->
+        <scene sceneID="QC1-uG-guf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="gDF-tD-gra" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="홈" image="house.fill" catalog="system" id="6R8-0C-rHA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MkC-iK-TGF">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tZi-qg-2ef" kind="relationship" relationship="rootViewController" id="aFz-fi-aeN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VWA-Dl-Utf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3195.6521739130435" y="-640.17857142857144"/>
+        </scene>
+        <!--Search Home View Controller-->
+        <scene sceneID="6uw-Pd-YuT">
+            <objects>
+                <viewController storyboardIdentifier="SearchHomeViewController" id="tZi-qg-2ef" customClass="SearchHomeViewController" customModule="JobPlanetMyPage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VsV-ty-sDm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJk-91-oWD" customClass="SearchHomeHeaderView" customModule="JobPlanetMyPage" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="2YJ-9z-9xr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCx-JC-MFK">
+                                <rect key="frame" x="0.0" y="124" width="414" height="60"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Of6-9H-igY"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Drh-42-838" customClass="HeadPageContainView" customModule="HeadPageKit">
+                                <rect key="frame" x="0.0" y="184" width="414" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="8Oh-nH-zgz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AKq-tH-Ge5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AKq-tH-Ge5" firstAttribute="trailing" secondItem="eCx-JC-MFK" secondAttribute="trailing" id="0KI-sN-2ho"/>
+                            <constraint firstItem="Drh-42-838" firstAttribute="top" secondItem="eCx-JC-MFK" secondAttribute="bottom" id="0U8-QE-SMg"/>
+                            <constraint firstItem="HJk-91-oWD" firstAttribute="leading" secondItem="AKq-tH-Ge5" secondAttribute="leading" id="3Kv-jX-Q5z"/>
+                            <constraint firstItem="AKq-tH-Ge5" firstAttribute="trailing" secondItem="HJk-91-oWD" secondAttribute="trailing" id="9Yv-CN-uqr"/>
+                            <constraint firstItem="AKq-tH-Ge5" firstAttribute="trailing" secondItem="Drh-42-838" secondAttribute="trailing" id="J9v-h2-9HK"/>
+                            <constraint firstItem="eCx-JC-MFK" firstAttribute="top" secondItem="HJk-91-oWD" secondAttribute="bottom" id="P1a-LQ-anA"/>
+                            <constraint firstItem="HJk-91-oWD" firstAttribute="top" secondItem="AKq-tH-Ge5" secondAttribute="top" id="ckI-2K-l0h"/>
+                            <constraint firstItem="Drh-42-838" firstAttribute="leading" secondItem="AKq-tH-Ge5" secondAttribute="leading" id="vCO-Ni-gX1"/>
+                            <constraint firstItem="eCx-JC-MFK" firstAttribute="leading" secondItem="AKq-tH-Ge5" secondAttribute="leading" id="yup-gA-nX3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fDn-cZ-Efn"/>
+                    <connections>
+                        <outlet property="headerView" destination="HJk-91-oWD" id="c5H-v8-WU0"/>
+                        <outlet property="headerViewHeight" destination="2YJ-9z-9xr" id="jCF-Dy-5Ld"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Rk-8Z-CCc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4107.2463768115949" y="-634.15178571428567"/>
         </scene>
     </scenes>
     <resources>
-        <image name="line.3.horizontal" catalog="system" width="128" height="64"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

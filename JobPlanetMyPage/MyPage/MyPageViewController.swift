@@ -7,10 +7,15 @@
 
 import UIKit
 
-final class MainViewController: UIViewController {
+protocol NaviTitleDelegate: AnyObject {
+    func sendToTitle(_ title: String)
+}
+
+final class MyPageViewController: UIViewController {
     @IBOutlet private weak var mypageTableView: UITableView!
     @IBOutlet private weak var navigationView: UIView!
- 
+    public weak var delegate: NaviTitleDelegate?
+
     enum MyPageListType: String {
         case header, line = ""
         case account = "계정"
@@ -70,7 +75,6 @@ final class MainViewController: UIViewController {
         mypageTableView.dataSource = self
         mypageTableView.delegate = self
         navigationUnderLine(sendView: navigationView)
-        
     }
     
     @IBAction func tappedSettingBtn(_ sender: UIButton) {
@@ -82,7 +86,7 @@ final class MainViewController: UIViewController {
 
 }
 
-extension MainViewController: UITableViewDataSource{
+extension MyPageViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableList.count
     }
@@ -96,7 +100,7 @@ extension MainViewController: UITableViewDataSource{
         }
         return cell
     }
-    func makeStoryboard(name: String, type: MainViewController.MyPageListType) {
+    func makeStoryboard(name: String, type: MyPageViewController.MyPageListType) {
         let storyboard = UIStoryboard.init(name: "\(name)", bundle: nil)
         guard let offerVC = storyboard.instantiateViewController(withIdentifier: "\(name)ViewController") as? OfferViewController else { return }
         self.navigationController?.pushViewController(offerVC, animated: true)
@@ -104,15 +108,16 @@ extension MainViewController: UITableViewDataSource{
     }
 }
 
-extension MainViewController: UITableViewDelegate{
+extension MyPageViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellData = tableList[indexPath.row]
+        print("data \(cellData.type.rawValue)")
+        delegate?.sendToTitle(cellData.type.rawValue)
         switch cellData.type {
         //이거 재사용한 코드 만들기
         case .offer:
             let storyboard = UIStoryboard.init(name: "Offer", bundle: nil)
             guard let offerVC = storyboard.instantiateViewController(withIdentifier: "OfferViewController") as? OfferViewController else { return }
-            offerVC.sentNavigationTitle = cellData.type.rawValue
             self.navigationController?.pushViewController(offerVC, animated: true)
         case .JobGroup:
             let storyboard = UIStoryboard.init(name: "JobGroup", bundle: nil)
@@ -120,8 +125,6 @@ extension MainViewController: UITableViewDelegate{
             //데이터 전달
             jobVC.modalPresentationStyle = .fullScreen
             self.present(jobVC, animated: true)
-            
-            
         default: return
         }
     }

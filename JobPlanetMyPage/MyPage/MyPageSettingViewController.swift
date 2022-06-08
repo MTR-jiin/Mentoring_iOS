@@ -7,6 +7,7 @@
 
 import UIKit
 import TagListView
+import UnderLineTextField
 
 class MyPageSettingViewController: UIViewController {
     @IBOutlet private weak var saveButton: UIButton!
@@ -32,7 +33,6 @@ class MyPageSettingViewController: UIViewController {
     //MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBarController?.tabBar.isHidden = true
         self.navigationController?.title = "마이페이지"
         configureStackView()
         makeTagListView()
