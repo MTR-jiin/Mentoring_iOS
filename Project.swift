@@ -33,6 +33,8 @@ class BaseProjectFactory: ProjectFactory {
 
     let dependencies: [TargetDependency] = [
       .external(name: "RxSwift"),
+      .external(name: "RxCocoa"),
+      .package(product: "InfiniteLayout"),
       .package(product: "HeadPageKit"),
       .package(product: "TagListView"),
       .package(product: "UnderLineTextField"),
@@ -42,7 +44,8 @@ class BaseProjectFactory: ProjectFactory {
     let packages: [Package] = [
         .local(path: .relativeToRoot("vendor/UnderLineTextField")),
         .local(path: .relativeToRoot("vendor/TagListView")),
-        .remote(url: "https://github.com/bugkingK/HeadPageKit", requirement: .branch("main"))
+        .remote(url: "https://github.com/bugkingK/HeadPageKit", requirement: .branch("main")),
+        .remote(url: "https://github.com/arnauddorgans/InfiniteLayout.git", requirement: .branch("master"))
     ]
 
     func generate() -> [Target] {

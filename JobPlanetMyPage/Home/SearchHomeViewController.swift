@@ -9,21 +9,24 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import InfiniteLayout
 
 class SearchHomeViewController: UIViewController {
     
-    @IBOutlet weak var headerView: SearchHomeHeaderView!
-    @IBOutlet weak var headerViewHeight: NSLayoutConstraint!
+    @IBOutlet private weak var headerView: SearchHomeHeaderView!
+    @IBOutlet private weak var headerViewHeight: NSLayoutConstraint!
+    @IBOutlet private weak var tableView: UITableView!
+    
     private let viewModel: SearchHomeViewModel = .init()
     private let disposeBag: DisposeBag = .init()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        bind() //dataSource
         headerView.delegate = self //delegate
+        rankDataBinding()
+        settingTableView()
     }
-    
-    private func bind() {
+    private func rankDataBinding() {
         viewModel.rankModelData
             .bind(to: headerView.tableView.rx.items(cellType: SearchHomeHeaderRankCell.self)){ idx, item, cell in
                 cell.bind(to: item)
@@ -31,8 +34,15 @@ class SearchHomeViewController: UIViewController {
             .disposed(by: disposeBag)
     }
     
+    private func settingTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        let nib = UINib(nibName: "HeadLineViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "HeadLineViewCell")
+    }
+    
 }
-
+//MARK: -  Rank
 extension SearchHomeViewController: SearchHomeHeaderDelegate {
     func tappedCompanyRanking() {
         let fold = !self.headerView.isFold
@@ -51,6 +61,41 @@ extension SearchHomeViewController {
         static let headerClose: CGFloat = 84.0
     }
 }
+
+//MARK: - HeadLine
+
+extension SearchHomeViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0 {
+            guard let cell = tableView.dequeue(type: HeadLineViewCell.self, for: indexPath) else {
+                return .init()
+            }
+            cell.titleRow1.text = "바뀜"
+            return cell
+        }
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            cell.textLabel?.text = "dsds"
+            return cell
+        }
+    }
+
+}
+
+extension SearchHomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 250
+        }
+        return 40
+    }
+}
+
 
 extension Reactive where Base: UITableView {
     public func items<Sequence: Swift.Sequence, Cell: UITableViewCell, Source: ObservableType>

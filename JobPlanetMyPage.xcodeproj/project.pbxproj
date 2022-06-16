@@ -3,55 +3,63 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01C6C6E86B67AAABF74EBD3D /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7A507BDF59628D39B2C9C9 /* RxCocoa.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0A56CF35AF942A07F576A6C2 /* HeadLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82AA4D03EA3E3E44A2F0F37 /* HeadLine.swift */; };
+		0B3578791B9F89A78E79F6F3 /* SearchHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF40972A3065EF5830D23924 /* SearchHomeViewModel.swift */; };
 		13418E908E60A058C8B3BE5F /* Offer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218A1B4408794647643A31B6 /* Offer.storyboard */; };
+		140EFF9501909DFEDFAE4B46 /* SearchHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E81E711FA2281EC0A79FDA /* SearchHome.swift */; };
 		178BCAA3C7498EEC337F9C9D /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C655CE46B3D55582A6253A4 /* MyPageViewController.swift */; };
-		2560FAA9BB89BB7C07AD9A45 /* SearchHomeHeaderRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319208BEDA2ABD9CBB8B9139 /* SearchHomeHeaderRankCell.swift */; };
 		28E1C02FB4780ED96279C14B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66A49FC1FA55EF605CE615 /* AppDelegate.swift */; };
 		2DB63EFEC6C814AA3C38BE32 /* MyPageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F057345DFA74AC7DF88784EF /* MyPageSettingViewController.swift */; };
-		30A27A24CA6CA205AC578A28 /* TagListView in Frameworks */ = {isa = PBXBuildFile; productRef = E5F2EDEF25C740F0356F5BD1 /* TagListView */; };
+		30A27A24CA6CA205AC578A28 /* HeadPageKit in Frameworks */ = {isa = PBXBuildFile; productRef = E5151EC7C11CCF61499A4DEB /* HeadPageKit */; };
 		3305EE7D3F092E410DAF1105 /* Ex+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E4F20CBB71774622D1C64A /* Ex+UIView.swift */; };
 		35F42EB21E7915E4CB8C17AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938126F3BDB9BCF20B4E3A81 /* LaunchScreen.storyboard */; };
 		39E091CB14F5A685FAAAC4BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371E10D9880CA638629D00FE /* Main.storyboard */; };
-		3BAB200B0BC34EA132E3A85D /* UnderLineTextField in Frameworks */ = {isa = PBXBuildFile; productRef = 83DAD738632442B36EB224D9 /* UnderLineTextField */; };
+		3BAB200B0BC34EA132E3A85D /* TagListView in Frameworks */ = {isa = PBXBuildFile; productRef = E5F2EDEF25C740F0356F5BD1 /* TagListView */; };
 		3EC7F16D48523CFF572EE56E /* JobGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A66A41C03188C87EA175C5C /* JobGroupTableViewCell.swift */; };
+		474079232D626E8622B5B03A /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8309CA32DB6C16C39E28AC7A /* RxRelay.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		49538D72406939C01203A9E1 /* MypageSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F0B72389653E8585005FF7 /* MypageSetting.storyboard */; };
 		4B9988707E1BBF5ECD8859BC /* OfferDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CC0AC235CB7621CA79FB1 /* OfferDetailViewController.swift */; };
-		4E5E15A5A18BAD6C88756D7C /* SearchHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738E8A4B60DA40FBBD627C34 /* SearchHomeViewController.swift */; };
 		4E66327B132742533E4A3F01 /* OfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C6A54FBF8B80A60DF15AF6 /* OfferViewController.swift */; };
 		501FA72EDE4F3A428DD06927 /* MyPageListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450D84CEE8D6531B1A3175D0 /* MyPageListTableViewCell.swift */; };
-		5265454670D66BB040CE5931 /* HeadPageKit in Frameworks */ = {isa = PBXBuildFile; productRef = E5151EC7C11CCF61499A4DEB /* HeadPageKit */; };
+		5265454670D66BB040CE5931 /* InfiniteLayout in Frameworks */ = {isa = PBXBuildFile; productRef = DA6C0E76CDD2058056CCED19 /* InfiniteLayout */; };
 		560B62A4244CF8FBCC6C790B /* JobGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDF22B8C6A72B5266B735D8 /* JobGroupViewController.swift */; };
 		5F66553C0D8BFCDB19310C74 /* MentoringMockData.SearchHome.HeadLine.json in Resources */ = {isa = PBXBuildFile; fileRef = 26809D55DAFE7B14093912F5 /* MentoringMockData.SearchHome.HeadLine.json */; };
-		6080A846F45ED3659097894B /* SearchHomeHeaderRankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEA1399DEDF6C4374237F6E0 /* SearchHomeHeaderRankCell.xib */; };
-		613158D6A7792903CC39CD8E /* SearchHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F84FFD647A1B5D0DB68786 /* SearchHomeHeaderView.swift */; };
-		6C9CB26D284F0290007EEDF3 /* NavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C9CB26C284F0290007EEDF3 /* NavigationView.xib */; };
-		6C9CB26F284F037C007EEDF3 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9CB26E284F037C007EEDF3 /* NavigationView.swift */; };
+		66C867EA894891B614D832C2 /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80E0A951EEB20AFB7C9B68B0 /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C157A6F285B298B004D0A3A /* HeadLineViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C157A6D285B298B004D0A3A /* HeadLineViewCell.swift */; };
+		6C157A70285B298B004D0A3A /* HeadLineViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C157A6E285B298B004D0A3A /* HeadLineViewCell.xib */; };
+		6C157A75285B647C004D0A3A /* InfinityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C157A73285B647C004D0A3A /* InfinityCollectionViewCell.swift */; };
+		6C157A76285B647C004D0A3A /* InfinityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C157A74285B647C004D0A3A /* InfinityCollectionViewCell.xib */; };
 		745F5C0FD8B9F5B136896B6E /* ProfileFirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D2267E8B1F23274AD6D7AD /* ProfileFirstTableViewCell.swift */; };
+		858B43625EE2640551471EE5 /* SearchHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E56C7EBB52F93142E76A5C /* SearchHomeViewController.swift */; };
+		89D4BC87391B5BF81B62ECF9 /* SearchHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265F011003443EAA42CB8AC7 /* SearchHomeHeaderView.swift */; };
 		8A0D09C8D813E2438056A8E3 /* Ex+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE773DF5271D2D24805398 /* Ex+UITableView.swift */; };
+		8F023C805AE850CA0745F836 /* UnderLineTextField in Frameworks */ = {isa = PBXBuildFile; productRef = 83DAD738632442B36EB224D9 /* UnderLineTextField */; };
+		9174FA9593FB478A61860EE1 /* SearchHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475E25C7E0C972CC50E55672 /* SearchHomeHeaderView.xib */; };
 		95ADD894E6D48A182880F954 /* OfferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE71E150EC456B4CF1B8F26 /* OfferTableViewCell.swift */; };
 		95C9A5B3A1E3F4FDC50AB418 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB212F46870CC24B886DD5B8 /* NavigationView.swift */; };
-		95EC4CC587B200F14E92DF63 /* SearchHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E8267EB29556B18604CAD5A /* SearchHomeHeaderView.xib */; };
 		9C411963958A45D404A34D57 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BD5DD2958896EECE7E4E0C /* RxSwift.framework */; platformFilter = ios; };
 		9DF4E45FA8F1C0CDBA108DC1 /* TuistBundle+JobPlanetMyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7746319FD82F3E1350FCA564 /* TuistBundle+JobPlanetMyPage.swift */; };
+		A818CE5561DF0E4878BA3F97 /* SearchHomeHeaderRankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB486353823C5631FC59B931 /* SearchHomeHeaderRankCell.xib */; };
 		AB65C112DB4144DF12BB0975 /* CellDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11721477868C46E12FA169E /* CellDataProtocol.swift */; };
 		AC04BCC8389DB100D19CA7C3 /* Ex+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0740E1F303D957966C7CF937 /* Ex+UIViewController.swift */; };
 		AC3E37FEC79FC0895BAFBE02 /* TuistAssets+JobPlanetMyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38227F335D6853723D04F948 /* TuistAssets+JobPlanetMyPage.swift */; };
+		AF3DA291638A627A01FEB9FB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7A507BDF59628D39B2C9C9 /* RxCocoa.framework */; platformFilter = ios; };
 		AF41ED97E74569E2D1CB1F37 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0BD5DD2958896EECE7E4E0C /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B64852286A36E18A4927F38C /* MentoringMockData.SearchHome.Ranking.json in Resources */ = {isa = PBXBuildFile; fileRef = 2046346DC2CE234B84CFE755 /* MentoringMockData.SearchHome.Ranking.json */; };
 		BC9952EB41951002ABABE598 /* MentoringMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183934B919B48B47DFE80275 /* MentoringMockData.swift */; };
 		BDB119032FB2F371FD528A47 /* SearchHomeRepostiory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DA0B8CC73309DD7027D670 /* SearchHomeRepostiory.swift */; };
 		BEC2194F4A08A0A2FA6CE713 /* APIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF109EAC74D79F16F85358D /* APIKit.swift */; };
 		C4D3F2AFE8CB0B58F2FB10EF /* JobGroup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2518B42C890F04483018C0B9 /* JobGroup.storyboard */; };
+		C65DCABC3D9CCE7882E36C65 /* SearchHomeHeaderRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C0AA7382F9E17BCEEE8FCF /* SearchHomeHeaderRankCell.swift */; };
 		C99E3A3A0A5FEBA729FB28B9 /* GrayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682B96789A463262AF1D02DA /* GrayTableViewCell.swift */; };
 		E2A7C470272397E76DEFD875 /* NavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9936976770FDCCBABB450DA7 /* NavigationView.xib */; };
-		ECF3FB6552AB08B24C7BF30F /* SearchHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795B82F7AB6A1EADA72311B0 /* SearchHome.swift */; };
 		ED962EE1FE6677C54B454878 /* DesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B92275D3F7D6D3EC5ED2DD5 /* DesignView.swift */; };
 		F6B859BC92858F2ADCED497B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB7C9F4E81B55D0380E164AC /* Assets.xcassets */; };
-		FEEAF71DEB0A5B7C8832F3C9 /* SearchHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D385201A77A61EC1C24035 /* SearchHomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,6 +69,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				01C6C6E86B67AAABF74EBD3D /* RxCocoa.framework in Embed Frameworks */,
+				66C867EA894891B614D832C2 /* RxCocoaRuntime.framework in Embed Frameworks */,
+				474079232D626E8622B5B03A /* RxRelay.framework in Embed Frameworks */,
 				AF41ED97E74569E2D1CB1F37 /* RxSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -77,32 +88,36 @@
 		2046346DC2CE234B84CFE755 /* MentoringMockData.SearchHome.Ranking.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MentoringMockData.SearchHome.Ranking.json; sourceTree = "<group>"; };
 		218A1B4408794647643A31B6 /* Offer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Offer.storyboard; sourceTree = "<group>"; };
 		2518B42C890F04483018C0B9 /* JobGroup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobGroup.storyboard; sourceTree = "<group>"; };
+		265F011003443EAA42CB8AC7 /* SearchHomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeHeaderView.swift; sourceTree = "<group>"; };
 		26809D55DAFE7B14093912F5 /* MentoringMockData.SearchHome.HeadLine.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MentoringMockData.SearchHome.HeadLine.json; sourceTree = "<group>"; };
 		27E4F20CBB71774622D1C64A /* Ex+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UIView.swift"; sourceTree = "<group>"; };
 		28DA0B8CC73309DD7027D670 /* SearchHomeRepostiory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeRepostiory.swift; sourceTree = "<group>"; };
-		319208BEDA2ABD9CBB8B9139 /* SearchHomeHeaderRankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeHeaderRankCell.swift; sourceTree = "<group>"; };
 		38227F335D6853723D04F948 /* TuistAssets+JobPlanetMyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+JobPlanetMyPage.swift"; sourceTree = "<group>"; };
 		42D2267E8B1F23274AD6D7AD /* ProfileFirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFirstTableViewCell.swift; sourceTree = "<group>"; };
 		450D84CEE8D6531B1A3175D0 /* MyPageListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageListTableViewCell.swift; sourceTree = "<group>"; };
 		4667C0A5F23DC9C1962FC97E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		475E25C7E0C972CC50E55672 /* SearchHomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHomeHeaderView.xib; sourceTree = "<group>"; };
+		48C0AA7382F9E17BCEEE8FCF /* SearchHomeHeaderRankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeHeaderRankCell.swift; sourceTree = "<group>"; };
 		4B2CC0AC235CB7621CA79FB1 /* OfferDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailViewController.swift; sourceTree = "<group>"; };
 		4B92275D3F7D6D3EC5ED2DD5 /* DesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignView.swift; sourceTree = "<group>"; };
 		5481CCD21EB4933DC54F54C7 /* JobPlanetMyPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobPlanetMyPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F0B72389653E8585005FF7 /* MypageSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MypageSetting.storyboard; sourceTree = "<group>"; };
 		59C6A54FBF8B80A60DF15AF6 /* OfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferViewController.swift; sourceTree = "<group>"; };
 		5C655CE46B3D55582A6253A4 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		5D7A507BDF59628D39B2C9C9 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63E56C7EBB52F93142E76A5C /* SearchHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeViewController.swift; sourceTree = "<group>"; };
 		682B96789A463262AF1D02DA /* GrayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayTableViewCell.swift; sourceTree = "<group>"; };
-		6C9CB26C284F0290007EEDF3 /* NavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationView.xib; sourceTree = "<group>"; };
-		6C9CB26E284F037C007EEDF3 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
-		738E8A4B60DA40FBBD627C34 /* SearchHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeViewController.swift; sourceTree = "<group>"; };
+		6C157A6D285B298B004D0A3A /* HeadLineViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadLineViewCell.swift; sourceTree = "<group>"; };
+		6C157A6E285B298B004D0A3A /* HeadLineViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeadLineViewCell.xib; sourceTree = "<group>"; };
+		6C157A73285B647C004D0A3A /* InfinityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinityCollectionViewCell.swift; sourceTree = "<group>"; };
+		6C157A74285B647C004D0A3A /* InfinityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfinityCollectionViewCell.xib; sourceTree = "<group>"; };
+		71E81E711FA2281EC0A79FDA /* SearchHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHome.swift; sourceTree = "<group>"; };
 		7746319FD82F3E1350FCA564 /* TuistBundle+JobPlanetMyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+JobPlanetMyPage.swift"; sourceTree = "<group>"; };
-		795B82F7AB6A1EADA72311B0 /* SearchHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHome.swift; sourceTree = "<group>"; };
-		7E8267EB29556B18604CAD5A /* SearchHomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHomeHeaderView.xib; sourceTree = "<group>"; };
+		80E0A951EEB20AFB7C9B68B0 /* RxCocoaRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoaRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8309CA32DB6C16C39E28AC7A /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A66A41C03188C87EA175C5C /* JobGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobGroupTableViewCell.swift; sourceTree = "<group>"; };
 		9936976770FDCCBABB450DA7 /* NavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationView.xib; sourceTree = "<group>"; };
 		9CDF22B8C6A72B5266B735D8 /* JobGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobGroupViewController.swift; sourceTree = "<group>"; };
-		A2D385201A77A61EC1C24035 /* SearchHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeViewModel.swift; sourceTree = "<group>"; };
-		AEA1399DEDF6C4374237F6E0 /* SearchHomeHeaderRankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHomeHeaderRankCell.xib; sourceTree = "<group>"; };
 		B39F315AEC6836BE878618FD /* TagListView */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TagListView; path = vendor/TagListView; sourceTree = "<group>"; };
 		C25BB1C71A7EE5C962F8AEFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6E4A324C3D1D4D9B6FE1A82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -111,7 +126,9 @@
 		CB7C9F4E81B55D0380E164AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D11721477868C46E12FA169E /* CellDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDataProtocol.swift; sourceTree = "<group>"; };
 		E0BD5DD2958896EECE7E4E0C /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3F84FFD647A1B5D0DB68786 /* SearchHomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeHeaderView.swift; sourceTree = "<group>"; };
+		E82AA4D03EA3E3E44A2F0F37 /* HeadLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadLine.swift; sourceTree = "<group>"; };
+		EB486353823C5631FC59B931 /* SearchHomeHeaderRankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHomeHeaderRankCell.xib; sourceTree = "<group>"; };
+		EF40972A3065EF5830D23924 /* SearchHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeViewModel.swift; sourceTree = "<group>"; };
 		F057345DFA74AC7DF88784EF /* MyPageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingViewController.swift; sourceTree = "<group>"; };
 		FCF109EAC74D79F16F85358D /* APIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,10 +138,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3DA291638A627A01FEB9FB /* RxCocoa.framework in Frameworks */,
 				9C411963958A45D404A34D57 /* RxSwift.framework in Frameworks */,
-				5265454670D66BB040CE5931 /* HeadPageKit in Frameworks */,
-				30A27A24CA6CA205AC578A28 /* TagListView in Frameworks */,
-				3BAB200B0BC34EA132E3A85D /* UnderLineTextField in Frameworks */,
+				5265454670D66BB040CE5931 /* InfiniteLayout in Frameworks */,
+				30A27A24CA6CA205AC578A28 /* HeadPageKit in Frameworks */,
+				3BAB200B0BC34EA132E3A85D /* TagListView in Frameworks */,
+				8F023C805AE850CA0745F836 /* UnderLineTextField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,16 +222,6 @@
 			path = JobGroupSatisfaction;
 			sourceTree = "<group>";
 		};
-		50364F30ECFEFE4D50B39EF4 /* HomeSearch */ = {
-			isa = PBXGroup;
-			children = (
-				C03C1DEAF01486B1F40C855D /* Entity */,
-				F4CE960E65ACE0609CA680C5 /* Views */,
-				738E8A4B60DA40FBBD627C34 /* SearchHomeViewController.swift */,
-			);
-			path = HomeSearch;
-			sourceTree = "<group>";
-		};
 		60BFE7462DB9B532937F10A3 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,13 +242,15 @@
 			name = Project;
 			sourceTree = "<group>";
 		};
-		6C9CB270284F1A0A007EEDF3 /* NavigationView */ = {
+		6C157A77285B6E5E004D0A3A /* HeadLine */ = {
 			isa = PBXGroup;
 			children = (
-				6C9CB26C284F0290007EEDF3 /* NavigationView.xib */,
-				6C9CB26E284F037C007EEDF3 /* NavigationView.swift */,
+				6C157A6D285B298B004D0A3A /* HeadLineViewCell.swift */,
+				6C157A73285B647C004D0A3A /* InfinityCollectionViewCell.swift */,
+				6C157A74285B647C004D0A3A /* InfinityCollectionViewCell.xib */,
+				6C157A6E285B298B004D0A3A /* HeadLineViewCell.xib */,
 			);
-			path = NavigationView;
+			path = HeadLine;
 			sourceTree = "<group>";
 		};
 		72062069B446A27541B5BB4A /* Helper */ = {
@@ -250,6 +261,18 @@
 				473668EDF08FC160F585B1B5 /* View */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		785FEC0CC2067F6F805BEE39 /* HeaderRank */ = {
+			isa = PBXGroup;
+			children = (
+				48C0AA7382F9E17BCEEE8FCF /* SearchHomeHeaderRankCell.swift */,
+				EB486353823C5631FC59B931 /* SearchHomeHeaderRankCell.xib */,
+				265F011003443EAA42CB8AC7 /* SearchHomeHeaderView.swift */,
+				475E25C7E0C972CC50E55672 /* SearchHomeHeaderView.xib */,
+				EF40972A3065EF5830D23924 /* SearchHomeViewModel.swift */,
+			);
+			path = HeaderRank;
 			sourceTree = "<group>";
 		};
 		913D7A166A3EC3A088A1883A = {
@@ -287,7 +310,7 @@
 		9DD40526FC7C51E5DC94E8CE /* JobPlanetMyPage */ = {
 			isa = PBXGroup;
 			children = (
-				6C9CB270284F1A0A007EEDF3 /* NavigationView */,
+				785FEC0CC2067F6F805BEE39 /* HeaderRank */,
 				72062069B446A27541B5BB4A /* Helper */,
 				E5ACCCAA4D92BC54B94A5AFB /* Home */,
 				48E47FE20B08C7DA5CD5F604 /* JobGroupSatisfaction */,
@@ -313,17 +336,12 @@
 			isa = PBXGroup;
 			children = (
 				5481CCD21EB4933DC54F54C7 /* JobPlanetMyPage.app */,
+				5D7A507BDF59628D39B2C9C9 /* RxCocoa.framework */,
+				80E0A951EEB20AFB7C9B68B0 /* RxCocoaRuntime.framework */,
+				8309CA32DB6C16C39E28AC7A /* RxRelay.framework */,
 				E0BD5DD2958896EECE7E4E0C /* RxSwift.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		C03C1DEAF01486B1F40C855D /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				795B82F7AB6A1EADA72311B0 /* SearchHome.swift */,
-			);
-			path = Entity;
 			sourceTree = "<group>";
 		};
 		DB19E8CCB94AC4E0F100B136 /* MockData */ = {
@@ -339,10 +357,21 @@
 		E5ACCCAA4D92BC54B94A5AFB /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				50364F30ECFEFE4D50B39EF4 /* HomeSearch */,
+				6C157A77285B6E5E004D0A3A /* HeadLine */,
+				EB4A2308AD769842D8BFA3D4 /* Entity */,
 				F155E773CAADD5F26A20B84C /* Repository */,
+				63E56C7EBB52F93142E76A5C /* SearchHomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		EB4A2308AD769842D8BFA3D4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E82AA4D03EA3E3E44A2F0F37 /* HeadLine.swift */,
+				71E81E711FA2281EC0A79FDA /* SearchHome.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		F155E773CAADD5F26A20B84C /* Repository */ = {
@@ -352,18 +381,6 @@
 				28DA0B8CC73309DD7027D670 /* SearchHomeRepostiory.swift */,
 			);
 			path = Repository;
-			sourceTree = "<group>";
-		};
-		F4CE960E65ACE0609CA680C5 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				319208BEDA2ABD9CBB8B9139 /* SearchHomeHeaderRankCell.swift */,
-				AEA1399DEDF6C4374237F6E0 /* SearchHomeHeaderRankCell.xib */,
-				E3F84FFD647A1B5D0DB68786 /* SearchHomeHeaderView.swift */,
-				7E8267EB29556B18604CAD5A /* SearchHomeHeaderView.xib */,
-				A2D385201A77A61EC1C24035 /* SearchHomeViewModel.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +401,7 @@
 			);
 			name = JobPlanetMyPage;
 			packageProductDependencies = (
+				DA6C0E76CDD2058056CCED19 /* InfiniteLayout */,
 				E5151EC7C11CCF61499A4DEB /* HeadPageKit */,
 				E5F2EDEF25C740F0356F5BD1 /* TagListView */,
 				83DAD738632442B36EB224D9 /* UnderLineTextField */,
@@ -399,8 +417,6 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = JobPlanetMyPage;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = FC1D8D8BA106ADC093FB4B81 /* Build configuration list for PBXProject "JobPlanetMyPage" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -412,6 +428,7 @@
 			);
 			mainGroup = 913D7A166A3EC3A088A1883A;
 			packageReferences = (
+				6DF35957A84060007D88DF42 /* XCRemoteSwiftPackageReference "InfiniteLayout" */,
 				01BAD89921AF9C8A6AFE25FE /* XCRemoteSwiftPackageReference "HeadPageKit" */,
 			);
 			productRefGroup = B0EC0DE4410F045B4663F755 /* Products */;
@@ -429,9 +446,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				39E091CB14F5A685FAAAC4BA /* Main.storyboard in Resources */,
-				6080A846F45ED3659097894B /* SearchHomeHeaderRankCell.xib in Resources */,
-				6C9CB26D284F0290007EEDF3 /* NavigationView.xib in Resources */,
-				95EC4CC587B200F14E92DF63 /* SearchHomeHeaderView.xib in Resources */,
+				A818CE5561DF0E4878BA3F97 /* SearchHomeHeaderRankCell.xib in Resources */,
+				9174FA9593FB478A61860EE1 /* SearchHomeHeaderView.xib in Resources */,
+				6C157A70285B298B004D0A3A /* HeadLineViewCell.xib in Resources */,
 				5F66553C0D8BFCDB19310C74 /* MentoringMockData.SearchHome.HeadLine.json in Resources */,
 				B64852286A36E18A4927F38C /* MentoringMockData.SearchHome.Ranking.json in Resources */,
 				C4D3F2AFE8CB0B58F2FB10EF /* JobGroup.storyboard in Resources */,
@@ -439,6 +456,7 @@
 				E2A7C470272397E76DEFD875 /* NavigationView.xib in Resources */,
 				13418E908E60A058C8B3BE5F /* Offer.storyboard in Resources */,
 				F6B859BC92858F2ADCED497B /* Assets.xcassets in Resources */,
+				6C157A76285B647C004D0A3A /* InfinityCollectionViewCell.xib in Resources */,
 				35F42EB21E7915E4CB8C17AA /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,23 +471,25 @@
 				AC3E37FEC79FC0895BAFBE02 /* TuistAssets+JobPlanetMyPage.swift in Sources */,
 				9DF4E45FA8F1C0CDBA108DC1 /* TuistBundle+JobPlanetMyPage.swift in Sources */,
 				28E1C02FB4780ED96279C14B /* AppDelegate.swift in Sources */,
+				6C157A6F285B298B004D0A3A /* HeadLineViewCell.swift in Sources */,
+				C65DCABC3D9CCE7882E36C65 /* SearchHomeHeaderRankCell.swift in Sources */,
+				89D4BC87391B5BF81B62ECF9 /* SearchHomeHeaderView.swift in Sources */,
+				6C157A75285B647C004D0A3A /* InfinityCollectionViewCell.swift in Sources */,
+				0B3578791B9F89A78E79F6F3 /* SearchHomeViewModel.swift in Sources */,
 				BEC2194F4A08A0A2FA6CE713 /* APIKit.swift in Sources */,
 				8A0D09C8D813E2438056A8E3 /* Ex+UITableView.swift in Sources */,
 				3305EE7D3F092E410DAF1105 /* Ex+UIView.swift in Sources */,
 				AC04BCC8389DB100D19CA7C3 /* Ex+UIViewController.swift in Sources */,
 				ED962EE1FE6677C54B454878 /* DesignView.swift in Sources */,
-				ECF3FB6552AB08B24C7BF30F /* SearchHome.swift in Sources */,
-				4E5E15A5A18BAD6C88756D7C /* SearchHomeViewController.swift in Sources */,
-				2560FAA9BB89BB7C07AD9A45 /* SearchHomeHeaderRankCell.swift in Sources */,
-				613158D6A7792903CC39CD8E /* SearchHomeHeaderView.swift in Sources */,
-				FEEAF71DEB0A5B7C8832F3C9 /* SearchHomeViewModel.swift in Sources */,
+				0A56CF35AF942A07F576A6C2 /* HeadLine.swift in Sources */,
+				140EFF9501909DFEDFAE4B46 /* SearchHome.swift in Sources */,
 				BC9952EB41951002ABABE598 /* MentoringMockData.swift in Sources */,
 				BDB119032FB2F371FD528A47 /* SearchHomeRepostiory.swift in Sources */,
+				858B43625EE2640551471EE5 /* SearchHomeViewController.swift in Sources */,
 				3EC7F16D48523CFF572EE56E /* JobGroupTableViewCell.swift in Sources */,
 				560B62A4244CF8FBCC6C790B /* JobGroupViewController.swift in Sources */,
 				AB65C112DB4144DF12BB0975 /* CellDataProtocol.swift in Sources */,
 				C99E3A3A0A5FEBA729FB28B9 /* GrayTableViewCell.swift in Sources */,
-				6C9CB26F284F037C007EEDF3 /* NavigationView.swift in Sources */,
 				501FA72EDE4F3A428DD06927 /* MyPageListTableViewCell.swift in Sources */,
 				745F5C0FD8B9F5B136896B6E /* ProfileFirstTableViewCell.swift in Sources */,
 				2DB63EFEC6C814AA3C38BE32 /* MyPageSettingViewController.swift in Sources */,
@@ -692,12 +712,24 @@
 				kind = branch;
 			};
 		};
+		6DF35957A84060007D88DF42 /* XCRemoteSwiftPackageReference "InfiniteLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/arnauddorgans/InfiniteLayout.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		83DAD738632442B36EB224D9 /* UnderLineTextField */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UnderLineTextField;
+		};
+		DA6C0E76CDD2058056CCED19 /* InfiniteLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = InfiniteLayout;
 		};
 		E5151EC7C11CCF61499A4DEB /* HeadPageKit */ = {
 			isa = XCSwiftPackageProductDependency;
