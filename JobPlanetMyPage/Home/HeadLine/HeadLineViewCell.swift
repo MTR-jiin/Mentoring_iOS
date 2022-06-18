@@ -20,8 +20,6 @@ class HeadLineViewCell: UITableViewCell {
         registerNib()
         collectionView.delegate = self
         collectionView.dataSource = self
-
-        collectionView.collectionViewLayout = createLayout()
     }
     
     private func registerNib() {
