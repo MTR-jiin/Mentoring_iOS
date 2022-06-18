@@ -20,25 +20,28 @@ class HeadLineViewCell: UITableViewCell {
         registerNib()
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.collectionViewLayout
-//        collectionView.isItemPagingEnabled = true //페이징 기능
+
+        collectionView.collectionViewLayout = createLayout()
     }
     
     private func registerNib() {
         let nib = UINib(nibName: "InfinityCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "InfinityCollectionViewCell")
     }
+   
     
 }
 
 extension HeadLineViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InfinityCollectionViewCell", for: indexPath) as! InfinityCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InfinityCollectionViewCell", for: indexPath) as? InfinityCollectionViewCell else { return UICollectionViewCell() }
+//        cell.update(index: self.collectionView!.indexPath(from: indexPath).row)
         cell.backgroundColor = .blue
+//        cell.titleLabel.text = "\(indexPath.row)"
 //        cell.update(idx: self.collectionView.indexPath(from: indexPath).row)
         return cell
     }
@@ -53,22 +56,32 @@ extension HeadLineViewCell: UICollectionViewDelegate {
 }
 
 
-extension HeadLineViewCell: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 200)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return collectionView.frame.height
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
-    }
-}
 
+extension HeadLineViewCell {
+    // 콤포지셔널 레이아웃 설정
+    fileprivate func createLayout() -> UICollectionViewLayout {
+        // 레이아웃 생성 - 섹션 > 아이템 > 그룹 이렇게 포함됨
+        let layout = UICollectionViewCompositionalLayout{
+            (sectionIndex: Int, layoutEnvironMent: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+            //아이템 사이즈
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.5), heightDimension: .fractionalHeight(1.0))
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            //아이템 간 간격 설정
+            item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5)
+
+            //그룹 사이즈
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+            // 그룹 만들기
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2)
+            // 그룹으로 섹션 만들기
+            let section = NSCollectionLayoutSection(group: group)
+            //섹션에 대한 간격 설정
+            section.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10)
+            section.orthogonalScrollingBehavior = .continuous
+
+            return section
+        }
+        return layout
+    }
+
+}

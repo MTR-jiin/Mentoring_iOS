@@ -30,20 +30,18 @@
 		560B62A4244CF8FBCC6C790B /* JobGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDF22B8C6A72B5266B735D8 /* JobGroupViewController.swift */; };
 		5F66553C0D8BFCDB19310C74 /* MentoringMockData.SearchHome.HeadLine.json in Resources */ = {isa = PBXBuildFile; fileRef = 26809D55DAFE7B14093912F5 /* MentoringMockData.SearchHome.HeadLine.json */; };
 		66C867EA894891B614D832C2 /* RxCocoaRuntime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80E0A951EEB20AFB7C9B68B0 /* RxCocoaRuntime.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6C157A6F285B298B004D0A3A /* HeadLineViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C157A6D285B298B004D0A3A /* HeadLineViewCell.swift */; };
-		6C157A70285B298B004D0A3A /* HeadLineViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C157A6E285B298B004D0A3A /* HeadLineViewCell.xib */; };
-		6C157A75285B647C004D0A3A /* InfinityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C157A73285B647C004D0A3A /* InfinityCollectionViewCell.swift */; };
-		6C157A76285B647C004D0A3A /* InfinityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C157A74285B647C004D0A3A /* InfinityCollectionViewCell.xib */; };
 		745F5C0FD8B9F5B136896B6E /* ProfileFirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D2267E8B1F23274AD6D7AD /* ProfileFirstTableViewCell.swift */; };
 		858B43625EE2640551471EE5 /* SearchHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E56C7EBB52F93142E76A5C /* SearchHomeViewController.swift */; };
 		89D4BC87391B5BF81B62ECF9 /* SearchHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265F011003443EAA42CB8AC7 /* SearchHomeHeaderView.swift */; };
 		8A0D09C8D813E2438056A8E3 /* Ex+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE773DF5271D2D24805398 /* Ex+UITableView.swift */; };
 		8F023C805AE850CA0745F836 /* UnderLineTextField in Frameworks */ = {isa = PBXBuildFile; productRef = 83DAD738632442B36EB224D9 /* UnderLineTextField */; };
 		9174FA9593FB478A61860EE1 /* SearchHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475E25C7E0C972CC50E55672 /* SearchHomeHeaderView.xib */; };
+		95423D6A1736DE9C9BFD9321 /* HeadLineViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86EE0AB6B701663C0E76CCCB /* HeadLineViewCell.xib */; };
 		95ADD894E6D48A182880F954 /* OfferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE71E150EC456B4CF1B8F26 /* OfferTableViewCell.swift */; };
 		95C9A5B3A1E3F4FDC50AB418 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB212F46870CC24B886DD5B8 /* NavigationView.swift */; };
 		9C411963958A45D404A34D57 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BD5DD2958896EECE7E4E0C /* RxSwift.framework */; platformFilter = ios; };
 		9DF4E45FA8F1C0CDBA108DC1 /* TuistBundle+JobPlanetMyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7746319FD82F3E1350FCA564 /* TuistBundle+JobPlanetMyPage.swift */; };
+		9F4ACF8806D07E217AD223F0 /* InfinityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B78B948B2CE18859A94119E /* InfinityCollectionViewCell.swift */; };
 		A818CE5561DF0E4878BA3F97 /* SearchHomeHeaderRankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB486353823C5631FC59B931 /* SearchHomeHeaderRankCell.xib */; };
 		AB65C112DB4144DF12BB0975 /* CellDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11721477868C46E12FA169E /* CellDataProtocol.swift */; };
 		AC04BCC8389DB100D19CA7C3 /* Ex+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0740E1F303D957966C7CF937 /* Ex+UIViewController.swift */; };
@@ -51,9 +49,11 @@
 		AF3DA291638A627A01FEB9FB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7A507BDF59628D39B2C9C9 /* RxCocoa.framework */; platformFilter = ios; };
 		AF41ED97E74569E2D1CB1F37 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0BD5DD2958896EECE7E4E0C /* RxSwift.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B64852286A36E18A4927F38C /* MentoringMockData.SearchHome.Ranking.json in Resources */ = {isa = PBXBuildFile; fileRef = 2046346DC2CE234B84CFE755 /* MentoringMockData.SearchHome.Ranking.json */; };
+		B83B54B0EAB71BDF206FB1DA /* HeadLineViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F7C721A0C6D9F6BC768960 /* HeadLineViewCell.swift */; };
 		BC9952EB41951002ABABE598 /* MentoringMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183934B919B48B47DFE80275 /* MentoringMockData.swift */; };
 		BDB119032FB2F371FD528A47 /* SearchHomeRepostiory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DA0B8CC73309DD7027D670 /* SearchHomeRepostiory.swift */; };
 		BEC2194F4A08A0A2FA6CE713 /* APIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF109EAC74D79F16F85358D /* APIKit.swift */; };
+		C1E0F3C001286B56A924CD37 /* InfinityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDF71538FDF8043CA1DBD7D1 /* InfinityCollectionViewCell.xib */; };
 		C4D3F2AFE8CB0B58F2FB10EF /* JobGroup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2518B42C890F04483018C0B9 /* JobGroup.storyboard */; };
 		C65DCABC3D9CCE7882E36C65 /* SearchHomeHeaderRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C0AA7382F9E17BCEEE8FCF /* SearchHomeHeaderRankCell.swift */; };
 		C99E3A3A0A5FEBA729FB28B9 /* GrayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682B96789A463262AF1D02DA /* GrayTableViewCell.swift */; };
@@ -103,19 +103,18 @@
 		5481CCD21EB4933DC54F54C7 /* JobPlanetMyPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobPlanetMyPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F0B72389653E8585005FF7 /* MypageSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MypageSetting.storyboard; sourceTree = "<group>"; };
 		59C6A54FBF8B80A60DF15AF6 /* OfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferViewController.swift; sourceTree = "<group>"; };
+		5B78B948B2CE18859A94119E /* InfinityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinityCollectionViewCell.swift; sourceTree = "<group>"; };
 		5C655CE46B3D55582A6253A4 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		5D7A507BDF59628D39B2C9C9 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63E56C7EBB52F93142E76A5C /* SearchHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeViewController.swift; sourceTree = "<group>"; };
 		682B96789A463262AF1D02DA /* GrayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayTableViewCell.swift; sourceTree = "<group>"; };
-		6C157A6D285B298B004D0A3A /* HeadLineViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadLineViewCell.swift; sourceTree = "<group>"; };
-		6C157A6E285B298B004D0A3A /* HeadLineViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeadLineViewCell.xib; sourceTree = "<group>"; };
-		6C157A73285B647C004D0A3A /* InfinityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinityCollectionViewCell.swift; sourceTree = "<group>"; };
-		6C157A74285B647C004D0A3A /* InfinityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfinityCollectionViewCell.xib; sourceTree = "<group>"; };
 		71E81E711FA2281EC0A79FDA /* SearchHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHome.swift; sourceTree = "<group>"; };
 		7746319FD82F3E1350FCA564 /* TuistBundle+JobPlanetMyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+JobPlanetMyPage.swift"; sourceTree = "<group>"; };
 		80E0A951EEB20AFB7C9B68B0 /* RxCocoaRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoaRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8309CA32DB6C16C39E28AC7A /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86EE0AB6B701663C0E76CCCB /* HeadLineViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeadLineViewCell.xib; sourceTree = "<group>"; };
 		8A66A41C03188C87EA175C5C /* JobGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobGroupTableViewCell.swift; sourceTree = "<group>"; };
+		94F7C721A0C6D9F6BC768960 /* HeadLineViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadLineViewCell.swift; sourceTree = "<group>"; };
 		9936976770FDCCBABB450DA7 /* NavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationView.xib; sourceTree = "<group>"; };
 		9CDF22B8C6A72B5266B735D8 /* JobGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobGroupViewController.swift; sourceTree = "<group>"; };
 		B39F315AEC6836BE878618FD /* TagListView */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TagListView; path = vendor/TagListView; sourceTree = "<group>"; };
@@ -125,6 +124,7 @@
 		CB212F46870CC24B886DD5B8 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		CB7C9F4E81B55D0380E164AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D11721477868C46E12FA169E /* CellDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDataProtocol.swift; sourceTree = "<group>"; };
+		DDF71538FDF8043CA1DBD7D1 /* InfinityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfinityCollectionViewCell.xib; sourceTree = "<group>"; };
 		E0BD5DD2958896EECE7E4E0C /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E82AA4D03EA3E3E44A2F0F37 /* HeadLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadLine.swift; sourceTree = "<group>"; };
 		EB486353823C5631FC59B931 /* SearchHomeHeaderRankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHomeHeaderRankCell.xib; sourceTree = "<group>"; };
@@ -150,6 +150,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		067D7C289298BF4A2434C1B3 /* HeadLine */ = {
+			isa = PBXGroup;
+			children = (
+				94F7C721A0C6D9F6BC768960 /* HeadLineViewCell.swift */,
+				86EE0AB6B701663C0E76CCCB /* HeadLineViewCell.xib */,
+				5B78B948B2CE18859A94119E /* InfinityCollectionViewCell.swift */,
+				DDF71538FDF8043CA1DBD7D1 /* InfinityCollectionViewCell.xib */,
+			);
+			path = HeadLine;
+			sourceTree = "<group>";
+		};
 		1809F66EA1051F67065F65C5 /* NavigationView */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,17 +251,6 @@
 				9DD40526FC7C51E5DC94E8CE /* JobPlanetMyPage */,
 			);
 			name = Project;
-			sourceTree = "<group>";
-		};
-		6C157A77285B6E5E004D0A3A /* HeadLine */ = {
-			isa = PBXGroup;
-			children = (
-				6C157A6D285B298B004D0A3A /* HeadLineViewCell.swift */,
-				6C157A73285B647C004D0A3A /* InfinityCollectionViewCell.swift */,
-				6C157A74285B647C004D0A3A /* InfinityCollectionViewCell.xib */,
-				6C157A6E285B298B004D0A3A /* HeadLineViewCell.xib */,
-			);
-			path = HeadLine;
 			sourceTree = "<group>";
 		};
 		72062069B446A27541B5BB4A /* Helper */ = {
@@ -357,8 +357,8 @@
 		E5ACCCAA4D92BC54B94A5AFB /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				6C157A77285B6E5E004D0A3A /* HeadLine */,
 				EB4A2308AD769842D8BFA3D4 /* Entity */,
+				067D7C289298BF4A2434C1B3 /* HeadLine */,
 				F155E773CAADD5F26A20B84C /* Repository */,
 				63E56C7EBB52F93142E76A5C /* SearchHomeViewController.swift */,
 			);
@@ -448,7 +448,8 @@
 				39E091CB14F5A685FAAAC4BA /* Main.storyboard in Resources */,
 				A818CE5561DF0E4878BA3F97 /* SearchHomeHeaderRankCell.xib in Resources */,
 				9174FA9593FB478A61860EE1 /* SearchHomeHeaderView.xib in Resources */,
-				6C157A70285B298B004D0A3A /* HeadLineViewCell.xib in Resources */,
+				95423D6A1736DE9C9BFD9321 /* HeadLineViewCell.xib in Resources */,
+				C1E0F3C001286B56A924CD37 /* InfinityCollectionViewCell.xib in Resources */,
 				5F66553C0D8BFCDB19310C74 /* MentoringMockData.SearchHome.HeadLine.json in Resources */,
 				B64852286A36E18A4927F38C /* MentoringMockData.SearchHome.Ranking.json in Resources */,
 				C4D3F2AFE8CB0B58F2FB10EF /* JobGroup.storyboard in Resources */,
@@ -456,7 +457,6 @@
 				E2A7C470272397E76DEFD875 /* NavigationView.xib in Resources */,
 				13418E908E60A058C8B3BE5F /* Offer.storyboard in Resources */,
 				F6B859BC92858F2ADCED497B /* Assets.xcassets in Resources */,
-				6C157A76285B647C004D0A3A /* InfinityCollectionViewCell.xib in Resources */,
 				35F42EB21E7915E4CB8C17AA /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,10 +471,8 @@
 				AC3E37FEC79FC0895BAFBE02 /* TuistAssets+JobPlanetMyPage.swift in Sources */,
 				9DF4E45FA8F1C0CDBA108DC1 /* TuistBundle+JobPlanetMyPage.swift in Sources */,
 				28E1C02FB4780ED96279C14B /* AppDelegate.swift in Sources */,
-				6C157A6F285B298B004D0A3A /* HeadLineViewCell.swift in Sources */,
 				C65DCABC3D9CCE7882E36C65 /* SearchHomeHeaderRankCell.swift in Sources */,
 				89D4BC87391B5BF81B62ECF9 /* SearchHomeHeaderView.swift in Sources */,
-				6C157A75285B647C004D0A3A /* InfinityCollectionViewCell.swift in Sources */,
 				0B3578791B9F89A78E79F6F3 /* SearchHomeViewModel.swift in Sources */,
 				BEC2194F4A08A0A2FA6CE713 /* APIKit.swift in Sources */,
 				8A0D09C8D813E2438056A8E3 /* Ex+UITableView.swift in Sources */,
@@ -483,6 +481,8 @@
 				ED962EE1FE6677C54B454878 /* DesignView.swift in Sources */,
 				0A56CF35AF942A07F576A6C2 /* HeadLine.swift in Sources */,
 				140EFF9501909DFEDFAE4B46 /* SearchHome.swift in Sources */,
+				B83B54B0EAB71BDF206FB1DA /* HeadLineViewCell.swift in Sources */,
+				9F4ACF8806D07E217AD223F0 /* InfinityCollectionViewCell.swift in Sources */,
 				BC9952EB41951002ABABE598 /* MentoringMockData.swift in Sources */,
 				BDB119032FB2F371FD528A47 /* SearchHomeRepostiory.swift in Sources */,
 				858B43625EE2640551471EE5 /* SearchHomeViewController.swift in Sources */,
