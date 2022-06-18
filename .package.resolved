@@ -5,9 +5,9 @@
         "package": "HeadPageKit",
         "repositoryURL": "https://github.com/bugkingK/HeadPageKit",
         "state": {
-          "branch": "main",
-          "revision": "e9db80a5185322ada20485b6c11a8442de6a8f09",
-          "version": null
+          "branch": null,
+          "revision": "3357fafff0ec3c79776369dd4979762cff1eedff",
+          "version": "3.0.1"
         }
       },
       {
@@ -33,8 +33,8 @@
         "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
         "state": {
           "branch": null,
-          "revision": "b4307ba0b6425c0ba4178e138799946c3da594f8",
-          "version": "6.5.0"
+          "revision": "c8742ed97fc2f0c015a5ea5eddefb064cd7532d2",
+          "version": "6.0.0"
         }
       }
     ]
