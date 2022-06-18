@@ -18,7 +18,7 @@ struct SearchHome {
             let items: [Item]
         }
 
-        struct Item: Codable, SearchHomeHeaderDatable {
+        struct Item: Codable, SearchHomeHeaderRankDatable {
             let ranking, companyID, fluctuation: Int
             let companyName: String
 
@@ -38,7 +38,7 @@ struct SearchHome {
             let items: [Item]
         }
 
-        struct Item: Codable {
+        struct Item: Codable, SearchHomeHeaderHeadLineDatable {
             let id, contentsType, contentsID: Int
             let titleRow1, titleRow2, subtitle, originalSubtitle: String
             let author, backgroundColor, thumbnail: String

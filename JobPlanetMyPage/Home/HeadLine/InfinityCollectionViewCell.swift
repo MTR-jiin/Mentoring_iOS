@@ -7,22 +7,22 @@
 //
 
 import UIKit
+import Kingfisher
+
+protocol SearchHomeHeaderHeadLineDatable {
+    var titleRow1: String { get }
+    var titleRow2: String { get }
+    var thumbnail: String { get }
+}
 
 class InfinityCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-//    @IBOutlet weak var cellView: CellView!
-    private let colors = [#colorLiteral(red: 0.5254901961, green: 0.6901960784, blue: 0.9137254902, alpha: 1), #colorLiteral(red: 0.5254901961, green: 0.6196078431, blue: 0.9137254902, alpha: 1), #colorLiteral(red: 0.6078431373, green: 0.5254901961, blue: 0.9137254902, alpha: 1), #colorLiteral(red: 0.9137254902, green: 0.5254901961, blue: 0.8392156863, alpha: 1), #colorLiteral(red: 0.9137254902, green: 0.5254901961, blue: 0.6, alpha: 1), #colorLiteral(red: 0.9137254902, green: 0.6784313725, blue: 0.5254901961, alpha: 1), #colorLiteral(red: 0.9137254902, green: 0.9058823529, blue: 0.5254901961, alpha: 1), #colorLiteral(red: 0.5254901961, green: 0.9137254902, blue: 0.5921568627, alpha: 1), #colorLiteral(red: 0.5254901961, green: 0.8, blue: 0.9137254902, alpha: 1)]
-    private let images = [UIImage(systemName: "pencil"),
-                        UIImage(systemName: "square.and.arrow.down.on.square.fill")]
     
-//    func update(index: Int) {
-//        cellView.update(index: index)
-//    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    func bind(to viewModel: SearchHomeHeaderHeadLineDatable) {
+        let url = URL(string: viewModel.thumbnail)
+        imageView.kf.setImage(with: url)
+        print("Success bind")
     }
 
 }

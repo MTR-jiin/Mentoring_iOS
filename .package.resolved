@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher",
+        "state": {
+          "branch": "master",
+          "revision": "022e4eeb79f817748544b318b991d9a70036bbf8",
+          "version": null
+        }
+      },
+      {
         "package": "RxDataSources",
         "repositoryURL": "https://github.com/RxSwiftCommunity/RxDataSources.git",
         "state": {

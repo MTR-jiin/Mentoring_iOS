@@ -38,6 +38,7 @@ class BaseProjectFactory: ProjectFactory {
       .package(product: "HeadPageKit"),
       .package(product: "TagListView"),
       .package(product: "UnderLineTextField"),
+      .package(product: "Kingfisher"),
       
     ]
     
@@ -45,7 +46,8 @@ class BaseProjectFactory: ProjectFactory {
         .local(path: .relativeToRoot("vendor/UnderLineTextField")),
         .local(path: .relativeToRoot("vendor/TagListView")),
         .remote(url: "https://github.com/bugkingK/HeadPageKit", requirement: .branch("main")),
-        .remote(url: "https://github.com/arnauddorgans/InfiniteLayout.git", requirement: .branch("master"))
+        .remote(url: "https://github.com/arnauddorgans/InfiniteLayout.git", requirement: .branch("master")),
+        .remote(url: "https://github.com/onevcat/Kingfisher", requirement: .branch("master"))
     ]
 
     func generate() -> [Target] {
