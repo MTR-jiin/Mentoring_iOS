@@ -22,7 +22,6 @@ class InfinityCollectionViewCell: UICollectionViewCell {
     func bind(to viewModel: SearchHomeHeaderHeadLineDatable) {
         let url = URL(string: viewModel.thumbnail)
         imageView.kf.setImage(with: url)
-        print("Success bind")
     }
 
 }

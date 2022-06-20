@@ -45,6 +45,9 @@
                         </collectionViewFlowLayout>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isItemPagingEnabled" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="velocityMultiplier">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </collectionView>
                 </subviews>

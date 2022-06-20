@@ -36,13 +36,20 @@ class HeadLineViewCell: UITableViewCell {
     
     private func headLineDataBinding() {
         viewModel.headLineData
-            .bind(to: collectionView.rx.items(cellIdentifier: "InfinityCollectionViewCell", cellType: InfinityCollectionViewCell.self)) { idx, item, cell in
-                cell.bind(to: item)
-                
+            .bind(to: collectionView.rx.items(infinite: true)) { collectionView, row, element in
+                let indexPath = IndexPath(row: row, section: 0)
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InfinityCollectionViewCell", for: indexPath) as? InfinityCollectionViewCell else { return UICollectionViewCell() }
+                cell.bind(to: element)
+                return cell
             }.disposed(by: disposeBag)
-    }
-   
+        
     
+    }
+    
+//cellIdentifier: "InfinityCollectionViewCell", cellType: InfinityCollectionViewCell.self)) { idx, item, cell in
+//    cell.bind(to: item)
+//
+//
 }
 
 //extension HeadLineViewCell: UICollectionViewDataSource {

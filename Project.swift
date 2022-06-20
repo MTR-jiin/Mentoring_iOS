@@ -49,6 +49,7 @@ class BaseProjectFactory: ProjectFactory {
         .remote(url: "https://github.com/ReactiveX/RxSwift.git", requirement: .upToNextMinor(from: "6.0.0")),
         .remote(url: "https://github.com/bugkingK/HeadPageKit", requirement: .upToNextMinor(from: "3.0.0")),
         .remote(url: "https://github.com/arnauddorgans/InfiniteLayout.git", requirement: .branch("master")),
+        .remote(url: "https://github.com/onevcat/Kingfisher", requirement: .branch("master"))
     ]
 
     func generate() -> [Target] {
