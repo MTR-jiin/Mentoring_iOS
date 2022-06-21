@@ -10,8 +10,7 @@ import RxRelay
  
 class HeadLineViewModel {
     let repository = SearchHomeRepostiory()
-
-    var headLineData = BehaviorRelay(value: [SearchHomeHeaderHeadLineDatable]())
+    var headLineData = BehaviorRelay(value: [HeadLineCellDatable]())
     
     init() {
         loadData()

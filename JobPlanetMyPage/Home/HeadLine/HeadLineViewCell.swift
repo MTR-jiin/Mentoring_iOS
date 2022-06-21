@@ -11,22 +11,34 @@ import RxSwift
 import RxCocoa
 import RxInfiniteLayout
 
+protocol HeadLineCellDatable {
+    var titleRow1: String { get }
+    var titleRow2: String { get }
+    var backgroundColor: String { get }
+    var thumbnail: String { get }
+}
+
+protocol HeadLineDelegate: AnyObject {
+    func sendToData()
+}
+
 class HeadLineViewCell: UITableViewCell {
 
     @IBOutlet weak var titleRow1: UILabel!
     @IBOutlet weak var titleRow2: UILabel!
     
+    @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var collectionView: RxInfiniteCollectionView!
     
     private let viewModel = HeadLineViewModel()
     private let disposeBag = DisposeBag()
+    private var bgColor: UIColor?
 
     override func awakeFromNib() {
         super.awakeFromNib()
         registerNib()
         headLineDataBinding()
-//        collectionView.delegate = self
-//        collectionView.dataSource = self
+        self.backgroundColor = bgColor
     }
     
     private func registerNib() {
@@ -34,41 +46,22 @@ class HeadLineViewCell: UITableViewCell {
         collectionView.register(nib, forCellWithReuseIdentifier: "InfinityCollectionViewCell")
     }
     
+    func configureData(to viewModel: HeadLineCellDatable) {
+        titleRow1.text = viewModel.titleRow1
+        titleRow2.text = viewModel.titleRow2
+        cellView.backgroundColor = UIColor(hexString: viewModel.backgroundColor)
+    }
+    
     private func headLineDataBinding() {
         viewModel.headLineData
-            .bind(to: collectionView.rx.items(infinite: true)) { collectionView, row, element in
+            .bind(to: collectionView.rx.items(infinite: true)) {
+                collectionView, row, element in
                 let indexPath = IndexPath(row: row, section: 0)
                 guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InfinityCollectionViewCell", for: indexPath) as? InfinityCollectionViewCell else { return UICollectionViewCell() }
                 cell.bind(to: element)
+                self.configureData(to: element)
                 return cell
             }.disposed(by: disposeBag)
-        
-    
     }
     
-//cellIdentifier: "InfinityCollectionViewCell", cellType: InfinityCollectionViewCell.self)) { idx, item, cell in
-//    cell.bind(to: item)
-//
-//
 }
-
-//extension HeadLineViewCell: UICollectionViewDataSource {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 10
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InfinityCollectionViewCell", for: indexPath) as? InfinityCollectionViewCell else { return UICollectionViewCell() }
-//        cell.bind(to: viewModel.headLineData as! SearchHomeHeaderHeadLineDatable)
-//        return cell
-//    }
-//
-//}
-//
-//extension HeadLineViewCell: UICollectionViewDelegate {
-//
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
-//    }
-//}
-//

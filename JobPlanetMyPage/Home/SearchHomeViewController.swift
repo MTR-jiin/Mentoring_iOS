@@ -17,7 +17,7 @@ class SearchHomeViewController: UIViewController {
     @IBOutlet private weak var headerViewHeight: NSLayoutConstraint!
     @IBOutlet private weak var tableView: UITableView!
     
-    private let viewModel: SearchHomeRankViewModel = .init()
+    private let rankViewModel: SearchHomeRankViewModel = .init()
     private let disposeBag: DisposeBag = .init()
     
     override func viewDidLoad() {
@@ -27,7 +27,7 @@ class SearchHomeViewController: UIViewController {
         settingTableView()
     }
     private func rankDataBinding() {
-        viewModel.rankModelData
+        rankViewModel.rankModelData
             .bind(to: headerView.tableView.rx.items(cellType: SearchHomeHeaderRankCell.self)){ idx, item, cell in
                 cell.bind(to: item)
             }

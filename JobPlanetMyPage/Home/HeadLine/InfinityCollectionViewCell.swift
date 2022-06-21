@@ -9,17 +9,15 @@
 import UIKit
 import Kingfisher
 
-protocol SearchHomeHeaderHeadLineDatable {
-    var titleRow1: String { get }
-    var titleRow2: String { get }
-    var thumbnail: String { get }
-}
 
 class InfinityCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var nowIndexLabel: UILabel!
+    @IBOutlet weak var totalIndexLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-    
-    func bind(to viewModel: SearchHomeHeaderHeadLineDatable) {
+        
+    func bind(to viewModel: HeadLineCellDatable) {
+//        nowIndexLabel.text = viewModel.nowIndex
         let url = URL(string: viewModel.thumbnail)
         imageView.kf.setImage(with: url)
     }
