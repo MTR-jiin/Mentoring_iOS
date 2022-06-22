@@ -18,10 +18,6 @@ protocol HeadLineCellDatable {
     var thumbnail: String { get }
 }
 
-protocol HeadLineDelegate: AnyObject {
-    func sendToData()
-}
-
 class HeadLineViewCell: UITableViewCell {
 
     @IBOutlet weak var titleRow1: UILabel!
@@ -59,9 +55,16 @@ class HeadLineViewCell: UITableViewCell {
                 let indexPath = IndexPath(row: row, section: 0)
                 guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InfinityCollectionViewCell", for: indexPath) as? InfinityCollectionViewCell else { return UICollectionViewCell() }
                 cell.bind(to: element)
-                self.configureData(to: element)
                 return cell
             }.disposed(by: disposeBag)
+        
+        collectionView.rx.modelCentered(HeadLineCellDatable.self)
+            .asDriver()
+            .drive(onNext: { current in
+                self.configureData(to: current)
+            }).disposed(by: disposeBag)
     }
+    
+    
     
 }

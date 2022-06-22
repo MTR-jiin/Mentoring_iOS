@@ -75,7 +75,6 @@ extension SearchHomeViewController: UITableViewDataSource {
             guard let cell = tableView.dequeue(type: HeadLineViewCell.self, for: indexPath) else {
                 return .init()
             }
-            cell.titleRow1.text = "바뀜"
             return cell
         }
         else {
