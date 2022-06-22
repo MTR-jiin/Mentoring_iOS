@@ -16,9 +16,7 @@ class HeadLineViewModel {
     init() {
         loadData()
     }
-    
-    //하나 Index를 넘겨야함
-    
+        
     func loadData() {
         repository.getHeadLine { result in
             switch result {

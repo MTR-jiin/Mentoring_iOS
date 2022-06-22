@@ -20,21 +20,18 @@ protocol HeadLineCellDatable {
 
 class HeadLineViewCell: UITableViewCell {
 
-    @IBOutlet weak var titleRow1: UILabel!
-    @IBOutlet weak var titleRow2: UILabel!
-    
-    @IBOutlet weak var cellView: UIView!
+    @IBOutlet private weak var titleRow1: UILabel!
+    @IBOutlet private weak var titleRow2: UILabel!
+    @IBOutlet private weak var cellView: UIView!
     @IBOutlet weak var collectionView: RxInfiniteCollectionView!
     
     private let viewModel = HeadLineViewModel()
     private let disposeBag = DisposeBag()
-    private var bgColor: UIColor?
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         registerNib()
         headLineDataBinding()
-        self.backgroundColor = bgColor
     }
     
     private func registerNib() {
@@ -54,7 +51,7 @@ class HeadLineViewCell: UITableViewCell {
                 collectionView, row, element in
                 let indexPath = IndexPath(row: row, section: 0)
                 guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InfinityCollectionViewCell", for: indexPath) as? InfinityCollectionViewCell else { return UICollectionViewCell() }
-                cell.bind(to: element)
+                cell.bind(data: element, row: row + 1)
                 return cell
             }.disposed(by: disposeBag)
         
@@ -65,6 +62,6 @@ class HeadLineViewCell: UITableViewCell {
             }).disposed(by: disposeBag)
     }
     
-    
-    
 }
+
+

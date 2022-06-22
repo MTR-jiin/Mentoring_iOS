@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 
+
 class InfinityCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var nowIndexLabel: UILabel!
@@ -16,18 +17,15 @@ class InfinityCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     
     private let viewModel = HeadLineViewModel()
-
-    func setting() {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
         totalIndexLabel.text = String(viewModel.itemCount)
     }
         
-    func bind(to viewModel: HeadLineCellDatable) {
-        let url = URL(string: viewModel.thumbnail)
+    func bind(data: HeadLineCellDatable, row: Int) {
+        let url = URL(string: data.thumbnail)
         imageView.kf.setImage(with: url)
+        nowIndexLabel.text = String(viewModel.itemCount % row)
     }
-    
-    func settingIndex(index: String) {
-        nowIndexLabel.text = index
-    }
-
 }

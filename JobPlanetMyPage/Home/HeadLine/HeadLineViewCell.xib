@@ -42,7 +42,7 @@
                             <size key="itemSize" width="200" height="125"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isItemPagingEnabled" value="YES"/>
@@ -66,7 +66,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cellView" destination="H2p-sc-9uM" id="Mk2-3m-ulq"/>
-                <outlet property="collectionView" destination="nAY-F1-Ufi" id="aVi-7p-W2f"/>
+                <outlet property="collectionView" destination="nAY-F1-Ufi" id="c3q-ki-1Ly"/>
                 <outlet property="titleRow1" destination="K0a-8y-KZz" id="p6e-nq-W7y"/>
                 <outlet property="titleRow2" destination="aCK-O7-iIz" id="XFf-wn-RBJ"/>
             </connections>
