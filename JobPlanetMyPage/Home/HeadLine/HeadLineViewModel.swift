@@ -9,23 +9,20 @@
 import RxRelay
  
 class HeadLineViewModel {
-    let repository = SearchHomeRepostiory()
-    var headLineData = BehaviorRelay(value: [HeadLineCellDatable]())
-    var itemCount: Int = 0
+    
+    let service = HeadLineService(SearchHomeRepostiory() as SearchHomeRepositable)
+    let headModelData = BehaviorRelay(value: [HeadLineModel]())
+    var cellModelData = [InfinityCellModel]()
     
     init() {
         loadData()
     }
         
     func loadData() {
-        repository.getHeadLine { result in
-            switch result {
-            case .success(let data):
-                self.headLineData.accept(data.data.items)
-                self.itemCount = data.data.items.count
-            case .failure(let error):
-                debugPrint(error)
-            }
+        service.fetch { viewResult, cellResult in
+//            guard let self = self else { return }
+            self.headModelData.accept(viewResult)
+            self.cellModelData = cellResult
         }
     }
 }
