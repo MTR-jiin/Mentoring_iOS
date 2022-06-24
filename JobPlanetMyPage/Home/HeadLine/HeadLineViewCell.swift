@@ -11,13 +11,6 @@ import RxSwift
 import RxCocoa
 import RxInfiniteLayout
 
-protocol HeadLineCellDatable {
-    var titleRow1: String { get }
-    var titleRow2: String { get }
-    var backgroundColor: String { get }
-    var thumbnail: String { get }
-}
-
 class HeadLineViewCell: UITableViewCell {
 
     @IBOutlet private weak var titleRow1: UILabel!
@@ -39,27 +32,29 @@ class HeadLineViewCell: UITableViewCell {
         collectionView.register(nib, forCellWithReuseIdentifier: "InfinityCollectionViewCell")
     }
     
-    func configureData(to viewModel: HeadLineCellDatable) {
-        titleRow1.text = viewModel.titleRow1
-        titleRow2.text = viewModel.titleRow2
-        cellView.backgroundColor = UIColor(hexString: viewModel.backgroundColor)
+    func configureHeadData(_ data: HeadDatable) {
+        titleRow1.text = data.titleRow1
+        titleRow2.text = data.titleRow2
+        cellView.backgroundColor = data.backgroundColor
     }
-    
+
     private func headLineDataBinding() {
-        viewModel.headLineData
+        viewModel.headModelData
             .bind(to: collectionView.rx.items(infinite: true)) {
                 collectionView, row, element in
                 let indexPath = IndexPath(row: row, section: 0)
                 guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InfinityCollectionViewCell", for: indexPath) as? InfinityCollectionViewCell else { return UICollectionViewCell() }
-                cell.bind(data: element, row: row + 1)
+                cell.configure(element)
                 return cell
             }.disposed(by: disposeBag)
         
-        collectionView.rx.modelCentered(HeadLineCellDatable.self)
+        collectionView.rx.modelSelected(HeadDatable.self)
             .asDriver()
             .drive(onNext: { current in
-                self.configureData(to: current)
+                print(current)
+                self.configureHeadData(current)
             }).disposed(by: disposeBag)
+    
     }
     
 }

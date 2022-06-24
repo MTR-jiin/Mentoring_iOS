@@ -10,13 +10,10 @@ import Foundation
 import UIKit
 
 class HeadLineService {
-    
-//    typealias lineModel = HeadLineModel.HeadLineViewModel
-//    typealias cellModel = HeadLineModel.InfinityCellModel
 
     let repository: SearchHomeRepositable
     var headLineModel = [HeadLineModel]()
-    var infinityModel = [InfinityCellModel]()
+//    var infinityModel = [InfinityCellModel]()
     
     init(_ repository: SearchHomeRepositable) {
         self.repository = repository
@@ -28,33 +25,25 @@ class HeadLineService {
             //Inject Model
             headLineModel.append(HeadLineModel(titleRow1: element.titleRow1,
                                            titleRow2: element.titleRow2,
-                                           backgroundColor: UIColor(hexString: element.backgroundColor)))
-            infinityModel.append(InfinityCellModel(imageURL: URL(fileURLWithPath: element.thumbnail),
-                                               nowIndex: String(idx)))
+                                           backgroundColor: UIColor(hexString: element.backgroundColor),
+                                           imageURL: URL(string: element.thumbnail)!,
+                                          nowIndex: String(idx + 1),
+                                          endIndex: String(entity.count)))
+//            infinityModel.append(InfinityCellModel()))
         }
     }
     
     //Entity -> Model
-    func fetch(_ comletionHandler: @escaping ([HeadLineModel], [InfinityCellModel]) -> Void) {
+    func fetchHeadLine(_ completionHandler: @escaping ([HeadLineModel]) -> Void) {
         repository.getHeadLine { result in
             switch result {
             case .success(let data):
                 self.entityToModel(data)
+                completionHandler(self.headLineModel)
             case .failure(let error):
                 debugPrint(error)
             }
         }
     }
     
-//    func infinityCellDataFetch(_ comletionHandler: @escaping ([InfinityCellModel]) -> Void) {
-//        repository.getHeadLine { result in
-//            switch result {
-//            case .success(let data):
-//                self.entityToModel(data)
-//            case .failure(let error):
-//                debugPrint(error)
-//            }
-//        }
-//    }
-
 }

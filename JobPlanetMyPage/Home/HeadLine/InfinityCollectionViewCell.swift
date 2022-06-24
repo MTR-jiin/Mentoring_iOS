@@ -16,8 +16,9 @@ class InfinityCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var totalIndexLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
         
-    func configure(_ data: InfinityCellModel) {
+    func configure(_ data: HeadLineModel) {
         nowIndexLabel.text = data.nowIndex
         imageView.kf.setImage(with: data.imageURL)
+        totalIndexLabel.text = data.endIndex
     }
 }

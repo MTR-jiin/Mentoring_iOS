@@ -12,17 +12,15 @@ class HeadLineViewModel {
     
     let service = HeadLineService(SearchHomeRepostiory() as SearchHomeRepositable)
     let headModelData = BehaviorRelay(value: [HeadLineModel]())
-    var cellModelData = [InfinityCellModel]()
     
     init() {
         loadData()
     }
         
     func loadData() {
-        service.fetch { viewResult, cellResult in
+        service.fetchHeadLine { result in
 //            guard let self = self else { return }
-            self.headModelData.accept(viewResult)
-            self.cellModelData = cellResult
+            self.headModelData.accept(result)
         }
     }
 }

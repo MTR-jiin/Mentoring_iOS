@@ -18,6 +18,7 @@ class SearchHomeViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     private let rankViewModel: SearchHomeRankViewModel = .init()
+    private let viewModel = HeadLineViewModel()
     private let disposeBag: DisposeBag = .init()
     
     override func viewDidLoad() {
