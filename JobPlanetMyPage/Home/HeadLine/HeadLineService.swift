@@ -13,7 +13,6 @@ class HeadLineService {
 
     let repository: SearchHomeRepositable
     var headLineModel = [HeadLineModel]()
-//    var infinityModel = [InfinityCellModel]()
     
     init(_ repository: SearchHomeRepositable) {
         self.repository = repository
@@ -29,7 +28,6 @@ class HeadLineService {
                                            imageURL: URL(string: element.thumbnail)!,
                                           nowIndex: String(idx + 1),
                                           endIndex: String(entity.count)))
-//            infinityModel.append(InfinityCellModel()))
         }
     }
     

@@ -34,6 +34,7 @@ class SearchHomeViewController: UIViewController {
             }
             .disposed(by: disposeBag)
     }
+
     
     private func settingTableView() {
         tableView.delegate = self
@@ -76,6 +77,23 @@ extension SearchHomeViewController: UITableViewDataSource {
             guard let cell = tableView.dequeue(type: HeadLineViewCell.self, for: indexPath) else {
                 return .init()
             }
+            //infinity Cell Binding
+            viewModel.headModelData
+                .bind(to: cell.collectionView.rx.items(infinite: true)) {
+                    collectionView, row, element in
+                    let indexPath = IndexPath(row: row, section: 0)
+                    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InfinityCollectionViewCell", for: indexPath) as? InfinityCollectionViewCell else { return UICollectionViewCell() }
+                    cell.configure(element)
+                    return cell
+                }.disposed(by: disposeBag)
+            //HeadLine Binding
+            // 🚨 여기서 current 값이 없음 ..
+            cell.collectionView.rx.modelSelected(HeadLineModel.self)
+                .asDriver()
+                 .drive(onNext: { current in
+                     print(current)
+                     cell.configureHeadData(current)
+                 }).disposed(by: disposeBag)
             return cell
         }
         else {
